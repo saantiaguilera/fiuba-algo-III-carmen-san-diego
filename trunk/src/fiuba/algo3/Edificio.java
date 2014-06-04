@@ -6,9 +6,9 @@ public class Edificio {
 	PistaDetective pistaDetective;
 	
 	public Edificio(){
-		vecesVisitado=0;
-		pistaNovato=new PistaNovato();
-		pistaDetective= new PistaDetective();
+		vecesVisitado = 0;
+		pistaNovato = new PistaNovato();
+		pistaDetective = new PistaDetective();
 	}
 	
 	public PistaNovato darPistaA(PersonajeNovato unPersonaje){
