@@ -10,4 +10,7 @@ public abstract class Pista {
 	public String getPista() {
 		return pista;
 	}
+	
+	public abstract Boolean esNovato();
+	public abstract Boolean esDetective();
 }
