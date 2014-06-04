@@ -6,9 +6,9 @@ public class Pais {
 	String nombre;
 	
 	public Pais(int x, int y, String nombrePais){
-		posisionX=x;
-		posisionY=y;
-		nombre=nombrePais;
+		posisionX = x;
+		posisionY = y;
+		nombre = nombrePais;
 	}
 
 	public int getPosisionX() {

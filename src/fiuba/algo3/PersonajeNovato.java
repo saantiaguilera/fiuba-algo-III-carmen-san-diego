@@ -3,13 +3,13 @@ package fiuba.algo3;
 public class PersonajeNovato extends Personaje {
 	
 	public PersonajeNovato(){
-		horasLimite=100;
-		ubicacion= new Pais(1,1,"Argentina");
-		velocidad=100;
+		this.horasLimite=10;
+		this.ubicacion= new Pais(1,1,"Argentina");
+		this.velocidad=1;
 	}
 	
 	public PistaNovato pedirPistaA(Edificio edificio){
-		horasLimite-=edificio.vecesVisitado();
+		this.horasLimite-=edificio.vecesVisitado();
 		return edificio.darPistaA(this);
 	}
 }

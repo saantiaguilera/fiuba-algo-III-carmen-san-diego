@@ -3,9 +3,9 @@ package fiuba.algo3;
 public class PersonajeDetective extends Personaje {
 	
 	public PersonajeDetective(){
-		horasLimite=100;
+		horasLimite=10;
 		ubicacion= new Pais(1,1,"Argentina");
-		velocidad=200;
+		velocidad=5;
 	}
 	
 	public PistaDetective pedirPistaA(Edificio edificio){
