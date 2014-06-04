@@ -1,3 +1,5 @@
+package fiuba.algo3;
+
 import fiuba.algo3.Foo;
 import org.junit.Assert;
 
