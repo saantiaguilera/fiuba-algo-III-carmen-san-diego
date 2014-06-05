@@ -2,25 +2,33 @@ package fiuba.algo3;
 
 public class Edificio {
 	int vecesVisitado;
-	PistaNovato pistaNovato;
-	PistaDetective pistaDetective;
+	Pista pistaFacil;
+	Pista pistaDificil;
 	
 	public Edificio(){
 		vecesVisitado = 0;
-		pistaNovato = new PistaNovato();
-		pistaDetective = new PistaDetective();
+		pistaFacil = new Pista();
+		pistaDificil = new Pista();
 	}
 	
-	public PistaNovato darPistaA(PersonajeNovato unPersonaje){
-		return pistaNovato;
+	public Pista darPistaA(PersonajeNovato unPersonaje){
+		return this.pistaFacil;
 	}
 	
-	public PistaDetective darPistaA(PersonajeDetective unPersonaje){
-		return pistaDetective;
+	public Pista darPistaA(PersonajeDetective unPersonaje){
+		return this.pistaDificil;
+	}
+	
+	public void agregarPistaFacil(Pista unaPista){
+		this.pistaFacil = unaPista;
 	}
 
+	public void agregarPistaDificil(Pista unaPista){
+		this.pistaDificil = unaPista;
+	}
+	
 	public int vecesVisitado() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
+
 }
