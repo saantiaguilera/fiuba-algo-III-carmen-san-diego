@@ -8,8 +8,8 @@ public class PersonajeNovato extends Personaje {
 		this.velocidad=1;
 	}
 	
-	public PistaNovato pedirPistaA(Edificio edificio){
-		this.horasLimite-=edificio.vecesVisitado();
+	public Pista pedirPistaA(Edificio edificio){
+		horasLimite -= edificio.vecesVisitado();
 		return edificio.darPistaA(this);
 	}
 }

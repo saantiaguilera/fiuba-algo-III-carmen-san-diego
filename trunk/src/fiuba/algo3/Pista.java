@@ -1,16 +1,17 @@
 package fiuba.algo3;
 
-public abstract class Pista {
-	String pista;
+public  class Pista {
+	private String pista;
 	
 	public Pista(){
-		pista="Pista";
+		pista = "Pista";
 	}
 
+	public Pista(String textoPista){
+		this.pista = textoPista;
+	}
+	
 	public String getPista() {
 		return pista;
 	}
-	
-	public abstract Boolean esNovato();
-	public abstract Boolean esDetective();
 }

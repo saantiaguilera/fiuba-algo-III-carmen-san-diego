@@ -4,12 +4,12 @@ public class PersonajeDetective extends Personaje {
 	
 	public PersonajeDetective(){
 		horasLimite=10;
-		ubicacion= new Pais(1,1,"Argentina");
+		ubicacion = new Pais(1,1,"Argentina");
 		velocidad=5;
 	}
 	
-	public PistaDetective pedirPistaA(Edificio edificio){
-		horasLimite-=edificio.vecesVisitado();
+	public Pista pedirPistaA(Edificio edificio){
+		horasLimite -= edificio.vecesVisitado();
 		return edificio.darPistaA(this);
 	}
 }
