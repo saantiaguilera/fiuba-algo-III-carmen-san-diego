@@ -1,7 +1,7 @@
 package fiuba.algo3;
 
 public abstract class Personaje {
-	int horasLimite;
+	static int horasLimite;
 	Pais ubicacion;
 	int velocidad;
 	
