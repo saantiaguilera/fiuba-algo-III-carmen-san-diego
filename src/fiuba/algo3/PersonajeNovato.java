@@ -12,4 +12,6 @@ public class PersonajeNovato extends Personaje {
 		horasLimite -= edificio.vecesVisitado();
 		return edificio.darPistaA(this);
 	}
+
+
 }

@@ -10,6 +10,14 @@ public abstract class Personaje {
 		this.ubicacion = destino;
 	}
 	
+	public int getHorasLimite() {
+		return horasLimite;
+	}
+	
+	public void restarHoras(int horas){
+		horasLimite-=horas;
+	}
+	
 	private int calcularTiempo(Pais destino){
 		int distanciaEnX = destino.getPosisionX() - ubicacion.getPosisionX();
 		int distanciaEnY = destino.getPosisionY() - ubicacion.getPosisionY();
