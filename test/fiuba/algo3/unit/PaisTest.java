@@ -1,7 +1,9 @@
-package fiuba.algo3;
+package fiuba.algo3.unit;
 
 import org.junit.Assert;
 import org.junit.Test;
+
+import fiuba.algo3.Pais;
 
 public class PaisTest {
 
