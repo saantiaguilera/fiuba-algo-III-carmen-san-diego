@@ -5,27 +5,49 @@ public class Edificio {
 	Pista pistaFacil;
 	Pista pistaDificil;
 	int porcentajeDeAsalto;
+	int porcentajeDeArmaOCuchillo;//>50 arma ; <=50 cuchillo
 	int contador;
 	
-	public Edificio(int porcentaje){
+	public Edificio(int porcentajeDeAsalto, int porcentajeDeArmaOCuchillo){
 		vecesVisitado = 0;
 		pistaFacil = new Pista();
 		pistaDificil = new Pista();
-		porcentajeDeAsalto=porcentaje;
+		this.porcentajeDeAsalto=porcentajeDeAsalto;
+		this.porcentajeDeArmaOCuchillo=porcentajeDeArmaOCuchillo;
 		contador=1;
+	}
+	
+	private void verificarConQueFueHerido(PersonajeNovato unPersonaje){
+		int R = (int) (Math.random() * (porcentajeDeArmaOCuchillo));
+		if (R <= 50){
+			unPersonaje.restarHoras(2);//Cuchillo			
+		}
+		else{
+			unPersonaje.restarHoras(4);//Bala
+			} 
+	}
+	
+	private void verificarConQueFueHerido(PersonajeDetective unPersonaje){
+		int R = (int) (Math.random() * (porcentajeDeArmaOCuchillo));
+		if (R <= 50){
+			unPersonaje.restarHoras(3);//Cuchillo			
+		}
+		else{
+			unPersonaje.restarHoras(5);//Bala
+			} 
 	}
 	
 	private void verificarSiFueHerido(PersonajeNovato unPersonaje){
 		int R = (int) (Math.random() * (porcentajeDeAsalto));
-		if (R < porcentajeDeAsalto){
-			unPersonaje.restarHoras(2);
+		if (R <= porcentajeDeAsalto){
+			verificarConQueFueHerido(unPersonaje);
 		}
 	}	
 	
 	private void verificarSiFueHerido(PersonajeDetective unPersonaje){
 		int R = (int) (Math.random() * (porcentajeDeAsalto));
 		if (R < porcentajeDeAsalto){
-			unPersonaje.restarHoras(3);
+			verificarConQueFueHerido(unPersonaje);
 		}
 	}
 	
