@@ -4,7 +4,7 @@ public  class Pista {
 	private String pista;
 	
 	public Pista(){
-		pista = "Pista";
+		this.pista = "Pista";
 	}
 
 	public Pista(String textoPista){

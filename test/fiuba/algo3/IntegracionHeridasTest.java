@@ -11,7 +11,7 @@ public class IntegracionHeridasTest {
 		PersonajeNovato personaje = new PersonajeNovato(horasLimite,new Pais(1,1,"Argentina"),5);
 		Edificio edificio = new Edificio(100,50);
 		edificio.darPistaA(personaje);
-		Assert.assertEquals(personaje.getHorasLimite(), horasLimite-2-1);	
+		Assert.assertEquals(personaje.getHorasRestantes(), horasLimite-2-1);	
 	}
 	
 	@Test
@@ -20,7 +20,7 @@ public class IntegracionHeridasTest {
 		PersonajeDetective personaje = new PersonajeDetective(horasLimite,new Pais(1,1,"Argentina"),5);
 		Edificio edificio = new Edificio(100,50);
 		edificio.darPistaA(personaje);
-		Assert.assertEquals(personaje.getHorasLimite(), horasLimite-3-1);	
+		Assert.assertEquals(personaje.getHorasRestantes(), horasLimite-3-1);	
 
 	}
 	
@@ -30,7 +30,7 @@ public class IntegracionHeridasTest {
 		PersonajeNovato personaje = new PersonajeNovato(horasLimite,new Pais(1,1,"Argentina"),5);
 		Edificio edificio = new Edificio(100,1000);
 		edificio.darPistaA(personaje);
-		Assert.assertEquals(personaje.getHorasLimite(), horasLimite-4-1);	
+		Assert.assertEquals(personaje.getHorasRestantes(), horasLimite-4-1);	
 	}
 	
 	@Test
@@ -39,6 +39,6 @@ public class IntegracionHeridasTest {
 		PersonajeDetective personaje = new PersonajeDetective(horasLimite,new Pais(1,1,"Argentina"),5);
 		Edificio edificio = new Edificio(100,1000);
 		edificio.darPistaA(personaje);
-		Assert.assertEquals(personaje.getHorasLimite(), horasLimite-5-1);	
+		Assert.assertEquals(personaje.getHorasRestantes(), horasLimite-5-1);	
 	}
 }
