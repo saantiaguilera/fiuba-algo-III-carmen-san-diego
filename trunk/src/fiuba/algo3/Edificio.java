@@ -1,12 +1,12 @@
 package fiuba.algo3;
 
 public class Edificio {
-	protected int vecesVisitado;//¿que diferencia hay en veces visitado y contador?
+	protected int vecesVisitado;
 	protected Pista pistaFacil;
 	protected Pista pistaDificil;
 	protected int porcentajeDeAsalto;
 	protected int porcentajeDeArmaOCuchillo;//>50 arma ; <=50 cuchillo
-	protected int contador;
+	//protected int contador;
 	
 	public Edificio(int porcentajeDeAsalto, int porcentajeDeArmaOCuchillo){
 		vecesVisitado = 0;
@@ -14,7 +14,6 @@ public class Edificio {
 		//pistaDificil = new Pista();
 		this.porcentajeDeAsalto=porcentajeDeAsalto;
 		this.porcentajeDeArmaOCuchillo=porcentajeDeArmaOCuchillo;
-		contador=1;
 	}
 	
 	private void verificarConQueFueHerido(PersonajeNovato unPersonaje){
@@ -53,17 +52,15 @@ public class Edificio {
 	
 	public Pista darPistaA(PersonajeNovato unPersonaje){
 		this.verificarSiFueHerido(unPersonaje);
-		unPersonaje.restarHoras(contador);
-		contador+=1;
 		vecesVisitado += 1;
+		unPersonaje.restarHoras(vecesVisitado);
 		return this.pistaFacil;
 	}
 	
 	public Pista darPistaA(PersonajeDetective unPersonaje){
 		this.verificarSiFueHerido(unPersonaje);
-		unPersonaje.restarHoras(contador);
-		contador+=1;
 		vecesVisitado += 1;
+		unPersonaje.restarHoras(vecesVisitado);
 		return this.pistaDificil;
 	}
 	
