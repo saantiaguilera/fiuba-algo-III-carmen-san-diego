@@ -1,9 +1,9 @@
 package fiuba.algo3;
 
 public class Pais {
-	int posisionX;
-	int posisionY;
-	String nombre;
+	private int posisionX;
+	private int posisionY;
+	private String nombre;
 	
 	public Pais(int x, int y, String nombrePais){
 		posisionX = x;
