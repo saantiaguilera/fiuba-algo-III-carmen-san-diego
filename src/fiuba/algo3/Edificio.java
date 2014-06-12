@@ -4,50 +4,67 @@ public class Edificio {
 	protected int vecesVisitado;
 	protected Pista pistaFacil;
 	protected Pista pistaDificil;
-	protected int porcentajeDeAsalto;
-	protected int porcentajeDeArmaOCuchillo;//>50 arma ; <=50 cuchillo
-	//protected int contador;
+	protected boolean seEscondioElLadron;
+	protected boolean tienenArmas;
+	protected boolean tienenCuchillos;
+	protected boolean esEdificioDeUltimoPais;
 	
-	public Edificio(int porcentajeDeAsalto, int porcentajeDeArmaOCuchillo){
+
+	public Edificio(boolean esUltimoEdificio) {
 		vecesVisitado = 0;
 		//pistaFacil = new Pista();
 		//pistaDificil = new Pista();
-		this.porcentajeDeAsalto=porcentajeDeAsalto;
-		this.porcentajeDeArmaOCuchillo=porcentajeDeArmaOCuchillo;
+		esEdificioDeUltimoPais=esUltimoEdificio;
+		tienenCuchillos=false;
+		tienenArmas=false;
+		seEscondioElLadron=false;
+	}
+
+	public void setSeEscondioElLadron(boolean seEscondioElLadron) {
+		this.seEscondioElLadron = seEscondioElLadron;
 	}
 	
+	public void setTienenArmas(boolean tienenArmas) {
+		this.tienenArmas = tienenArmas;
+	}
+	
+	public void setTienenCuchillos(boolean tienenCuchillos) {
+		this.tienenCuchillos = tienenCuchillos;
+	}
+	
+	public void setEsEdificioDeUltimoPais(boolean esEdificioDeUltimoPais) {
+		this.esEdificioDeUltimoPais = esEdificioDeUltimoPais;
+	}
+
+	
 	private void verificarConQueFueHerido(PersonajeNovato unPersonaje){
-		int R = (int) (Math.random() * (porcentajeDeArmaOCuchillo));
-		if (R <= 50){
-			unPersonaje.restarHoras(2);//Cuchillo			
+		if (tienenArmas){
+			unPersonaje.restarHoras(4);
 		}
-		else{
-			unPersonaje.restarHoras(4);//Bala
-			} 
+		if (tienenCuchillos){
+			unPersonaje.restarHoras(2);
+		}
 	}
 	
 	private void verificarConQueFueHerido(PersonajeDetective unPersonaje){
-		int R = (int) (Math.random() * (porcentajeDeArmaOCuchillo));
-		if (R <= 50){
-			unPersonaje.restarHoras(3);//Cuchillo			
+		if (tienenArmas){
+			unPersonaje.restarHoras(5);
 		}
-		else{
-			unPersonaje.restarHoras(5);//Bala
-			} 
+		if (tienenCuchillos){
+			unPersonaje.restarHoras(3);
+		}
 	}
 	
 	private void verificarSiFueHerido(PersonajeNovato unPersonaje){
-		int R = (int) (Math.random() * (porcentajeDeAsalto));
-		if (R <= porcentajeDeAsalto){
+		if (esEdificioDeUltimoPais & seEscondioElLadron==false){
 			verificarConQueFueHerido(unPersonaje);
 		}
 	}	
 	
 	private void verificarSiFueHerido(PersonajeDetective unPersonaje){
-		int R = (int) (Math.random() * (porcentajeDeAsalto));
-		if (R < porcentajeDeAsalto){
+		if (esEdificioDeUltimoPais & seEscondioElLadron==false){
 			verificarConQueFueHerido(unPersonaje);
-		}
+		}		
 	}
 	
 	public Pista darPistaA(PersonajeNovato unPersonaje){
