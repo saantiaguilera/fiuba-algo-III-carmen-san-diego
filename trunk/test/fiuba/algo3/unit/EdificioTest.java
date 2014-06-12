@@ -9,14 +9,14 @@ public class EdificioTest {
 
 	@Test
 	public void deberiaInicializarEdificioConCeroVisitas() {
-		Edificio edificio = new Edificio(0,0);
+		Edificio edificio = new Edificio(false);
 		Assert.assertEquals(0 , edificio.vecesVisitado());
 	}
 	
 	@SuppressWarnings("unused") //suprimo los warnings de que no se utilizan las pistas
 	@Test
 	public void deberiaDevolverTresVisitas(){
-		Edificio edificio = new Edificio(0,0);
+		Edificio edificio = new Edificio(false);
 		PersonajeDetective personajeDetective = new PersonajeDetective(10,new Pais(1,1,"Argentina"),5);
 		PersonajeNovato personajeNovato = new PersonajeNovato(10,new Pais(1,1,"Argentina"),1);
 		Pista pistaRecibida1 = personajeDetective.pedirPistaA(edificio);
