@@ -8,21 +8,21 @@ public class IntegracionViajesTest {
 	@Test
 	public void DetectiveNoDeberiaDescontarHorasAlViajarAlMismoLugarDeOrigen(){
 		PersonajeDetective personaje = new PersonajeDetective(10,new Pais(1,1,"Argentina"),5);
-		int horasParaResolverElCaso = personaje.getHorasRestantes();
+		int horasParaResolverElCaso = personaje.horasRestantes();
 		Pais pais = new Pais(1,1,"Argentina");
 		personaje.viajarA(pais);
 		
-		Assert.assertTrue(personaje.getHorasRestantes() == horasParaResolverElCaso );
+		Assert.assertTrue(personaje.horasRestantes() == horasParaResolverElCaso );
 	}
 	
 	@Test
 	public void NovatoNoDeberiaDescontarHorasAlViajarAlMismoLugarDeOrigen(){
 		PersonajeNovato personaje = new PersonajeNovato(10,new Pais(1,1,"Argentina"),1);
-		int horasParaResolverElCaso = personaje.getHorasRestantes();
+		int horasParaResolverElCaso = personaje.horasRestantes();
 		Pais pais = new Pais(1,1,"Argentina");
 		personaje.viajarA(pais);
 		
-		Assert.assertTrue(personaje.getHorasRestantes() == horasParaResolverElCaso );
+		Assert.assertTrue(personaje.horasRestantes() == horasParaResolverElCaso );
 	}
 	
 	@Test
@@ -31,7 +31,7 @@ public class IntegracionViajesTest {
 		Pais pais = new Pais(5,4,"Espania");
 		personaje.viajarA(pais);
 		
-		Assert.assertTrue(personaje.getHorasRestantes() == 9 );
+		Assert.assertTrue(personaje.horasRestantes() == 9 );
 	}
 	
 	@Test
@@ -40,7 +40,7 @@ public class IntegracionViajesTest {
 		Pais pais = new Pais(5,4,"Espania");
 		personaje.viajarA(pais);
 		
-		Assert.assertTrue(personaje.getHorasRestantes() == 5 );
+		Assert.assertTrue(personaje.horasRestantes() == 5 );
 	}
 	
 	@Test

@@ -1,32 +1,29 @@
 package fiuba.algo3;
 
 public abstract class Personaje {
-	protected static int horasLimite;
-	protected Pais ubicacion;
-	protected int velocidad;
-	
-	public Personaje(int horasMaxima){
-		horasLimite = horasMaxima;
-	}
+	static int horasLimite;
+	Pais ubicacion;
+	int velocidad;
 	
 	public void viajarA(Pais destino){
 		horasLimite-= this.calcularTiempo(destino);
 		this.ubicacion = destino;
 	}
 	
+	public int getHorasLimite() {
+		return horasLimite;
+	}
 	
 	public void restarHoras(int horas){
 		horasLimite-=horas;
 	}
 	
 	private int calcularTiempo(Pais destino){
-		int distanciaEnX = destino.getPosisionX() - ubicacion.getPosisionX();
-		int distanciaEnY = destino.getPosisionY() - ubicacion.getPosisionY();
-		double distancia = Math.sqrt( Math.pow(distanciaEnX, 2) + Math.pow(distanciaEnY, 2));
+		double distancia = ubicacion.calcularDistanciaCon(destino);
 		return (int)(distancia/velocidad);			
 	}
 	
-	public int getHorasRestantes(){
+	public int horasRestantes(){
 		return horasLimite;
 	}
 	

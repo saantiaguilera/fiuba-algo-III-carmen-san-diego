@@ -3,7 +3,7 @@ package fiuba.algo3;
 public class PersonajeNovato extends Personaje {
 	
 	public PersonajeNovato(int horasMaxima, Pais pais , int velocidad){
-		super(horasMaxima);
+		horasLimite = horasMaxima;
 		this.ubicacion= pais ;
 		this.velocidad = velocidad;
 	}

@@ -1,26 +1,31 @@
 package fiuba.algo3;
 
 public class Pais {
-	private int posisionX;
-	private int posisionY;
+	private int posicionX;	
+	private int posicionY;
 	private String nombre;
 	
 	public Pais(int x, int y, String nombrePais){
-		posisionX = x;
-		posisionY = y;
+		posicionX = x;
+		posicionY = y;
 		nombre = nombrePais;
 	}
 
-	public int getPosisionX() {
-		return posisionX;
+	public int getPosicionX() {
+		return posicionX;
 	}
 
-	public int getPosisionY() {
-		return posisionY;
+	public int getPosicionY() {
+		return posicionY;
 	}
 
 	public String getNombre() {
 		return nombre;
+	}
+
+	public double calcularDistanciaCon(Pais paisDestino) {
+		return Math.sqrt( Math.pow(this.posicionX - paisDestino.getPosicionX(), 2)
+				+ Math.pow(this.posicionY - paisDestino.getPosicionY(), 2));
 	}
 	
 }

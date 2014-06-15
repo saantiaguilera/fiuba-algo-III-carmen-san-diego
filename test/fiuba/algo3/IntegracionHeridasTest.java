@@ -12,7 +12,7 @@ public class IntegracionHeridasTest {
 		Edificio edificio = new Edificio(true);
 		edificio.setTienenCuchillos(true);
 		edificio.darPistaA(personaje);
-		Assert.assertEquals(personaje.getHorasRestantes(), horasLimite-2-1);	
+		Assert.assertEquals(personaje.horasRestantes(), horasLimite-2-1);	
 	}
 	
 	@Test
@@ -22,7 +22,7 @@ public class IntegracionHeridasTest {
 		Edificio edificio = new Edificio(true);
 		edificio.setTienenCuchillos(true);		
 		edificio.darPistaA(personaje);
-		Assert.assertEquals(personaje.getHorasRestantes(), horasLimite-3-1);	
+		Assert.assertEquals(personaje.horasRestantes(), horasLimite-3-1);	
 
 	}
 	
@@ -33,7 +33,7 @@ public class IntegracionHeridasTest {
 		Edificio edificio = new Edificio(true);
 		edificio.setTienenArmas(true);
 		edificio.darPistaA(personaje);
-		Assert.assertEquals(personaje.getHorasRestantes(), horasLimite-4-1);	
+		Assert.assertEquals(personaje.horasRestantes(), horasLimite-4-1);	
 	}
 	
 	@Test
@@ -43,6 +43,6 @@ public class IntegracionHeridasTest {
 		Edificio edificio = new Edificio(true);
 		edificio.setTienenArmas(true);
 		edificio.darPistaA(personaje);
-		Assert.assertEquals(personaje.getHorasRestantes(), horasLimite-5-1);	
+		Assert.assertEquals(personaje.horasRestantes(), horasLimite-5-1);	
 	}
 }
