@@ -4,7 +4,7 @@ public class PersonajeDetective extends Personaje {
 	
 	
 	public PersonajeDetective(int horasMaxima, Pais pais , int velocidad){
-		super(horasMaxima);
+		horasLimite = horasMaxima;
 		ubicacion = pais;
 		this.velocidad = velocidad;
 	}

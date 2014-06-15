@@ -11,14 +11,14 @@ public class PaisTest {
 	public void deberiaDevolverCorrectamenteLaPosicionEnX() {
 		Pais pais = new Pais(10,2,"Uruguay");
 		
-		Assert.assertTrue(pais.getPosisionX() == 10);
+		Assert.assertTrue(pais.getPosicionX() == 10);
 	}
 	
 	@Test
 	public void deberiaDevolverCorrectamenteLaPosicionEnY(){
 		Pais pais = new Pais(10,2,"Uruguay");
 		
-		Assert.assertTrue(pais.getPosisionY() == 2);
+		Assert.assertTrue(pais.getPosicionY() == 2);
 	}
 
 	@Test
