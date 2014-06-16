@@ -3,6 +3,7 @@ package fiuba.algo3;
 public class Edificio {
 	protected int vecesVisitado;
 	protected Pista pistaFacil;
+	protected Pista pistaMedia;
 	protected Pista pistaDificil;
 	protected boolean seEscondioElLadron;
 	protected boolean tienenArmas;
@@ -55,6 +56,24 @@ public class Edificio {
 		}
 	}
 	
+	private void verificarConQueFueHerido(PersonajeInvestigador unPersonaje){
+		if (tienenArmas){
+			unPersonaje.restarHoras(5);
+		}
+		if (tienenCuchillos){
+			unPersonaje.restarHoras(3);
+		}
+	}	
+	
+	private void verificarConQueFueHerido(PersonajeSargento unPersonaje){
+		if (tienenArmas){
+			unPersonaje.restarHoras(5);
+		}
+		if (tienenCuchillos){
+			unPersonaje.restarHoras(3);
+		}
+	}	
+	
 	private void verificarSiFueHerido(PersonajeNovato unPersonaje){
 		if (esEdificioDeUltimoPais & seEscondioElLadron==false){
 			verificarConQueFueHerido(unPersonaje);
@@ -62,6 +81,18 @@ public class Edificio {
 	}	
 	
 	private void verificarSiFueHerido(PersonajeDetective unPersonaje){
+		if (esEdificioDeUltimoPais & seEscondioElLadron==false){
+			verificarConQueFueHerido(unPersonaje);
+		}		
+	}
+	
+	private void verificarSiFueHerido(PersonajeInvestigador unPersonaje){
+		if (esEdificioDeUltimoPais & seEscondioElLadron==false){
+			verificarConQueFueHerido(unPersonaje);
+		}		
+	}
+
+	private void verificarSiFueHerido(PersonajeSargento unPersonaje){
 		if (esEdificioDeUltimoPais & seEscondioElLadron==false){
 			verificarConQueFueHerido(unPersonaje);
 		}		
@@ -78,11 +109,30 @@ public class Edificio {
 		this.verificarSiFueHerido(unPersonaje);
 		vecesVisitado += 1;
 		unPersonaje.restarHoras(vecesVisitado);
+		return this.pistaMedia;
+	}
+	
+	public Pista darPistaA(PersonajeInvestigador unPersonaje){
+		this.verificarSiFueHerido(unPersonaje);
+		vecesVisitado += 1;
+		unPersonaje.restarHoras(vecesVisitado);
+		return this.pistaDificil;
+	}
+	
+	public Pista darPistaA(PersonajeSargento unPersonaje){
+		this.verificarSiFueHerido(unPersonaje);
+		vecesVisitado += 1;
+		unPersonaje.restarHoras(vecesVisitado);
 		return this.pistaDificil;
 	}
 	
 	public void agregarPistaFacil(Pista unaPista){
 		this.pistaFacil = unaPista;
+	}
+	
+	public void agregarPistaMedia(Pista unaPista) {
+		this.pistaMedia = unaPista;
+		
 	}
 
 	public void agregarPistaDificil(Pista unaPista){

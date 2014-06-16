@@ -18,12 +18,12 @@ public class RasgoTest {
 	public void deberiaReconocerQueTieneRasgo(){
 		Rasgo rasgo = new Rasgo("Alpinismo");
 		
-		Assert.assertTrue(rasgo.tieneRasgo());
+		Assert.assertTrue(rasgo.hayRasgo());
 	}
 	
 	@Test public void noDeberiaReconocerQueTieneRasgoSiEsAsi(){
 		Rasgo rasgo = new Rasgo(null);
 		
-		Assert.assertFalse(rasgo.tieneRasgo());
+		Assert.assertFalse(rasgo.hayRasgo());
 	}
 }
