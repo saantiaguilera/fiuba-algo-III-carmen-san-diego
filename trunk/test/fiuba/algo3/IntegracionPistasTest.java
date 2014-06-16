@@ -5,18 +5,50 @@ import org.junit.Test;
 
 public class IntegracionPistasTest {
 
+	public PersonajeInvestigador generarInvestigador(){
+		return new PersonajeInvestigador(10, new Pais(1,1, "Argentina"), 5);
+	}
+	
+	public PersonajeSargento generarSargento(){
+		return new PersonajeSargento(10, new Pais(1,1, "Argentina"), 5);
+	}
+	
 	@Test
-	public void DetectiveDeberiaRecibirPistaDificil(){
-		PersonajeDetective personaje= new PersonajeDetective(10,new Pais(1,1,"Argentina"),5);
+	public void SargentoDebeRecibirPistaDificil(){
+		PersonajeSargento sargento = generarSargento();
 		Edificio edificio = new Edificio(false);
-		Pista pistaFacil = new Pista("Pista Facil");
-		Pista pistaDificil = new Pista("Pista Dificil");
+		Pista pistaDificil = new Pista("Pista dificil");
 		
-		edificio.agregarPistaFacil(pistaFacil);
+		edificio.agregarPistaDificil(pistaDificil);
+		Pista pistaRecibida = sargento.pedirPistaA(edificio);
+		
+		Assert.assertEquals("Pista dificil", pistaRecibida.getPista());
+	}
+	
+	@Test
+	public void InvestigadorDebeRecibirPistaDificil(){
+		PersonajeInvestigador personaje = generarInvestigador();
+		Edificio edificio = new Edificio(false);
+		Pista pistaDificil = new Pista("Pista dificil");
+		
 		edificio.agregarPistaDificil(pistaDificil);
 		Pista pistaRecibida = personaje.pedirPistaA(edificio);
 		
-		Assert.assertEquals(pistaRecibida.getPista(), "Pista Dificil");
+		Assert.assertEquals("Pista dificil", pistaRecibida.getPista());
+	}
+	
+	@Test
+	public void DetectiveDeberiaRecibirPistaMedia(){
+		PersonajeDetective personaje= new PersonajeDetective(10,new Pais(1,1,"Argentina"),5);
+		Edificio edificio = new Edificio(false);
+		Pista pistaFacil = new Pista("Pista Facil");
+		Pista pistaMedia = new Pista("Pista Media");
+		
+		edificio.agregarPistaFacil(pistaFacil);
+		edificio.agregarPistaMedia(pistaMedia);
+		Pista pistaRecibida = personaje.pedirPistaA(edificio);
+		
+		Assert.assertEquals(pistaRecibida.getPista(), "Pista Media");
 	}
 	
 	@Test

@@ -20,7 +20,7 @@ public class Rasgo {
 		this.rasgo = rasgo;
 	}
 
-	public boolean tieneRasgo() {
+	public boolean hayRasgo() {
 		return this.rasgo != null;
 	}
 	

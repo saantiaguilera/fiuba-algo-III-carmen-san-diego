@@ -57,32 +57,32 @@ public class Sospechoso {
 	}
 	
 	
-	public boolean coincideRasgosCon(Sospechoso ladron) {
+	public boolean coincideRasgosCon(Sospechoso sospechoso) {
 		int cantidadCoincidencias = 0;
 		int COINCIDENCIAS_MINIMAS = 3;
 		
-		if(ladron.getSexo().tieneRasgo())
-			if(sexo == ladron.getSexo())
+		if(sospechoso.getSexo().hayRasgo())
+			if(sexo == sospechoso.getSexo())
 				cantidadCoincidencias++;
 			else return false;
 		
-		if(ladron.getHobby().tieneRasgo())
-			if(hobby == ladron.getHobby())
+		if(sospechoso.getHobby().hayRasgo())
+			if(hobby == sospechoso.getHobby())
 				cantidadCoincidencias++;
 			else return false;
 		
-		if(ladron.getCabello().tieneRasgo())	
-			if(cabello == ladron.getCabello())
+		if(sospechoso.getCabello().hayRasgo())	
+			if(cabello == sospechoso.getCabello())
 				cantidadCoincidencias++;
 			else return false;
 		
-		if(ladron.getSenia().tieneRasgo())
-			if(senia == ladron.getSenia())
+		if(sospechoso.getSenia().hayRasgo())
+			if(senia == sospechoso.getSenia())
 				cantidadCoincidencias++;
 			else return false;
 		
-		if(ladron.getVehiculo().tieneRasgo())
-			if(vehiculo == ladron.getVehiculo())
+		if(sospechoso.getVehiculo().hayRasgo())
+			if(vehiculo == sospechoso.getVehiculo())
 				cantidadCoincidencias++;
 			else return false;
 		

@@ -1,10 +1,10 @@
 package fiuba.algo3;
 
-public class PersonajeDetective extends Personaje {
-	
-	public PersonajeDetective(int horasMaxima, Pais pais , int velocidad){
+public class PersonajeSargento extends Personaje {
+
+	public PersonajeSargento(int horasMaxima, Pais pais , int velocidad){
 		horasLimite = horasMaxima;
-		this.ubicacion = pais;
+		this.ubicacion= pais ;
 		this.velocidad = velocidad;
 	}
 	
@@ -12,4 +12,5 @@ public class PersonajeDetective extends Personaje {
 		horasLimite -= edificio.vecesVisitado();
 		return edificio.darPistaA(this);
 	}
+
 }

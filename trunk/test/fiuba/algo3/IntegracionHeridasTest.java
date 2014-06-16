@@ -23,8 +23,27 @@ public class IntegracionHeridasTest {
 		edificio.setTienenCuchillos(true);		
 		edificio.darPistaA(personaje);
 		Assert.assertEquals(personaje.horasRestantes(), horasLimite-3-1);	
-
 	}
+	
+	@Test
+	public void heridaCuchilloEnPersonajeInvestigadorRetrasaTresHoras(){
+		int horasLimite = 15;
+		PersonajeInvestigador personaje = new PersonajeInvestigador(horasLimite,new Pais(1,1,"Argentina"),5);
+		Edificio edificio = new Edificio(true);
+		edificio.setTienenCuchillos(true);		
+		edificio.darPistaA(personaje);
+		Assert.assertEquals(personaje.horasRestantes(), horasLimite-3-1);	
+	}	
+	
+	@Test
+	public void heridaCuchilloEnPersonajeSargentoRetrasaTresHoras(){
+		int horasLimite = 15;
+		PersonajeSargento personaje = new PersonajeSargento(horasLimite,new Pais(1,1,"Argentina"),5);
+		Edificio edificio = new Edificio(true);
+		edificio.setTienenCuchillos(true);		
+		edificio.darPistaA(personaje);
+		Assert.assertEquals(personaje.horasRestantes(), horasLimite-3-1);	
+	}	
 	
 	@Test
 	public void heridaBalaEnPersonajeNovatoRetrasaTresHoras(){
@@ -45,4 +64,24 @@ public class IntegracionHeridasTest {
 		edificio.darPistaA(personaje);
 		Assert.assertEquals(personaje.horasRestantes(), horasLimite-5-1);	
 	}
+	
+	@Test
+	public void heridaBalaEnPersonajeInvestigadorRetrasaCincoHoras(){
+		int horasLimite = 15;
+		PersonajeInvestigador personaje = new PersonajeInvestigador(horasLimite,new Pais(1,1,"Argentina"),5);
+		Edificio edificio = new Edificio(true);
+		edificio.setTienenArmas(true);
+		edificio.darPistaA(personaje);
+		Assert.assertEquals(personaje.horasRestantes(), horasLimite-5-1);	
+	}
+	
+	@Test
+	public void heridaBalaEnPersonajeSargentoRetrasaCincoHoras(){
+		int horasLimite = 15;
+		PersonajeSargento personaje = new PersonajeSargento(horasLimite,new Pais(1,1,"Argentina"),5);
+		Edificio edificio = new Edificio(true);
+		edificio.setTienenArmas(true);
+		edificio.darPistaA(personaje);
+		Assert.assertEquals(personaje.horasRestantes(), horasLimite-5-1);	
+	}	
 }
