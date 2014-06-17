@@ -13,8 +13,6 @@ public class Edificio {
 
 	public Edificio(boolean esUltimoEdificio) {
 		vecesVisitado = 0;
-		//pistaFacil = new Pista();
-		//pistaDificil = new Pista();
 		esEdificioDeUltimoPais=esUltimoEdificio;
 		tienenCuchillos=false;
 		tienenArmas=false;

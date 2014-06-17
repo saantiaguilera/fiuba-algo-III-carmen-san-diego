@@ -1,9 +1,9 @@
 package fiuba.algo3;
 
 public abstract class Personaje {
-	int horasLimite;
-	Pais ubicacion;
-	int velocidad;
+	protected int horasLimite;
+	protected Pais ubicacion;
+	protected int velocidad;
 	
 	public void viajarA(Pais destino){
 		horasLimite -= this.calcularTiempo(destino);
