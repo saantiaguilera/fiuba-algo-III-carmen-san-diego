@@ -9,7 +9,6 @@ public class PersonajeSargento extends Personaje {
 	}
 	
 	public Pista pedirPistaA(Edificio edificio){
-		horasLimite -= edificio.vecesVisitado();
 		return edificio.darPistaA(this);
 	}
 
