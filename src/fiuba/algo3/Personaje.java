@@ -1,12 +1,12 @@
 package fiuba.algo3;
 
 public abstract class Personaje {
-	static int horasLimite;
+	int horasLimite;
 	Pais ubicacion;
 	int velocidad;
 	
 	public void viajarA(Pais destino){
-		horasLimite-= this.calcularTiempo(destino);
+		horasLimite -= this.calcularTiempo(destino);
 		this.ubicacion = destino;
 	}
 	
@@ -29,5 +29,12 @@ public abstract class Personaje {
 	
 	public Pais getUbicacion(){
 		return ubicacion;
+	}
+
+	public abstract Pista pedirPistaA(Edificio edificio);
+	
+	public void emitirOrdenA(Jefatura jefatura, Sospechoso sospechoso) {
+		this.restarHoras(3);
+		jefatura.emitirOrden(sospechoso);
 	}
 }

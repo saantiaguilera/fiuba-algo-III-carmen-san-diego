@@ -28,4 +28,11 @@ public class PaisTest {
 		Assert.assertTrue(pais.getNombre() == "Uruguay");
 	}
 	
+	@Test
+	public void deberiaCalcularLaDistanciaConOtroPais(){
+		Pais paisOrigen = new Pais(-2, -1, "Argentina");
+		Pais paisDestino = new Pais(2, 2, "Uruguay");
+		
+		Assert.assertTrue(5 == paisOrigen.calcularDistanciaCon(paisDestino));
+	}
 }

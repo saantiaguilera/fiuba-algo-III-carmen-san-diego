@@ -1,9 +1,32 @@
 package fiuba.algo3;
 
+import java.util.ArrayList;
+
 import org.junit.Assert;
 import org.junit.Test;
 
 public class IntegracionOrdenArrestoTest {
+	
+	public ArrayList<Pais> generarListaPaises(){
+		ArrayList<Pais> listaPaises = new ArrayList<Pais>();
+		listaPaises.add(new Pais(2,2, "Brasil"));
+		listaPaises.add(new Pais(5,5, "Inglaterra"));
+		listaPaises.add(new Pais(3,4, "Sudafrica"));
+		
+		return listaPaises;
+	}
+		
+	public Ladron generarLadron(){
+		Ladron ladron = new Ladron(generarListaPaises(), "Carmen SanDiego");
+		
+		ladron.setSexo(new Rasgo("Femenino"));
+		ladron.setCabello(new Rasgo("Rojo"));
+		ladron.setHobby(new Rasgo("Alpinismo"));
+		ladron.setSenia(new Rasgo("Anillo"));
+		ladron.setVehiculo(new Rasgo("Descapotable"));
+		
+		return ladron;
+	}
 	
 	@Test
 	public void emiteOrdenSiEsCorrecta(){
@@ -12,7 +35,7 @@ public class IntegracionOrdenArrestoTest {
 		Rasgo CABELLO = new Rasgo("Rubio");
 		Rasgo SENIA = new Rasgo("Tatuaje");
 				
-		Sospechoso ladron = new Sospechoso();
+		Ladron ladron = new Ladron();
 		Sospechoso sospechoso = new Sospechoso();
 				
 		ladron.setSexo(SEXO);
@@ -31,7 +54,7 @@ public class IntegracionOrdenArrestoTest {
 	@Test
 	public void noDeberiaEmitirOrdenSiEsIncorrecta(){
 		
-		Sospechoso ladron = new Sospechoso();
+		Ladron ladron = new Ladron();
 		Sospechoso sospechoso = new Sospechoso();	
 		
 		Rasgo HOBBY_LADRON = new Rasgo("Tenis");
@@ -49,7 +72,7 @@ public class IntegracionOrdenArrestoTest {
 	@Test
 	public void coincidirTresRasgosPeroErrarUnoNoDeberiaEmitirOrden(){
 		
-		Sospechoso ladron = new Sospechoso();
+		Ladron ladron = new Ladron();
 		Sospechoso sospechoso = new Sospechoso();
 		
 		ladron.setSexo(new Rasgo("Masculino"));
@@ -66,5 +89,15 @@ public class IntegracionOrdenArrestoTest {
 		jefatura.emitirOrden(sospechoso);
 		
 		Assert.assertFalse(jefatura.ordenEstaEmitida());
+	}
+	
+	@Test
+	public void emitirUnaOrdenRestaTiempo(){
+		PersonajeNovato personaje = new PersonajeNovato(150, new Pais(2,2, "Brasil"), 5);
+		Jefatura jefatura = new Jefatura(generarLadron());
+				
+		personaje.emitirOrdenA(jefatura, new Sospechoso());
+		
+		Assert.assertEquals(147, personaje.horasRestantes());
 	}
 }

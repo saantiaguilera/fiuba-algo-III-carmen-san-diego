@@ -65,5 +65,20 @@ public class IntegracionPistasTest {
 		Assert.assertEquals(pistaRecibida.getPista(), "Pista Facil");
 	}
 
+	@Test
+	public void pedirPistaMultiplesVecesConSargentoRestaMasTiempo(){
+		PersonajeSargento personaje = generarSargento();
+		Edificio edificio = new Edificio(false);
+		
+		personaje.pedirPistaA(edificio);
+		
+		Assert.assertEquals(9, personaje.horasRestantes());	
+		
+		personaje.pedirPistaA(edificio);
+		Assert.assertEquals(7, personaje.horasRestantes());
+		
+		personaje.pedirPistaA(edificio);
+		Assert.assertEquals(4, personaje.horasRestantes());
+	}
 	
 }
