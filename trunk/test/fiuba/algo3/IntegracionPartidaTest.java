@@ -40,7 +40,7 @@ public class IntegracionPartidaTest {
 	}
 	
 	public PersonajeNovato generarPersonajeNovato(){
-		return new PersonajeNovato(HORAS_LIMITE, ARGENTINA);
+		return new PersonajeNovato(HORAS_LIMITE, ARGENTINA , 100);
 	}
 	
 	public Edificio generarBibliotecaConPistaFacilDe(Pais pais){
