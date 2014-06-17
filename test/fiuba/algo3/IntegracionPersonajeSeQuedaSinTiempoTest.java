@@ -11,10 +11,15 @@ public class IntegracionPersonajeSeQuedaSinTiempoTest {
 		Pais primerPais = new Pais(1,2,"Argentina");
 		Pais segundoPais = new Pais(4,5,"Ghana");
 		Pais tercerPais = new Pais(6,7,"Turquia");
-		//Inicializador ladron con una lista de estos 3 paises
-		//Sospechoso ladron= new Sospechoso();
+		Ladron ladron = new Ladron();
+		ladron.agregarPais(primerPais);
+		ladron.agregarPais(segundoPais);
+		ladron.agregarPais(tercerPais);
 		//Jefatura jefatura = new Jefatura(ladron); No lo uso porque no necesito emitir orden
 		PersonajeNovato jugador = new PersonajeNovato(10,primerPais,1);
+		
+		
+
 		
 		
 		Edificio primerEdificio = new Edificio(false);
@@ -24,19 +29,40 @@ public class IntegracionPersonajeSeQuedaSinTiempoTest {
 		segundoEdificio.darPistaA(jugador);
 		tercerEdificio.darPistaA(jugador);
 		jugador.viajarA(segundoPais);
-		//ladron tiene que viajar a el next de su lista
-		//si es el ultimo edificio se setea uno con cuchillo otro con bala y en otro se esconde
+
 		
-		primerEdificio = new Edificio(false);
-		segundoEdificio = new Edificio(false);
-		tercerEdificio = new Edificio(false);
+		
+		
+		if (ladron.esUltimoPais(segundoPais)){		
+			primerEdificio = new Edificio(true);
+			segundoEdificio = new Edificio(true);
+			tercerEdificio = new Edificio(true);
+			ladron.esconderse(primerEdificio, segundoEdificio, tercerEdificio);
+		}
+		else{		
+			primerEdificio = new Edificio(false);
+			segundoEdificio = new Edificio(false);
+			tercerEdificio = new Edificio(false);
+		}
 		primerEdificio.darPistaA(jugador);
 		segundoEdificio.darPistaA(jugador);
 		tercerEdificio.darPistaA(jugador);
 		jugador.viajarA(tercerPais);
-		//ladron tiene que viajar a el next de su lista
-		//si es el ultimo edificio se setea uno con cuchillo otro con bala y en otro se esconde
+
 		
+		
+		
+		if (ladron.esUltimoPais(tercerPais)){	
+			primerEdificio = new Edificio(true);
+			segundoEdificio = new Edificio(true);
+			tercerEdificio = new Edificio(true);
+			ladron.esconderse(primerEdificio, segundoEdificio, tercerEdificio);	
+		}
+		else{		
+			primerEdificio = new Edificio(false);
+			segundoEdificio = new Edificio(false);
+			tercerEdificio = new Edificio(false);
+		}
 		primerEdificio = new Edificio(true);
 		segundoEdificio = new Edificio(true);
 		tercerEdificio = new Edificio(true);
@@ -47,11 +73,5 @@ public class IntegracionPersonajeSeQuedaSinTiempoTest {
 		tercerEdificio.darPistaA(jugador);
 		
 		Assert.assertFalse(jugador.getHorasLimite()>=0);
-		
-		
-		
-		
-	
-	
 	}
 }
