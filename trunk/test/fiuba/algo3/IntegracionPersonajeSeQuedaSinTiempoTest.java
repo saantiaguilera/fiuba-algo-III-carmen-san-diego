@@ -22,9 +22,12 @@ public class IntegracionPersonajeSeQuedaSinTiempoTest {
 
 		
 		
-		Edificio primerEdificio = new Edificio(false);
-		Edificio segundoEdificio = new Edificio(false);
-		Edificio tercerEdificio = new Edificio(false);
+		Edificio primerEdificio = new Edificio();
+		Edificio segundoEdificio = new Edificio();
+		Edificio tercerEdificio = new Edificio();
+		if (ladron.esUltimoPais(jugador.getUbicacion())){
+			ladron.esconderse(primerEdificio,segundoEdificio,tercerEdificio);
+		}
 		primerEdificio.darPistaA(jugador);
 		segundoEdificio.darPistaA(jugador);
 		tercerEdificio.darPistaA(jugador);
@@ -33,16 +36,12 @@ public class IntegracionPersonajeSeQuedaSinTiempoTest {
 		
 		
 		
-		if (ladron.esUltimoPais(segundoPais)){		
-			primerEdificio = new Edificio(true);
-			segundoEdificio = new Edificio(true);
-			tercerEdificio = new Edificio(true);
-			ladron.esconderse(primerEdificio, segundoEdificio, tercerEdificio);
-		}
-		else{		
-			primerEdificio = new Edificio(false);
-			segundoEdificio = new Edificio(false);
-			tercerEdificio = new Edificio(false);
+		
+		primerEdificio = new Edificio();
+		segundoEdificio = new Edificio();
+		tercerEdificio = new Edificio();
+		if (ladron.esUltimoPais(jugador.getUbicacion())){
+			ladron.esconderse(primerEdificio,segundoEdificio,tercerEdificio);
 		}
 		primerEdificio.darPistaA(jugador);
 		segundoEdificio.darPistaA(jugador);
@@ -52,24 +51,14 @@ public class IntegracionPersonajeSeQuedaSinTiempoTest {
 		
 		
 		
-		if (ladron.esUltimoPais(tercerPais)){	
-			primerEdificio = new Edificio(true);
-			segundoEdificio = new Edificio(true);
-			tercerEdificio = new Edificio(true);
-			ladron.esconderse(primerEdificio, segundoEdificio, tercerEdificio);	
+		
+		primerEdificio = new Edificio();
+		segundoEdificio = new Edificio();
+		tercerEdificio = new Edificio();
+		if (ladron.esUltimoPais(jugador.getUbicacion())){
+			ladron.esconderse(primerEdificio,segundoEdificio,tercerEdificio);
 		}
-		else{		
-			primerEdificio = new Edificio(false);
-			segundoEdificio = new Edificio(false);
-			tercerEdificio = new Edificio(false);
-		}
-		primerEdificio = new Edificio(true);
-		segundoEdificio = new Edificio(true);
-		tercerEdificio = new Edificio(true);
-		primerEdificio.setSeEscondioElLadron(true);
-		segundoEdificio.setTienenArmas(true);
-		tercerEdificio.setTienenCuchillos(true);
-		segundoEdificio.darPistaA(jugador);
+		primerEdificio.darPistaA(jugador);
 		tercerEdificio.darPistaA(jugador);
 		
 		Assert.assertFalse(jugador.getHorasLimite()>=0);

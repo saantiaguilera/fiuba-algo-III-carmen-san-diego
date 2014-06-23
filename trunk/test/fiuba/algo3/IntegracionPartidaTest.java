@@ -47,11 +47,11 @@ public class IntegracionPartidaTest {
 		Edificio biblio;
 		
 		if(pais == PARAGUAY){
-			biblio = new Edificio(false);
+			biblio = new Edificio();
 			biblio.agregarPistaFacil(new Pista("Queria ver la triple forntera"));
 		}
 		else{
-			biblio = new Edificio(true);
+			biblio = new Edificio();
 			biblio.agregarPistaFacil(new Pista("Queria ir a la linea ecuatorial. Tenia un anillo"));
 		}
 		
@@ -62,11 +62,11 @@ public class IntegracionPartidaTest {
 		Edificio puerto;
 		
 		if(pais == PARAGUAY){
-			puerto = new Edificio(false);
+			puerto = new Edificio();
 			puerto.agregarPistaFacil(new Pista("Se fue en un auto con la bandera roja, blanca y azul"));
 		}
 		else{
-			puerto = new Edificio(true);
+			puerto = new Edificio();
 			puerto.agregarPistaFacil(new Pista("Bandera amarilla, roja y azul, con un escudo"));
 		}
 		
@@ -77,11 +77,11 @@ public class IntegracionPartidaTest {
 		Edificio banco;
 		
 		if(pais == PARAGUAY){
-			banco = new Edificio(false);
+			banco = new Edificio();
 			banco.agregarPistaFacil(new Pista("Se fue en un auto con la bandera roja, blanca y azul"));
 		}
 		else{
-			banco = new Edificio(true);
+			banco = new Edificio();
 			banco.agregarPistaFacil(new Pista("Bandera amarilla, roja y azul, con un escudo"));
 		}
 		
