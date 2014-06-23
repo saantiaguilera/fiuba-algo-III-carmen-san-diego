@@ -1,9 +1,9 @@
 package fiuba.algo3;
 
 public class Arma {
-	protected int daño;
+	protected int danio;
 	
-	public int dañar(){
-		return daño;
+	public int daniar(){
+		return danio;
 	}
 }

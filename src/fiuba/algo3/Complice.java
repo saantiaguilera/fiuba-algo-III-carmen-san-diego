@@ -12,7 +12,7 @@ public class Complice extends Ladron {
 	public int getHorasARestar(Pais unPais){
 		if (ladron.esUltimoPais(unPais)){
 
-			return arma.dañar();
+			return arma.daniar();
 		}
 		else { return 0;}
 	}
