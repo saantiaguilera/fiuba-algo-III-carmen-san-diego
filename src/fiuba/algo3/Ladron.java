@@ -31,15 +31,21 @@ public class Ladron extends Sospechoso{
 
 	public boolean esUltimoPais(Pais unPais) {
 		int posision=listaPaises.indexOf(unPais);
+		if (posision==0){
+			posision+=1;
+		}
 		if (posision==listaPaises.size()){
 			return true;
 		}
 		else { return false;}
 	}
-
-	public void esconderse(Edificio primerEdificio, Edificio segundoEdificio, Edificio tercerEdificio) {
-		primerEdificio.setSeEscondioElLadron(true);
-		segundoEdificio.setTienenArmas(true);
-		tercerEdificio.setTienenCuchillos(true);
+	
+	public void esconderse(Edificio primerEdificio,Edificio segundoEdificio, Edificio tercerEdificio){
+		Complice unComplice= new Complice(this,new Bala());
+		Complice otroComplice = new Complice(this, new Cuchillo());
+		Complice ladron= new Complice (this, null);
+		primerEdificio.setComplice(unComplice);
+		segundoEdificio.setComplice(ladron);
+		tercerEdificio.setComplice(otroComplice);
 	}
 }

@@ -16,7 +16,7 @@ public class IntegracionPistasTest {
 	@Test
 	public void SargentoDebeRecibirPistaDificil(){
 		PersonajeSargento sargento = generarSargento();
-		Edificio edificio = new Edificio(false);
+		Edificio edificio = new Edificio();
 		Pista pistaDificil = new Pista("Pista dificil");
 		
 		edificio.agregarPistaDificil(pistaDificil);
@@ -28,7 +28,7 @@ public class IntegracionPistasTest {
 	@Test
 	public void InvestigadorDebeRecibirPistaDificil(){
 		PersonajeInvestigador personaje = generarInvestigador();
-		Edificio edificio = new Edificio(false);
+		Edificio edificio = new Edificio();
 		Pista pistaDificil = new Pista("Pista dificil");
 		
 		edificio.agregarPistaDificil(pistaDificil);
@@ -40,7 +40,7 @@ public class IntegracionPistasTest {
 	@Test
 	public void DetectiveDeberiaRecibirPistaMedia(){
 		PersonajeDetective personaje= new PersonajeDetective(10,new Pais(1,1,"Argentina"),5);
-		Edificio edificio = new Edificio(false);
+		Edificio edificio = new Edificio();
 		Pista pistaFacil = new Pista("Pista Facil");
 		Pista pistaMedia = new Pista("Pista Media");
 		
@@ -54,7 +54,7 @@ public class IntegracionPistasTest {
 	@Test
 	public void NovatoDebeRecibirPistaFacil(){
 		PersonajeNovato personaje = new PersonajeNovato(10,new Pais(1,1,"Argentina"),1);
-		Edificio edificio = new Edificio(false);
+		Edificio edificio = new Edificio();
 		Pista pistaFacil = new Pista("Pista Facil");
 		Pista pistaDificil = new Pista("Pista Dificil");
 		
@@ -68,7 +68,7 @@ public class IntegracionPistasTest {
 	@Test
 	public void pedirPistaMultiplesVecesConSargentoRestaMasTiempo(){
 		PersonajeSargento personaje = generarSargento();
-		Edificio edificio = new Edificio(false);
+		Edificio edificio = new Edificio();
 		
 		personaje.pedirPistaA(edificio);
 		

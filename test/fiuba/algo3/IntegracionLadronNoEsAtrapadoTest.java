@@ -33,12 +33,12 @@ public class IntegracionLadronNoEsAtrapadoTest {
 		Edificio biblio;
 		
 		if(pais.getNombre() == "Argentina"){
-			biblio = new Edificio(false);
+			biblio = new Edificio();
 			biblio.agregarPistaMedia(new Pista("Queria ver la triple forntera. Tenia un anillo"));
 		}
 		else{
-			biblio = new Edificio(true);
-			biblio.setTienenArmas(true);
+			biblio = new Edificio();
+			//biblio.setTienenArmas(true);
 			biblio.agregarPistaMedia(new Pista("La banda esta cerca, podrian lastimarte"));
 		}
 		
@@ -49,12 +49,12 @@ public class IntegracionLadronNoEsAtrapadoTest {
 		Edificio puerto;
 		
 		if(pais.getNombre() == "Argentina"){
-			puerto = new Edificio(false);
+			puerto = new Edificio();
 			puerto.agregarPistaMedia(new Pista("Se fue en un auto con la bandera verde, amarilla y azul. Era una mujer"));
 		}
 		else{
-			puerto = new Edificio(true);
-			puerto.setTienenCuchillos(true);
+			puerto = new Edificio();
+			//puerto.setTienenCuchillos(true);
 			puerto.agregarPistaMedia(new Pista("La banda esta cerca, podrian lastimarte"));
 		}
 		
@@ -65,12 +65,12 @@ public class IntegracionLadronNoEsAtrapadoTest {
 		Edificio banco;
 		
 		if(pais.getNombre() == "Argentina"){
-			banco = new Edificio(false);
+			banco = new Edificio();
 			banco.agregarPistaMedia(new Pista("Se fue en un auto con la bandera verde, amarilla y azul. Tenia el pelo rojo"));
 		}
 		else{
-			banco = new Edificio(true);
-			banco.setSeEscondioElLadron(true);
+			banco = new Edificio();
+			//banco.setSeEscondioElLadron(true);
 			banco.agregarPistaMedia(new Pista("Alli esa el ladron"));
 		}
 		
