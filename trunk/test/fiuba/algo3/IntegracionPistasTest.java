@@ -1,21 +1,34 @@
 package fiuba.algo3;
 
+import java.io.File;
+import java.io.IOException;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.Document;
+import org.xml.sax.SAXException;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class IntegracionPistasTest {
 
-	public PersonajeInvestigador generarInvestigador(){
-		return new PersonajeInvestigador(10, new Pais(1,1, "Argentina"), 5);
-	}
+	PersonajeSargento sargento;
+	PersonajeInvestigador investigador;
+	PersonajeDetective detective;
+	PersonajeNovato novato;
 	
-	public PersonajeSargento generarSargento(){
-		return new PersonajeSargento(10, new Pais(1,1, "Argentina"), 5);
+	public IntegracionPistasTest(){
+		this.sargento = new PersonajeSargento(10, new Pais(1,1, "Argentina"), 5);
+		this.investigador = new PersonajeInvestigador(10, new Pais(1,1, "Argentina"), 5);
+		this.detective = new PersonajeDetective(10, new Pais(1,1, "Argentina"), 5);
+		this.novato = new PersonajeNovato(10, new Pais(1,1, "Argentina"), 5);
 	}
-	
+			
 	@Test
 	public void SargentoDebeRecibirPistaDificil(){
-		PersonajeSargento sargento = generarSargento();
+		PersonajeSargento sargento = this.sargento;
 		Edificio edificio = new Edificio();
 		Pista pistaDificil = new Pista("Pista dificil");
 		
@@ -27,7 +40,7 @@ public class IntegracionPistasTest {
 	
 	@Test
 	public void InvestigadorDebeRecibirPistaDificil(){
-		PersonajeInvestigador personaje = generarInvestigador();
+		PersonajeInvestigador personaje = this.investigador;
 		Edificio edificio = new Edificio();
 		Pista pistaDificil = new Pista("Pista dificil");
 		
@@ -67,7 +80,7 @@ public class IntegracionPistasTest {
 
 	@Test
 	public void pedirPistaMultiplesVecesConSargentoRestaMasTiempo(){
-		PersonajeSargento personaje = generarSargento();
+		PersonajeSargento personaje = this.sargento;
 		Edificio edificio = new Edificio();
 		
 		personaje.pedirPistaA(edificio);
@@ -81,4 +94,83 @@ public class IntegracionPistasTest {
 		Assert.assertEquals(4, personaje.horasRestantes());
 	}
 	
+	@Test
+	public void pedirPistaMultiplesVecesConInvestigadorRestaMasTiempo(){
+		PersonajeInvestigador personaje = this.investigador;
+		Edificio edificio = new Edificio();
+		
+		personaje.pedirPistaA(edificio);
+		
+		Assert.assertEquals(9, personaje.horasRestantes());	
+		
+		personaje.pedirPistaA(edificio);
+		Assert.assertEquals(7, personaje.horasRestantes());
+		
+		personaje.pedirPistaA(edificio);
+		Assert.assertEquals(4, personaje.horasRestantes());
+	}
+	
+	@Test
+	public void pedirPistaMultiplesVecesConDetectiveRestaMasTiempo(){
+		PersonajeDetective personaje = this.detective;
+		Edificio edificio = new Edificio();
+		
+		personaje.pedirPistaA(edificio);
+		
+		Assert.assertEquals(9, personaje.horasRestantes());	
+		
+		personaje.pedirPistaA(edificio);
+		Assert.assertEquals(7, personaje.horasRestantes());
+		
+		personaje.pedirPistaA(edificio);
+		Assert.assertEquals(4, personaje.horasRestantes());
+	}
+	
+	@Test
+	public void pedirPistaMultiplesVecesConNovatoRestaMasTiempo(){
+		PersonajeNovato personaje = this.novato;
+		Edificio edificio = new Edificio();
+		
+		personaje.pedirPistaA(edificio);
+		
+		Assert.assertEquals(9, personaje.horasRestantes());	
+		
+		personaje.pedirPistaA(edificio);
+		Assert.assertEquals(7, personaje.horasRestantes());
+		
+		personaje.pedirPistaA(edificio);
+		Assert.assertEquals(4, personaje.horasRestantes());
+	}
+	
+	@Test
+	public void paisDeberiaHidratarseConSusPistas() throws ParserConfigurationException, SAXException, IOException{
+		File paisesXML = new File("paises.xml");
+		Assert.assertTrue(paisesXML.exists());
+		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+		Document doc = dBuilder.parse(paisesXML);
+		doc.getDocumentElement().normalize();
+		
+		Pais pais = Pais.hidratar(doc, "Argentina", "Paraguay");
+		Pista pista = pais.biblioteca.darPistaA(this.sargento);
+		
+		Assert.assertNotNull(pista);
+	}
+	
+	@Test
+	public void piasDeberiaHidratarseConPistasIncorrectas() throws ParserConfigurationException, SAXException, IOException{
+		File paisesXML = new File("paises.xml");
+		Assert.assertTrue(paisesXML.exists());
+		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+		Document doc = dBuilder.parse(paisesXML);
+		doc.getDocumentElement().normalize();
+		
+		Pais pais = Pais.hidratar(doc, "Argentina", null);
+		Pista pista = pais.biblioteca.darPistaA(this.sargento);
+		String noFueVisto = "Lo siento, no hemos visto a esa persona";
+		
+		Assert.assertEquals(noFueVisto, pista.getPista());
+	}
 }
+

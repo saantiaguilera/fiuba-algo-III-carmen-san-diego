@@ -1,0 +1,80 @@
+<Paises>
+	<Pais nombre="Argentina" coordX="-2000" coordY="-4000">
+		<Edificio tipo="biblioteca">
+			<Pista tipo="dificil" pista="Arg, biblio, dif">
+			</Pista>
+			<Pista tipo="media" pista="Arg, biblio, med">
+			</Pista>
+			<Pista tipo="facil" pista="Arg, biblio, fac">
+			</Pista>
+		</Edificio>
+		<Edificio tipo="puerto">
+			<Pista tipo="dificil" pista="Arg, puerto, dif">
+			</Pista>
+			<Pista tipo="media" pista="Arg, puerto, med">
+			</Pista>
+			<Pista tipo="facil" pista="Arg, puerto, fac">
+			</Pista>
+		</Edificio>
+		<Edificio tipo="banco">
+			<Pista tipo="dificil" pista="Arg, banco, dif">
+			</Pista>
+			<Pista tipo="media" pista="Arg, banco, med">
+			</Pista>
+			<Pista tipo="facil" pista="Arg, banco, fac">
+			</Pista>
+		</Edificio>
+	</Pais>
+	<Pais nombre="Paraguay" coordX="-2000" coordY="-3000">
+		<Edificio tipo="biblioteca">
+			<Pista tipo="dificil" pista="Par, biblio, dif">
+			</Pista>
+			<Pista tipo="media" pista="Par, biblio, med">
+			</Pista>
+			<Pista tipo="facil" pista="Par, biblio, fac">
+			</Pista>
+		</Edificio>
+		<Edificio tipo="puerto">
+			<Pista tipo="dificil" pista="Par, puerto, dif">
+			</Pista>
+			<Pista tipo="media" pista="Par, puerto, med">
+			</Pista>
+			<Pista tipo="facil" pista="Par, puerto, fac">
+			</Pista>
+		</Edificio>
+		<Edificio tipo="banco">
+			<Pista tipo="dificil" pista="Par, banco, dif">
+			</Pista>
+			<Pista tipo="media" pista="Par, banco, med">
+			</Pista>
+			<Pista tipo="facil" pista="Par, banco, fac">
+			</Pista>
+		</Edificio>
+	</Pais>
+	<Pais nombre="Ecuador" coordX="-4000" coordY="0">
+		<Edificio tipo="biblioteca">
+			<Pista tipo="dificil" pista="Ecu, biblio, dif">
+			</Pista>
+			<Pista tipo="media" pista="Ecu, biblio, med">
+			</Pista>
+			<Pista tipo="facil" pista="Ecu, biblio, fac">
+			</Pista>
+		</Edificio>
+		<Edificio tipo="puerto">
+			<Pista tipo="dificil" pista="Ecu, puerto, dif">
+			</Pista>
+			<Pista tipo="media" pista="Ecu, puerto, med">
+			</Pista>
+			<Pista tipo="facil" pista="Ecu, puerto, fac">
+			</Pista>
+		</Edificio>
+		<Edificio tipo="banco">
+			<Pista tipo="dificil" pista="Ecu, banco, dif">
+			</Pista>
+			<Pista tipo="media" pista="Ecu, banco, med">
+			</Pista>
+			<Pista tipo="facil" pista="Ecu, banco, fac">
+			</Pista>
+		</Edificio>
+	</Pais>
+</Paises>

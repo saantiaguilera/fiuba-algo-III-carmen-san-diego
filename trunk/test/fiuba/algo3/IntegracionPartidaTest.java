@@ -15,7 +15,7 @@ public class IntegracionPartidaTest {
 		HORAS_LIMITE = 150;
 		ARGENTINA = new Pais(-2000, -4000, "Argentina");
 		PARAGUAY = new Pais(-2000, -3000, "Paraguay");
-		ECUADOR = new Pais(0, -4000, "Ecuador");
+		ECUADOR = new Pais(-4000, 0, "Ecuador");
 	}
 	
 	public ArrayList<Pais> generarListaPaises(){
@@ -129,7 +129,7 @@ public class IntegracionPartidaTest {
 		
 		personaje.viajarA(ECUADOR);
 		
-		Assert.assertEquals(136, personaje.horasRestantes());	
+		Assert.assertEquals(135, personaje.horasRestantes());	
 		Assert.assertTrue(jefatura.ordenEstaEmitida());
 		
 	}
