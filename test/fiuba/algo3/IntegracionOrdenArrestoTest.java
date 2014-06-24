@@ -98,6 +98,6 @@ public class IntegracionOrdenArrestoTest {
 				
 		personaje.emitirOrdenA(jefatura, new Sospechoso());
 		
-		Assert.assertEquals(147, personaje.horasRestantes());
+		Assert.assertEquals(147, personaje.getHorasRestantes());
 	}
 }

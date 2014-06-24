@@ -107,7 +107,7 @@ public class IntegracionLadronNoEsAtrapadoTest {
 		
 		Assert.assertTrue(personaje.getUbicacion().getNombre() == "Brasil");
 		Assert.assertTrue(banco.vecesVisitado() == 1);
-		Assert.assertTrue(personaje.getHorasLimite() >= 0);
+		Assert.assertTrue(personaje.getHorasRestantes() >= 0);
 		Assert.assertFalse(jefatura.ordenEstaEmitida());
 		}
 
@@ -142,7 +142,7 @@ public class IntegracionLadronNoEsAtrapadoTest {
 		
 		Assert.assertTrue(personaje.getUbicacion().getNombre() == "Brasil");
 		Assert.assertTrue(banco.vecesVisitado() == 1);
-		Assert.assertTrue(personaje.getHorasLimite() >= 0);
+		Assert.assertTrue(personaje.getHorasRestantes() >= 0);
 		Assert.assertFalse(jefatura.ordenEstaEmitida());
 	}
 
@@ -174,7 +174,7 @@ public class IntegracionLadronNoEsAtrapadoTest {
 		personaje.pedirPistaA(puerto);
 		
 		Assert.assertTrue(personaje.getUbicacion().getNombre() == "Brasil");
-		Assert.assertTrue(personaje.getHorasLimite() >= 0);
+		Assert.assertTrue(personaje.getHorasRestantes() >= 0);
 		Assert.assertFalse(jefatura.ordenEstaEmitida());
 		
 		Assert.assertTrue(banco.vecesVisitado() == 0);
