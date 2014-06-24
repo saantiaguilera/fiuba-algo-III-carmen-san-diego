@@ -85,13 +85,13 @@ public class IntegracionPistasTest {
 		
 		personaje.pedirPistaA(edificio);
 		
-		Assert.assertEquals(9, personaje.horasRestantes());	
+		Assert.assertEquals(9, personaje.getHorasRestantes());	
 		
 		personaje.pedirPistaA(edificio);
-		Assert.assertEquals(7, personaje.horasRestantes());
+		Assert.assertEquals(7, personaje.getHorasRestantes());
 		
 		personaje.pedirPistaA(edificio);
-		Assert.assertEquals(4, personaje.horasRestantes());
+		Assert.assertEquals(4, personaje.getHorasRestantes());
 	}
 	
 	@Test
@@ -101,13 +101,13 @@ public class IntegracionPistasTest {
 		
 		personaje.pedirPistaA(edificio);
 		
-		Assert.assertEquals(9, personaje.horasRestantes());	
+		Assert.assertEquals(9, personaje.getHorasRestantes());	
 		
 		personaje.pedirPistaA(edificio);
-		Assert.assertEquals(7, personaje.horasRestantes());
+		Assert.assertEquals(7, personaje.getHorasRestantes());
 		
 		personaje.pedirPistaA(edificio);
-		Assert.assertEquals(4, personaje.horasRestantes());
+		Assert.assertEquals(4, personaje.getHorasRestantes());
 	}
 	
 	@Test
@@ -117,13 +117,13 @@ public class IntegracionPistasTest {
 		
 		personaje.pedirPistaA(edificio);
 		
-		Assert.assertEquals(9, personaje.horasRestantes());	
+		Assert.assertEquals(9, personaje.getHorasRestantes());	
 		
 		personaje.pedirPistaA(edificio);
-		Assert.assertEquals(7, personaje.horasRestantes());
+		Assert.assertEquals(7, personaje.getHorasRestantes());
 		
 		personaje.pedirPistaA(edificio);
-		Assert.assertEquals(4, personaje.horasRestantes());
+		Assert.assertEquals(4, personaje.getHorasRestantes());
 	}
 	
 	@Test
@@ -132,14 +132,15 @@ public class IntegracionPistasTest {
 		Edificio edificio = new Edificio();
 		
 		personaje.pedirPistaA(edificio);
-		
-		Assert.assertEquals(9, personaje.horasRestantes());	
-		
-		personaje.pedirPistaA(edificio);
-		Assert.assertEquals(7, personaje.horasRestantes());
+
+		Assert.assertEquals(9, personaje.getHorasRestantes());	
 		
 		personaje.pedirPistaA(edificio);
-		Assert.assertEquals(4, personaje.horasRestantes());
+
+		Assert.assertEquals(7, personaje.getHorasRestantes());
+		
+		personaje.pedirPistaA(edificio);
+		Assert.assertEquals(4, personaje.getHorasRestantes());
 	}
 	
 	@Test

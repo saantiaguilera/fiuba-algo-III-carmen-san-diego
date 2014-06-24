@@ -61,6 +61,6 @@ public class IntegracionPersonajeSeQuedaSinTiempoTest {
 		primerEdificio.darPistaA(jugador);
 		tercerEdificio.darPistaA(jugador);
 		
-		Assert.assertFalse(jugador.getHorasLimite()>=0);
+		Assert.assertFalse(jugador.getHorasRestantes()>=0);
 	}
 }

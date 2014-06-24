@@ -19,7 +19,8 @@ public class IntegracionHeridasTest {
 		Complice complice= new Complice(ladron,cuchillo);
 		edificio.setComplice(complice);
 		edificio.darPistaA(personaje);
-		Assert.assertEquals(personaje.horasRestantes(), horasLimite-2-1);	
+		
+		Assert.assertEquals(personaje.getHorasRestantes(), horasLimite-2-1);	
 	}
 		
 	@Test
@@ -34,6 +35,6 @@ public class IntegracionHeridasTest {
 		Complice complice= new Complice(ladron,bala);
 		edificio.setComplice(complice);
 		edificio.darPistaA(personaje);
-		Assert.assertEquals(personaje.horasRestantes(), horasLimite-4-1);	
+		Assert.assertEquals(personaje.getHorasRestantes(), horasLimite-4-1);	
 	}
 }

@@ -12,7 +12,7 @@ public class PersonajeSargentoTest {
 	public void deberiaDevolverHorasLimiteCorrectas() {
 		PersonajeSargento personaje = new PersonajeSargento(10,new Pais(1,1,"Argentina"),5);
 		
-		Assert.assertTrue(personaje.horasRestantes() == 10);
+		Assert.assertTrue(personaje.getHorasRestantes() == 10);
 	}
 
 	@Test
@@ -28,6 +28,6 @@ public class PersonajeSargentoTest {
 		PersonajeSargento personaje = new PersonajeSargento(10,new Pais(1,1,"Argentina"),5);	
 		personaje.restarHoras(7);
 	
-		Assert.assertTrue(personaje.horasRestantes() == 3);
+		Assert.assertTrue(personaje.getHorasRestantes() == 3);
 	}
 }
