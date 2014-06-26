@@ -6,9 +6,6 @@ import org.w3c.dom.NodeList;
 
 public class Edificio {
 	protected int vecesVisitado;
-	protected Pista pistaFacil;
-	protected Pista pistaMedia;
-	protected Pista pistaDificil;
 	protected Complice complice;
 	
 
@@ -22,43 +19,40 @@ public class Edificio {
 		unPersonaje.restarHoras(complice.getHorasARestar(unPersonaje.getUbicacion()));
 		vecesVisitado += 1;
 		unPersonaje.restarHoras(vecesVisitado);
-		return this.pistaFacil;
+		return complice.darPistaFacil();
 	}
 	
 	public Pista darPistaA(PersonajeDetective unPersonaje){
 		unPersonaje.restarHoras(complice.getHorasARestar(unPersonaje.getUbicacion()));
 		vecesVisitado += 1;
 		unPersonaje.restarHoras(vecesVisitado);
-		return this.pistaMedia;
+		return complice.darPistaMedia();
 	}
 	
 	public Pista darPistaA(PersonajeInvestigador unPersonaje){
 		unPersonaje.restarHoras(complice.getHorasARestar(unPersonaje.getUbicacion()));
 		vecesVisitado += 1;
 		unPersonaje.restarHoras(vecesVisitado);
-		return this.pistaDificil;
+		return complice.darPistaDificil();
 	}
 	
 	public Pista darPistaA(PersonajeSargento unPersonaje){
 		unPersonaje.restarHoras(complice.getHorasARestar(unPersonaje.getUbicacion()));
 		vecesVisitado += 1;
 		unPersonaje.restarHoras(vecesVisitado);
-		return complice.devolverPistaDificil();
-		//El complice debe tener el atributo Pista
-		// Testigo complices!
+		return complice.darPistaDificil();
 	}
 	
 	public void agregarPistaFacil(Pista unaPista){
-		complice.setPisa(unaPista);
+		complice.agregarPistaFacil(unaPista);
 	}
 	
 	public void agregarPistaMedia(Pista unaPista) {
-		this.pistaMedia = unaPista;
-		
+		complice.agregarPistaMedia(unaPista);		
 	}
 
 	public void agregarPistaDificil(Pista unaPista){
-		this.pistaDificil = unaPista;
+		complice.agregarPistaDificil(unaPista);
 	}
 	
 	public int vecesVisitado() {
