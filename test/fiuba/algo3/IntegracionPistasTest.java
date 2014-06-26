@@ -159,7 +159,7 @@ public class IntegracionPistasTest {
 	}
 	
 	@Test
-	public void piasDeberiaHidratarseConPistasIncorrectas() throws ParserConfigurationException, SAXException, IOException{
+	public void piasPuedeHidratarseConPistasIncorrectas() throws ParserConfigurationException, SAXException, IOException{
 		File paisesXML = new File("paises.xml");
 		Assert.assertTrue(paisesXML.exists());
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -173,5 +173,7 @@ public class IntegracionPistasTest {
 		
 		Assert.assertEquals(noFueVisto, pista.getPista());
 	}
+	
+	
 }
 

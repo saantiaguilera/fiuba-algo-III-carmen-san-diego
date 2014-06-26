@@ -9,7 +9,7 @@ import org.w3c.dom.NodeList;
 public class Tesoros {
 	protected ArrayList<ObjetoRaro> tesorosRaros;
 	protected ArrayList<ObjetoExotico> tesorosExoticos;
-	protected ArrayList<ObjetoLegendario>tesorosLegendarios;
+	protected ArrayList<ObjetoLegendario> tesorosLegendarios;
 
 	public Tesoros(Document doc){
 		tesorosRaros = new ArrayList<ObjetoRaro>();
