@@ -7,6 +7,10 @@ import org.junit.Test;
 
 public class IntegracionHeridasTest {
 	
+	public void eliminarEsteMetodo(){
+		//Quiero probar un commit
+	}
+	
 	@Test
 	public void heridaCuchilloEnPersonajeNovatoRetrasaDosHoras(){
 		int horasLimite = 15;
