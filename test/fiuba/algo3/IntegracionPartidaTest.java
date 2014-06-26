@@ -101,10 +101,10 @@ public class IntegracionPartidaTest {
 		personaje.pedirPistaA(biblioteca);
 		personaje.pedirPistaA(puerto);
 		personaje.pedirPistaA(banco);
-		
+		System.out.println ("Mensaje a mostrar");
 		personaje.viajarA(PARAGUAY);
-		
-		Assert.assertEquals(146, personaje.horasRestantes());
+		System.out.println(personaje.getHorasRestantes());
+		Assert.assertEquals(146, personaje.getHorasRestantes());
 		
 		biblioteca = generarBibliotecaConPistaFacilDe(ECUADOR);
 		puerto = generarPuertoConPistaFacilDe(ECUADOR);
@@ -116,8 +116,8 @@ public class IntegracionPartidaTest {
 		
 		Assert.assertEquals(1, banco.vecesVisitado());
 		personaje.pedirPistaA(banco);
-				
-		Assert.assertEquals(141, personaje.horasRestantes());
+		
+		Assert.assertEquals(141, personaje.getHorasRestantes());
 		
 		Sospechoso sospechoso = new Sospechoso();
 		sospechoso.setSexo(new Rasgo("Femenino"));
@@ -129,7 +129,8 @@ public class IntegracionPartidaTest {
 		
 		personaje.viajarA(ECUADOR);
 		
-		Assert.assertEquals(135, personaje.horasRestantes());	
+		
+		Assert.assertEquals(127, personaje.getHorasRestantes());	
 		Assert.assertTrue(jefatura.ordenEstaEmitida());
 		
 	}

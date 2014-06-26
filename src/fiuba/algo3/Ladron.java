@@ -1,20 +1,30 @@
 package fiuba.algo3;
 
 import java.util.ArrayList;
+import java.util.Random;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
 
 public class Ladron extends Sospechoso{
 	
 	protected ArrayList<Pais> listaPaises;
 	protected String nombre;
 	
+	public Ladron(Tesoros tesoro){
+		Random rnd = new Random();
+	}
+	
 	public Ladron(){
+		super();
 		this.listaPaises = new ArrayList<Pais>();
 		this.nombre = null;
 	}
-	
-	public Ladron(ArrayList<Pais> listaPaises, String nombre){
+	public Ladron(ArrayList<Pais> listaPaises, String unNombre){
+		super();
 		this.listaPaises = listaPaises;
-		this.nombre = nombre;
+		this.nombre = unNombre;
 	}
 	
 	public void agregarPais(Pais pais){
@@ -27,6 +37,10 @@ public class Ladron extends Sospechoso{
 
 	public String getNombre(){
 		return nombre;
+	}
+	
+	public void setNombre(String unNombre){
+		this.nombre = unNombre;
 	}
 
 	public boolean esUltimoPais(Pais unPais) {
@@ -48,4 +62,20 @@ public class Ladron extends Sospechoso{
 		segundoEdificio.setComplice(ladron);
 		tercerEdificio.setComplice(otroComplice);
 	}
+	
+	public static Ladron Hidratar(Document doc, int numeroDeSospechoso){
+		Ladron ladron = new Ladron();
+		NodeList nodos = doc.getElementsByTagName("Sospechoso");
+
+		Element elementoNodo =(Element)nodos.item(numeroDeSospechoso);
+		ladron.setNombre(elementoNodo.getAttribute("nombre"));
+		ladron.setSexo(new Rasgo(elementoNodo.getAttribute("sexo")));
+		ladron.setHobby(new Rasgo(elementoNodo.getAttribute("hobby")));
+		ladron.setCabello(new Rasgo((String)elementoNodo.getAttribute("cabello")));
+		ladron.setSenia(new Rasgo(elementoNodo.getAttribute("senia")));
+		ladron.setVehiculo(new Rasgo(elementoNodo.getAttribute("vehiculo")));
+		
+		return ladron;
+	}
+	
 }

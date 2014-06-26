@@ -43,11 +43,13 @@ public class Edificio {
 		unPersonaje.restarHoras(complice.getHorasARestar(unPersonaje.getUbicacion()));
 		vecesVisitado += 1;
 		unPersonaje.restarHoras(vecesVisitado);
-		return this.pistaDificil;
+		return complice.devolverPistaDificil();
+		//El complice debe tener el atributo Pista
+		// Testigo complices!
 	}
 	
 	public void agregarPistaFacil(Pista unaPista){
-		this.pistaFacil = unaPista;
+		complice.setPisa(unaPista);
 	}
 	
 	public void agregarPistaMedia(Pista unaPista) {

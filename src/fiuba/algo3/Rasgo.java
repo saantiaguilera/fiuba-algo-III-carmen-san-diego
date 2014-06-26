@@ -11,7 +11,7 @@ public class Rasgo {
 	public Rasgo() {
 		this.rasgo = null;
 	}
-
+	
 	public String getRasgo() {
 		return rasgo;
 	}
