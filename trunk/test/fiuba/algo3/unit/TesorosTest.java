@@ -31,7 +31,9 @@ public class TesorosTest {
 		Tesoro = new Tesoros(doc);
 		
 		
-		Assert.assertTrue(Tesoro.getCantidadDeTesoros()>0);
+		Assert.assertTrue(Tesoro.getCantidadDeTesorosRaros()>0);
+		Assert.assertTrue(Tesoro.getCantidadDeTesorosExoticos()>0);
+		Assert.assertTrue(Tesoro.getCantidadDeTesorosLegendarios()>0);
 		
 		
 	}

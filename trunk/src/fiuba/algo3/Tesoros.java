@@ -43,15 +43,15 @@ public class Tesoros {
 		}	
 	}
 		
-	public ObjetoValioso obtenerObjetoRaro(int posision){
+	public ObjetoRaro obtenerObjetoRaro(int posision){
 		return tesorosRaros.get(posision);
 	}
 	
-	public ObjetoValioso obtenerObjetoExotico(int posision){
+	public ObjetoExotico obtenerObjetoExotico(int posision){
 		return tesorosExoticos.get(posision);
 	}
 	
-	public ObjetoValioso obtenerObjetoLegendario(int posision){
+	public ObjetoLegendario obtenerObjetoLegendario(int posision){
 		return tesorosLegendarios.get(posision);
 	}
 	
