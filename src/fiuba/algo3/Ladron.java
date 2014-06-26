@@ -13,9 +13,33 @@ public class Ladron extends Sospechoso{
 	protected String nombre;
 	
 	public Ladron(Tesoros tesoro){
-		Random rnd = new Random();
+		listaPaises = new ArrayList<Pais>();
+		robarUnTesoroRandom(tesoro);
+		this.nombre = null;
 	}
 	
+	private void robarUnTesoroRandom(Tesoros tesoro) {
+		Random rnd = new Random();
+		int tipoDeObjeto = rnd.nextInt(3);
+		switch (tipoDeObjeto){
+		case 0:
+			int unaPosision = rnd.nextInt(tesoro.getCantidadDeTesorosRaros());
+			ObjetoRaro unObjetoRobado = tesoro.obtenerObjetoRaro(unaPosision);
+			//Hace dispatch con el objeto
+			break;
+		case 1:
+			int otraPosision = rnd.nextInt(tesoro.getCantidadDeTesorosExoticos());
+			ObjetoExotico otroObjetoRobado = tesoro.obtenerObjetoExotico(otraPosision);
+			//Hace dispatch con el objeto
+			break;			
+		case 2:
+			int otraPosisionMas = rnd.nextInt(tesoro.getCantidadDeTesorosLegendarios());
+			ObjetoLegendario otroObjetoRobadoMas = tesoro.obtenerObjetoLegendario(otraPosisionMas);
+			//Hace dispatch con el objeto
+			break;
+		}	
+	}
+
 	public Ladron(){
 		super();
 		this.listaPaises = new ArrayList<Pais>();
