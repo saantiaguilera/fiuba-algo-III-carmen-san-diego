@@ -1,9 +1,17 @@
 package fiuba.algo3.unit;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.w3c.dom.Document;
+import org.xml.sax.SAXException;
 
 import fiuba.algo3.Ladron;
 import fiuba.algo3.Pais;
@@ -76,4 +84,41 @@ public class LadronTest {
 		
 		Assert.assertTrue(ladron.coincideRasgosCon(sospechoso));
 	}
+	
+	@Test
+	public void deberiaHidratarseConElLadronNickBrunch() throws ParserConfigurationException, SAXException, IOException{
+		File sospechososXML = new File("sospechosos.xml");
+		Assert.assertTrue(sospechososXML.exists());
+		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+		DocumentBuilder db = dbf.newDocumentBuilder();
+		Document doc = db.newDocument();
+		doc = db.parse(sospechososXML);
+		doc.getDocumentElement().normalize();
+		
+		Ladron ladronCargado = Ladron.Hidratar(doc, 0);
+		
+		Assert.assertNotNull(ladronCargado);
+		Assert.assertEquals( "Nick Brunch" , ladronCargado.getNombre());
+		
+	}
+	
+	@Test
+	public void deberiaHidratarseConElLadronConRasgos() throws ParserConfigurationException, SAXException, IOException{
+		File sospechososXML = new File("sospechosos.xml");
+		Assert.assertTrue(sospechososXML.exists());
+		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+		DocumentBuilder db = dbf.newDocumentBuilder();
+		Document doc = db.newDocument();
+		doc = db.parse(sospechososXML);
+		doc.getDocumentElement().normalize();
+		
+		Ladron ladronCargado = Ladron.Hidratar(doc, 1);
+		
+		Assert.assertNotNull(ladronCargado);
+		
+		Assert.assertEquals( "rojo" , ladronCargado.getCabello().getRasgo());
+		Assert.assertEquals( "tatuaje" , ladronCargado.getSenia().getRasgo());
+		Assert.assertEquals( "convertible" , ladronCargado.getVehiculo().getRasgo());
+	}
 }
+
