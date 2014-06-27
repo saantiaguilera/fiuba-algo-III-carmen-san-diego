@@ -1,8 +1,8 @@
 <Rasgos>
 	<Sexo opcion1="hombre" opcion2="mujer"></Sexo>
-	<Hobby opcion1="alpinismo" opcion2="croquet" opcion3="tenis"></Hobby>
-	<Cabello opcion1="negro" opcion2="colorado" opcion3="rubio" opcion4="castanio"></Cabello>
-	<Senia opcion1="anillo" opcion2="tatuaje" opcion3="joyas"></Senia>
-	<Vehiculo opcion1="moto" opcion2="convertible" opcion3="limusina"></Vehiculo>
+	<Hobby opcion1="Alpinismo" opcion2="Croquet" opcion3="Tenis" opcion4="Musica" opcion5="Paracaidismo" opcion6="Natacion"></Hobby>
+	<Cabello opcion1="Negro" opcion2="Colorado" opcion3="Rubio" opcion4="Castanio"></Cabello>
+	<Senia opcion1="Anillo" opcion2="Tatuaje" opcion3="Joyas" opcion4="Cicatriz"></Senia>
+	<Vehiculo opcion1="Moto" opcion2="Descapotable" opcion3="Limusina" opcion4="Deportivo"></Vehiculo>
 </Rasgos>
 			

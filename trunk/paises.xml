@@ -77,4 +77,134 @@
 			</Pista>
 		</Edificio>
 	</Pais>
+	<Pais nombre="Francia" coordX="500" coordY="5500">
+		<Edificio tipo="biblioteca">
+			<Pista tipo="dificil" pista="Fra, biblio, dif">
+			</Pista>
+			<Pista tipo="media" pista="Fra, biblio, med">
+			</Pista>
+			<Pista tipo="facil" pista="Fra, biblio, fac">
+			</Pista>
+		</Edificio>
+		<Edificio tipo="puerto">
+			<Pista tipo="dificil" pista="Fra, puerto, dif">
+			</Pista>
+			<Pista tipo="media" pista="Fra, puerto, med">
+			</Pista>
+			<Pista tipo="facil" pista="Fra, puerto, fac">
+			</Pista>
+		</Edificio>
+		<Edificio tipo="banco">
+			<Pista tipo="dificil" pista="Fra, banco, dif">
+			</Pista>
+			<Pista tipo="media" pista="Fra, banco, med">
+			</Pista>
+			<Pista tipo="facil" pista="Fra, banco, fac">
+			</Pista>
+		</Edificio>
+	</Pais>
+	<Pais nombre="Inglaterra" coordX="0" coordY="6000">
+		<Edificio tipo="biblioteca">
+			<Pista tipo="dificil" pista="Ing, biblio, dif">
+			</Pista>
+			<Pista tipo="media" pista="Ing, biblio, med">
+			</Pista>
+			<Pista tipo="facil" pista="Ing, biblio, fac">
+			</Pista>
+		</Edificio>
+		<Edificio tipo="puerto">
+			<Pista tipo="dificil" pista="Ing, puerto, dif">
+			</Pista>
+			<Pista tipo="media" pista="Ing, puerto, med">
+			</Pista>
+			<Pista tipo="facil" pista="Ing, puerto, fac">
+			</Pista>
+		</Edificio>
+		<Edificio tipo="banco">
+			<Pista tipo="dificil" pista="Ing, banco, dif">
+			</Pista>
+			<Pista tipo="media" pista="Ing, banco, med">
+			</Pista>
+			<Pista tipo="facil" pista="Ing, banco, fac">
+			</Pista>
+		</Edificio>
+	</Pais>
+	<Pais nombre="Marruecos" coordX="0" coordY="3000">
+		<Edificio tipo="biblioteca">
+			<Pista tipo="dificil" pista="Marr, biblio, dif">
+			</Pista>
+			<Pista tipo="media" pista="Marr, biblio, med">
+			</Pista>
+			<Pista tipo="facil" pista="Marr, biblio, fac">
+			</Pista>
+		</Edificio>
+		<Edificio tipo="puerto">
+			<Pista tipo="dificil" pista="Marr, puerto, dif">
+			</Pista>
+			<Pista tipo="media" pista="Marr, puerto, med">
+			</Pista>
+			<Pista tipo="facil" pista="Marr, puerto, fac">
+			</Pista>
+		</Edificio>
+		<Edificio tipo="banco">
+			<Pista tipo="dificil" pista="Marr, banco, dif">
+			</Pista>
+			<Pista tipo="media" pista="Marr, banco, med">
+			</Pista>
+			<Pista tipo="facil" pista="Marr, banco, fac">
+			</Pista>
+		</Edificio>
+	</Pais>
+	<Pais nombre="Brasil" coordX="-3000" coordY="-2000">
+		<Edificio tipo="biblioteca">
+			<Pista tipo="dificil" pista="Bra, biblio, dif">
+			</Pista>
+			<Pista tipo="media" pista="Bra, biblio, med">
+			</Pista>
+			<Pista tipo="facil" pista="Bra, biblio, fac">
+			</Pista>
+		</Edificio>
+		<Edificio tipo="puerto">
+			<Pista tipo="dificil" pista="Bra, puerto, dif">
+			</Pista>
+			<Pista tipo="media" pista="Bra, puerto, med">
+			</Pista>
+			<Pista tipo="facil" pista="Bra, puerto, fac">
+			</Pista>
+		</Edificio>
+		<Edificio tipo="banco">
+			<Pista tipo="dificil" pista="Bra, banco, dif">
+			</Pista>
+			<Pista tipo="media" pista="Bra, banco, med">
+			</Pista>
+			<Pista tipo="facil" pista="Bra, banco, fac">
+			</Pista>
+		</Edificio>
+	</Pais>
+	<Pais nombre="EEUU" coordX="-6000" coordY="4000">
+		<Edificio tipo="biblioteca">
+			<Pista tipo="dificil" pista="EEUU, biblio, dif">
+			</Pista>
+			<Pista tipo="media" pista="EEUU, biblio, med">
+			</Pista>
+			<Pista tipo="facil" pista="EEUU, biblio, fac">
+			</Pista>
+		</Edificio>
+		<Edificio tipo="puerto">
+			<Pista tipo="dificil" pista="EEUU, puerto, dif">
+			</Pista>
+			<Pista tipo="media" pista="EEUU, puerto, med">
+			</Pista>
+			<Pista tipo="facil" pista="EEUU, puerto, fac">
+			</Pista>
+		</Edificio>
+		<Edificio tipo="banco">
+			<Pista tipo="dificil" pista="EEUU, banco, dif">
+			</Pista>
+			<Pista tipo="media" pista="EEUU, banco, med">
+			</Pista>
+			<Pista tipo="facil" pista="EEUU, banco, fac">
+			</Pista>
+		</Edificio>
+	</Pais>
 </Paises>
