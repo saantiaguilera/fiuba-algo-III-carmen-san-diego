@@ -1,16 +1,19 @@
 package fiuba.algo3;
 
+
 import java.util.ArrayList;
+
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
+
 public class Tesoros {
 	protected ArrayList<ObjetoRaro> tesorosRaros;
 	protected ArrayList<ObjetoExotico> tesorosExoticos;
 	protected ArrayList<ObjetoLegendario> tesorosLegendarios;
-
+	
 	public Tesoros(Document doc){
 		tesorosRaros = new ArrayList<ObjetoRaro>();
 		tesorosExoticos = new ArrayList<ObjetoExotico>();
