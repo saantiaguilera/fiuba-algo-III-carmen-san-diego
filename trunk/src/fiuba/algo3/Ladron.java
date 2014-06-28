@@ -19,12 +19,6 @@ public class Ladron extends Sospechoso{
 	protected ArrayList<Pais> listaPaises;
 	protected String nombre;
 	
-	public Ladron(Tesoros tesoro){
-		listaPaises = new ArrayList<Pais>();
-		robarUnTesoroRandom(tesoro);
-		this.nombre = null;
-	}
-	
 	public Ladron(){
 		super();
 		this.listaPaises = new ArrayList<Pais>();
@@ -36,7 +30,13 @@ public class Ladron extends Sospechoso{
 		this.nombre = unNombre;
 	}
 	
-	private void robarUnTesoroRandom(Tesoros tesoro) {
+	public Ladron(String unNombre){
+		super();
+		this.listaPaises = new ArrayList<Pais>();
+		this.nombre = unNombre;
+	}
+	
+	public void robarUnTesoroRandom(Tesoros tesoro) {
 		Random rnd = new Random();
 		int tipoDeObjeto = rnd.nextInt(3);
 		switch (tipoDeObjeto){
@@ -110,11 +110,11 @@ public class Ladron extends Sospechoso{
 				
 					
 				if(listaPaises.size() < cantPaises - 1){	//Si no se esta en ultimo pais
-					Pais paisNuevo = Pais.hidratar(docPaises, nombrePaisNuevo, nombreProxPais);
+					Pais paisNuevo = Pais.hidratar(docPaises, nombrePaisNuevo, nombreProxPais, this);
 					listaPaises.add(paisNuevo);
 				}
 				else{
-					Pais paisNuevo = Pais.hidratar(docPaises, nombrePaisNuevo, null);
+					Pais paisNuevo = Pais.hidratar(docPaises, nombrePaisNuevo, null, this);
 					listaPaises.add(paisNuevo);
 				}
 				
@@ -176,6 +176,23 @@ public class Ladron extends Sospechoso{
 		ladron.setVehiculo(new Rasgo(elementoNodo.getAttribute("vehiculo")));
 		
 		return ladron;
+	}
+
+	public void dejarRasgoAleatorioEn(Edificio edificio) {
+		Random rand = new Random();
+		switch(rand.nextInt(4)){
+		case 0:
+			edificio.concatenarRasgo(" Le gustaba hacer ", hobby);
+			break;
+		case 1:
+			edificio.concatenarRasgo(" Tenia el cabello ", cabello);
+			break;
+		case 2:
+			edificio.concatenarRasgo(" Le vi sus grandes ", senia);
+			break;
+		case 3:
+			edificio.concatenarRasgo(" Le gustaba lucir su ", vehiculo);
+		}
 	}
 	
 }

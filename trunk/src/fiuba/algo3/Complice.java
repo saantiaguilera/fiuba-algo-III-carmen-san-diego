@@ -21,6 +21,7 @@ public class Complice {
 		else { return 0;}
 	}
 
+
 	public void agregarPistaFacil(Pista unaPista) {
 		this.pistaFacil = unaPista;
 	}
@@ -43,5 +44,11 @@ public class Complice {
 	
 	public Pista darPistaDificil() {
 		return pistaDificil;
+	}
+
+	public void concatenarAPistas(String texto) {
+		pistaFacil.concatenar(texto);
+		pistaMedia.concatenar(texto);
+		pistaDificil.concatenar(texto);
 	}
 }

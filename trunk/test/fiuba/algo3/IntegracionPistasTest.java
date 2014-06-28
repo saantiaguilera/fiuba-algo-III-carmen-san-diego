@@ -52,7 +52,7 @@ public class IntegracionPistasTest {
 	
 	@Test
 	public void DetectiveDeberiaRecibirPistaMedia(){
-		PersonajeDetective personaje= new PersonajeDetective(10,new Pais(1,1,"Argentina"),5);
+		Personaje personaje= new PersonajeDetective(10,new Pais(1,1,"Argentina"),5);
 		Edificio edificio = new Edificio();
 		Pista pistaFacil = new Pista("Pista Facil");
 		Pista pistaMedia = new Pista("Pista Media");
@@ -152,7 +152,7 @@ public class IntegracionPistasTest {
 		Document doc = dBuilder.parse(paisesXML);
 		doc.getDocumentElement().normalize();
 		
-		Pais pais = Pais.hidratar(doc, "Argentina", "Paraguay");
+		Pais pais = Pais.hidratar(doc, "Argentina", "Paraguay", null);
 		Pista pista = pais.biblioteca.darPistaA(this.sargento);
 		
 		Assert.assertNotNull(pista);
@@ -167,7 +167,7 @@ public class IntegracionPistasTest {
 		Document doc = dBuilder.parse(paisesXML);
 		doc.getDocumentElement().normalize();
 		
-		Pais pais = Pais.hidratar(doc, "Argentina", null);
+		Pais pais = Pais.hidratar(doc, "Argentina", null, null);
 		Pista pista = pais.biblioteca.darPistaA(this.sargento);
 		String noFueVisto = "Lo siento, no hemos visto a esa persona";
 		

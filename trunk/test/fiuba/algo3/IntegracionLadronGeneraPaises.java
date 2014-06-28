@@ -24,7 +24,15 @@ public class IntegracionLadronGeneraPaises {
 		doc.getDocumentElement().normalize();
 		
 		Tesoros tesoros = new Tesoros(doc);
-		Ladron ladron = new Ladron(tesoros);
+		
+		Ladron ladron = new Ladron("Juan Perez");
+		ladron.setCabello(new Rasgo("rojo"));
+		ladron.setSenia(new Rasgo("tatuajes"));
+		ladron.setSexo(new Rasgo("masculino"));
+		ladron.setHobby(new Rasgo("alpinismo"));
+		ladron.setVehiculo(new Rasgo("moto"));
+		
+		ladron.robarUnTesoroRandom(tesoros);
 		
 		Assert.assertTrue(ladron.getCantPaises() >= 4);
 		
@@ -32,6 +40,12 @@ public class IntegracionLadronGeneraPaises {
 		for(int i=0; i<ladron.getCantPaises(); i++){
 			Assert.assertFalse(nombrePaises.contains(ladron.getPais(i).getNombre()));
 			nombrePaises.add(ladron.getPais(i).getNombre());
+			
+			/**/
+			System.out.println(ladron.getPais(i).banco.getPistas());
+			System.out.println(ladron.getPais(i).biblioteca.getPistas());
+			System.out.println(ladron.getPais(i).puerto.getPistas());
+			/**/
 		}
 	}
 	
