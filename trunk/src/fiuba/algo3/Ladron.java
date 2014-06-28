@@ -44,27 +44,42 @@ public class Ladron extends Sospechoso{
 			int unaPosision = rnd.nextInt(tesoro.getCantidadDeTesorosRaros());
 			ObjetoRaro unObjetoRaro = tesoro.obtenerObjetoRaro(unaPosision);
 			try {
-				this.generarListaPaises(unObjetoRaro);
+				this.generarListaPaisesPara(unObjetoRaro);
 			} catch (ParserConfigurationException | SAXException | IOException e) {}
 			break;
 		case 1:
 			int otraPosision = rnd.nextInt(tesoro.getCantidadDeTesorosExoticos());
 			ObjetoExotico unObjetoExotico = tesoro.obtenerObjetoExotico(otraPosision);
 			try {
-				this.generarListaPaises(unObjetoExotico);
+				this.generarListaPaisesPara(unObjetoExotico);
 			} catch (ParserConfigurationException | SAXException | IOException e) {}
 			break;			
 		case 2:
 			int otraPosisionMas = rnd.nextInt(tesoro.getCantidadDeTesorosLegendarios());
 			ObjetoLegendario unObjetoLegendario = tesoro.obtenerObjetoLegendario(otraPosisionMas);
 			try {
-				this.generarListaPaises(unObjetoLegendario);
+				this.generarListaPaisesPara(unObjetoLegendario);
 			} catch (ParserConfigurationException | SAXException | IOException e) {}
 			break;
 		}	
 	}
 	
-	private void generarListaPaises(ObjetoRaro unObjeto) throws ParserConfigurationException, SAXException, IOException{
+	private void generarListaPaisesPara(ObjetoLegendario unObjetoLegendario)
+			throws ParserConfigurationException, SAXException, IOException{
+		this.generarListaPaisesDeTamanio(7);
+	}
+	
+	private void generarListaPaisesPara(ObjetoExotico unObjetoExotico)
+			throws ParserConfigurationException, SAXException, IOException{
+		this.generarListaPaisesDeTamanio(5);
+	}	
+
+	private void generarListaPaisesPara(ObjetoRaro unObjetoRaro)
+			throws ParserConfigurationException, SAXException, IOException{
+		this.generarListaPaisesDeTamanio(4);
+	}	
+	
+	private void generarListaPaisesDeTamanio(int cantPaises) throws ParserConfigurationException, SAXException, IOException{
 		//POST: this.listaPaises termina con una lista aleatoria de paises
 		//	que recorre el ladron
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -73,15 +88,14 @@ public class Ladron extends Sospechoso{
 			docPaises.getDocumentElement().normalize();
 			
 			NodeList nodosPaises = docPaises.getElementsByTagName("Pais");
-			int cantPaisesObjExotico = 4;
 			Random rnd = new Random();
 			
-			//Se quiere buscar 4 paises aleatorios no repetidos
+			//Se quiere buscar x=cantPaises paises aleatorios no repetidos
 			int nroPaisActual = rnd.nextInt(nodosPaises.getLength());
 			ArrayList<Integer> nrosPaisesElegidos = new ArrayList<Integer>();
 			nrosPaisesElegidos.add(nroPaisActual);
 			
-			while(listaPaises.size() < cantPaisesObjExotico){
+			while(listaPaises.size() < cantPaises){
 				//Busco un numero de prox. pais que sea != al actual y que no haya sido elegido
 				int nroProxPais = nroPaisActual;
 				while(nroProxPais == nroPaisActual || nrosPaisesElegidos.contains(nroProxPais)){
@@ -95,7 +109,7 @@ public class Ladron extends Sospechoso{
 				String nombreProxPais = elementoPaisProx.getAttribute("nombre");
 				
 					
-				if(listaPaises.size() < cantPaisesObjExotico - 1){	//Si no se esta en ultimo pais
+				if(listaPaises.size() < cantPaises - 1){	//Si no se esta en ultimo pais
 					Pais paisNuevo = Pais.hidratar(docPaises, nombrePaisNuevo, nombreProxPais);
 					listaPaises.add(paisNuevo);
 				}
@@ -109,96 +123,6 @@ public class Ladron extends Sospechoso{
 			}
 		}
 
-	private void generarListaPaises(ObjetoExotico unObjeto) throws ParserConfigurationException, SAXException, IOException{
-	//POST: this.listaPaises termina con una lista aleatoria de paises
-	//	que recorre el ladron
-		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-		Document docPaises = dBuilder.parse(new File("paises.xml"));
-		docPaises.getDocumentElement().normalize();
-		
-		NodeList nodosPaises = docPaises.getElementsByTagName("Pais");
-		int cantPaisesObjExotico = 5;
-		Random rnd = new Random();
-		
-		//Se quiere buscar 5 paises aleatorios no repetidos
-		int nroPaisActual = rnd.nextInt(nodosPaises.getLength());
-		ArrayList<Integer> nrosPaisesElegidos = new ArrayList<Integer>();
-		nrosPaisesElegidos.add(nroPaisActual);
-		
-		while(listaPaises.size() < cantPaisesObjExotico){
-			//Busco un numero de prox. pais que sea != al actual y que no haya sido elegido
-			int nroProxPais = nroPaisActual;
-			while(nroProxPais == nroPaisActual || nrosPaisesElegidos.contains(nroProxPais)){
-				nroProxPais = rnd.nextInt(nodosPaises.getLength());
-			}
-			
-			nrosPaisesElegidos.add(nroProxPais);
-			Element elementoPaisNuevo = (Element)nodosPaises.item(nroPaisActual);
-			Element elementoPaisProx = (Element)nodosPaises.item(nroProxPais);
-			String nombrePaisNuevo = elementoPaisNuevo.getAttribute("nombre");
-			String nombreProxPais = elementoPaisProx.getAttribute("nombre");
-			
-				
-			if(listaPaises.size() < cantPaisesObjExotico - 1){	//Si no se esta en ultimo pais
-				Pais paisNuevo = Pais.hidratar(docPaises, nombrePaisNuevo, nombreProxPais);
-				listaPaises.add(paisNuevo);
-			}
-			else{
-				Pais paisNuevo = Pais.hidratar(docPaises, nombrePaisNuevo, null);
-				listaPaises.add(paisNuevo);
-			}
-			
-			//El siguiente pais será el que ahora es próximo
-			nroPaisActual = nroProxPais;		
-		}
-	}
-
-	private void generarListaPaises(ObjetoLegendario unObjeto) throws ParserConfigurationException, SAXException, IOException{
-		//POST: this.listaPaises termina con una lista aleatoria de paises
-		//	que recorre el ladron
-			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-			Document docPaises = dBuilder.parse(new File("paises.xml"));
-			docPaises.getDocumentElement().normalize();
-			
-			NodeList nodosPaises = docPaises.getElementsByTagName("Pais");
-			int cantPaisesObjExotico = 7;
-			Random rnd = new Random();
-			
-			//Se quiere buscar 7 paises aleatorios no repetidos
-			int nroPaisActual = rnd.nextInt(nodosPaises.getLength());
-			ArrayList<Integer> nrosPaisesElegidos = new ArrayList<Integer>();
-			nrosPaisesElegidos.add(nroPaisActual);
-			
-			while(listaPaises.size() < cantPaisesObjExotico){
-				//Busco un numero de prox. pais que sea != al actual y que no haya sido elegido
-				int nroProxPais = nroPaisActual;
-				while(nroProxPais == nroPaisActual || nrosPaisesElegidos.contains(nroProxPais)){
-					nroProxPais = rnd.nextInt(nodosPaises.getLength());
-				}
-				
-				nrosPaisesElegidos.add(nroProxPais);
-				Element elementoPaisNuevo = (Element)nodosPaises.item(nroPaisActual);
-				Element elementoPaisProx = (Element)nodosPaises.item(nroProxPais);
-				String nombrePaisNuevo = elementoPaisNuevo.getAttribute("nombre");
-				String nombreProxPais = elementoPaisProx.getAttribute("nombre");
-				
-					
-				if(listaPaises.size() < cantPaisesObjExotico - 1){	//Si no se esta en ultimo pais
-					Pais paisNuevo = Pais.hidratar(docPaises, nombrePaisNuevo, nombreProxPais);
-					listaPaises.add(paisNuevo);
-				}
-				else{
-					Pais paisNuevo = Pais.hidratar(docPaises, nombrePaisNuevo, null);
-					listaPaises.add(paisNuevo);
-				}
-				
-				//El siguiente pais será el que ahora es próximo
-				nroPaisActual = nroProxPais;		
-			}
-		}
-	
 	public void agregarPais(Pais pais){
 		listaPaises.add(pais);
 	}
