@@ -55,7 +55,7 @@ public class Pais {
 		this.banco.agregarPistaFacil(noFueVisto);
 	}
 	
-	public static Pais hidratar(Document doc, String paisActual, String proxPais) {
+	public static Pais hidratar(Document doc, String paisActual, String proxPais, Ladron ladron) {
 	//POST: Devuelve un pais con coordenadas y nombre de paisActual
 	//	y con edificios que tienen pistas del proximo pais. Si este ultimo es null,
 	//	carga pistas de que no se vio al ladron por ahi
@@ -79,9 +79,9 @@ public class Pais {
 			//Asigno pistas de proximo pais
 			elementoPais = (Element)nodosPaises.item(indice);
 			NodeList nodosEdificios = elementoPais.getElementsByTagName("Edificio");
-			paisNuevo.biblioteca = Edificio.hidratar(nodosEdificios.item(0));
-			paisNuevo.puerto = Edificio.hidratar(nodosEdificios.item(1));
-			paisNuevo.banco = Edificio.hidratar(nodosEdificios.item(2));
+			paisNuevo.biblioteca = Edificio.hidratar(nodosEdificios.item(0), ladron);
+			paisNuevo.puerto = Edificio.hidratar(nodosEdificios.item(1), ladron);
+			paisNuevo.banco = Edificio.hidratar(nodosEdificios.item(2), ladron);
 		}
 		else{
 			//Asigno pistas de que no fue visto

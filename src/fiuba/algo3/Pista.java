@@ -19,8 +19,15 @@ public  class Pista {
 	}
 	
 	public static Pista hidratar(Node nodoPista){
-		Pista nuevaPista = new Pista(((Element)nodoPista).getAttribute("pista"));
-		
-		return nuevaPista;
+		String textoPista = ((Element)nodoPista).getAttribute("pista");
+		return new Pista(textoPista);
+	}
+
+	public void setPista(String texto){
+		this.pista = texto;
+	}
+
+	public void concatenar(String texto) {
+		pista = pista.concat(texto);
 	}
 }

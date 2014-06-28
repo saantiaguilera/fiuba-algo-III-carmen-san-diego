@@ -39,7 +39,7 @@ public class SospechosoTest {
 		Sospechoso sospechoso = new Sospechoso();
 		sospechoso = generarSospechoso();
 		
-		Assert.assertEquals(SEXO, sospechoso.getSexo());
+		Assert.assertEquals("Femenino", sospechoso.getSexo().getRasgo());
 		Assert.assertEquals(HOBBY, sospechoso.getHobby());
 		Assert.assertEquals(CABELLO, sospechoso.getCabello());
 		Assert.assertEquals(SENIA, sospechoso.getSenia());

@@ -23,6 +23,6 @@ public class Rasgo {
 	public boolean hayRasgo() {
 		return this.rasgo != null;
 	}
-	
+		
 }
 

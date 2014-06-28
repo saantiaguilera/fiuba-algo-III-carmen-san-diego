@@ -1,5 +1,7 @@
 package fiuba.algo3;
 
+import java.util.Random;
+
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -62,8 +64,8 @@ public class Edificio {
 	public void setComplice(Complice complice) {
 		this.complice = complice;
 	}
-
-	public static Edificio hidratar(Node nodoEdificio){
+	
+	public static Edificio hidratar(Node nodoEdificio, Ladron ladron){
 		Edificio nuevoEdificio = new Edificio();
 		NodeList nodosPistas = ((Element)nodoEdificio).getElementsByTagName("Pista");
 		
@@ -71,6 +73,21 @@ public class Edificio {
 		nuevoEdificio.agregarPistaMedia(Pista.hidratar(nodosPistas.item(1)));
 		nuevoEdificio.agregarPistaFacil(Pista.hidratar(nodosPistas.item(2)));
 		
+
+		Random rand = new Random();
+		if(rand.nextInt(5) == 4){
+			ladron.dejarRasgoAleatorioEn(nuevoEdificio);
+		}
+		
 		return nuevoEdificio;
+	}
+
+	public void concatenarRasgo(String texto, Rasgo rasgo) {
+		complice.concatenarAPistas(texto.concat(rasgo.getRasgo()));
+	}
+
+
+	public String getPistas() {
+		return complice.darPistaDificil().getPista().concat(complice.darPistaMedia().getPista()).concat(complice.darPistaFacil().getPista());
 	}
 }

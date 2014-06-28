@@ -91,7 +91,7 @@ public class IntegracionPartidaTest {
 	@Test
 	public void personajeAtrapaALadron(){
 		Ladron ladron = generarLadron();
-		PersonajeNovato personaje = generarPersonajeNovato();
+		Personaje personaje = generarPersonajeNovato();
 		Jefatura jefatura = new Jefatura(ladron);
 		
 		Edificio biblioteca = generarBibliotecaConPistaFacilDe(PARAGUAY);
