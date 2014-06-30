@@ -1,5 +1,10 @@
 package fiuba.algo3.unit;
 
+import org.junit.Assert;
+import org.junit.Test;
+
+import fiuba.algo3.Jefatura;
+import fiuba.algo3.Ladron;
 import java.io.File;
 import java.io.IOException;
 
@@ -7,12 +12,8 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-import org.junit.Assert;
-import org.junit.Test;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
-
-import fiuba.algo3.*;
 
 public class JefaturaTest {
 	

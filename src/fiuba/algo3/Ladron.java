@@ -1,12 +1,12 @@
 package fiuba.algo3;
 
-import java.io.File;
+//import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
+//import javax.xml.parsers.DocumentBuilder;
+//import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.w3c.dom.Document;
@@ -36,7 +36,8 @@ public class Ladron extends Sospechoso{
 		this.nombre = unNombre;
 	}
 	
-	public void robarUnTesoroRandom(Tesoros tesoro) {
+	
+	public void robarUnTesoroRandom(Tesoros tesoro ,Document doc) {
 		Random rnd = new Random();
 		int tipoDeObjeto = rnd.nextInt(3);
 		switch (tipoDeObjeto){
@@ -44,48 +45,55 @@ public class Ladron extends Sospechoso{
 			int unaPosision = rnd.nextInt(tesoro.getCantidadDeTesorosRaros());
 			ObjetoRaro unObjetoRaro = tesoro.obtenerObjetoRaro(unaPosision);
 			try {
-				this.generarListaPaisesPara(unObjetoRaro);
-			} catch (ParserConfigurationException | SAXException | IOException e) {}
+				this.generarListaPaisesPara(unObjetoRaro,doc);
+			} catch (ParserConfigurationException  e) {}
+			catch (SAXException e){} 
+			catch (IOException e){}
 			break;
 		case 1:
 			int otraPosision = rnd.nextInt(tesoro.getCantidadDeTesorosExoticos());
 			ObjetoExotico unObjetoExotico = tesoro.obtenerObjetoExotico(otraPosision);
 			try {
-				this.generarListaPaisesPara(unObjetoExotico);
-			} catch (ParserConfigurationException | SAXException | IOException e) {}
+				this.generarListaPaisesPara(unObjetoExotico,doc);
+			} catch (ParserConfigurationException  e) {}
+			catch (SAXException e){} 
+			catch (IOException e){}
 			break;			
 		case 2:
 			int otraPosisionMas = rnd.nextInt(tesoro.getCantidadDeTesorosLegendarios());
 			ObjetoLegendario unObjetoLegendario = tesoro.obtenerObjetoLegendario(otraPosisionMas);
 			try {
-				this.generarListaPaisesPara(unObjetoLegendario);
-			} catch (ParserConfigurationException | SAXException | IOException e) {}
+				this.generarListaPaisesPara(unObjetoLegendario,doc);
+			} catch (ParserConfigurationException  e) {}
+			catch (SAXException e){} 
+			catch (IOException e){}
 			break;
 		}	
 	}
 	
-	private void generarListaPaisesPara(ObjetoLegendario unObjetoLegendario)
+	private void generarListaPaisesPara(ObjetoLegendario unObjetoLegendario, Document doc)
 			throws ParserConfigurationException, SAXException, IOException{
-		this.generarListaPaisesDeTamanio(7);
+		this.generarListaPaisesDeTamanio(7,doc);
 	}
 	
-	private void generarListaPaisesPara(ObjetoExotico unObjetoExotico)
+	private void generarListaPaisesPara(ObjetoExotico unObjetoExotico,Document doc)
 			throws ParserConfigurationException, SAXException, IOException{
-		this.generarListaPaisesDeTamanio(5);
+		this.generarListaPaisesDeTamanio(5,doc);
 	}	
 
-	private void generarListaPaisesPara(ObjetoRaro unObjetoRaro)
+	private void generarListaPaisesPara(ObjetoRaro unObjetoRaro,Document doc)
 			throws ParserConfigurationException, SAXException, IOException{
-		this.generarListaPaisesDeTamanio(4);
+		this.generarListaPaisesDeTamanio(4,doc);
 	}	
 	
-	private void generarListaPaisesDeTamanio(int cantPaises) throws ParserConfigurationException, SAXException, IOException{
+
+	private void generarListaPaisesDeTamanio(int cantPaises,Document docPaises) throws ParserConfigurationException , SAXException, IOException{
 		//POST: this.listaPaises termina con una lista aleatoria de paises
 		//	que recorre el ladron
-			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-			Document docPaises = dBuilder.parse(new File("paises.xml"));
-			docPaises.getDocumentElement().normalize();
+		//	DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+		//	DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+		//	Document docPaises = dBuilder.parse(new File("paises.xml"));
+		//	docPaises.getDocumentElement().normalize();
 			
 			NodeList nodosPaises = docPaises.getElementsByTagName("Pais");
 			Random rnd = new Random();
