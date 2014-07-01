@@ -116,9 +116,9 @@ public class LadronTest {
 		
 		Assert.assertNotNull(ladronCargado);
 		
-		Assert.assertEquals( "rojo" , ladronCargado.getCabello().getRasgo());
-		Assert.assertEquals( "tatuaje" , ladronCargado.getSenia().getRasgo());
-		Assert.assertEquals( "convertible" , ladronCargado.getVehiculo().getRasgo());
+		Assert.assertEquals( "colorado" , ladronCargado.getCabello().getRasgo());
+		Assert.assertEquals( "tatuajes" , ladronCargado.getSenia().getRasgo());
+		Assert.assertEquals( "descapotable" , ladronCargado.getVehiculo().getRasgo());
 	}
 }
 
