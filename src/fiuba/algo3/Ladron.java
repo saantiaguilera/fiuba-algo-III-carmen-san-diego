@@ -126,7 +126,7 @@ public class Ladron extends Sospechoso{
 					listaPaises.add(paisNuevo);
 				}
 				
-				//El siguiente pais será el que ahora es próximo
+				//El siguiente pais sera el que ahora es proximo
 				nroPaisActual = nroProxPais;		
 			}
 		}
