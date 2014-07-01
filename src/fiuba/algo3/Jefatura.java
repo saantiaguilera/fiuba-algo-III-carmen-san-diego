@@ -7,6 +7,12 @@ import java.util.*;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -114,9 +120,8 @@ public class Jefatura {
 		return jefatura;
 	}
 
-	public Personaje asignarPersonajeConNombre(String nombrePersonaje) {
+	public Personaje asignarPersonajeConNombre(File personajesXML, String nombrePersonaje) {
 	//POST: retorna el personaje correspondiente a los casos resueltos.
-		File tesorosXML = new File("personajes.xml");
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder dBuilder = null;
 		try {
@@ -125,10 +130,9 @@ public class Jefatura {
 		Document doc = null;
 		
 		try {
-			doc = dBuilder.parse(tesorosXML);
+			doc = dBuilder.parse(personajesXML);
 		} catch (SAXException e) {
 		} catch (IOException e) {}
-
 
 		doc.getDocumentElement().normalize();
 		
@@ -170,6 +174,60 @@ public class Jefatura {
 
 	public boolean verificarSiElLadronPasoPor(Pais ubicacion) {
 		return ladron.estuvoEn(ubicacion);
+	}
+
+	public void sumarCasoAXML(File personajesXML, String nombrePersonaje) {
+		//Carga los datos del xml...
+		ArrayList<NodoXMLPersonaje> listaPersonajes =
+				NodoXMLPersonaje.generarLista(personajesXML);;
+		
+		//...y finalmente reescribo
+		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder dBuilder = null;
+		try {
+			dBuilder = dbFactory.newDocumentBuilder();
+		} catch (ParserConfigurationException e) {}
+		Document docPersonajes = dBuilder.newDocument();
+		Element elementoPersonajes = docPersonajes.createElement("Personajes");
+		Boolean personajeEncontrado = false;
+		
+		for(NodoXMLPersonaje personaje : listaPersonajes){
+			Element elementoPersonaje = docPersonajes.createElement("Personaje");
+			
+			if( personaje.nombre.matches(nombrePersonaje) ){
+				personajeEncontrado = true;
+				int casosResueltos = 
+						Integer.parseInt(personaje.casosResueltos);
+				casosResueltos++;
+				elementoPersonaje.setAttribute("casosResueltos", String.valueOf(casosResueltos));
+				elementoPersonaje.setAttribute("nombre", nombrePersonaje);
+			}
+			else{
+				elementoPersonaje.setAttribute("nombre", personaje.nombre);
+				elementoPersonaje.setAttribute("casosResueltos", personaje.casosResueltos);
+			}
+			
+			elementoPersonajes.appendChild(elementoPersonaje);
+		}
+		if(!personajeEncontrado){
+			Element personajeNuevo = docPersonajes.createElement("Personaje");
+			personajeNuevo.setAttribute("nombre", nombrePersonaje);
+			personajeNuevo.setAttribute("casosResueltos", "1");
+			elementoPersonajes.appendChild(personajeNuevo);
+		}
+		
+		docPersonajes.appendChild(elementoPersonajes);
+		TransformerFactory tf = TransformerFactory.newInstance();
+		Transformer transformer = null;
+		try {
+			transformer = tf.newTransformer();
+		} catch (TransformerConfigurationException e) {}
+		DOMSource source = new DOMSource(docPersonajes);
+		StreamResult result = new StreamResult(personajesXML);
+		try {
+			transformer.transform(source, result);
+		} catch (TransformerException e) {}
+		
 	}
 }
 
