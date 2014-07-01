@@ -15,6 +15,7 @@ public abstract class Personaje {
 	protected Calendar tiempoLimite;
 	protected Jefatura jefatura;
 	protected Stack<Pais> paisesVisitados;
+	protected boolean capturoAlLadron;
 	
 	public Personaje(int horasMaxima, Jefatura unaJefatura) {
 		horaActual = Calendar.getInstance();
@@ -25,6 +26,16 @@ public abstract class Personaje {
 	    jefatura=unaJefatura;
 	    paisesVisitados = new Stack<Pais>();
 	    paisesVisitados.push(ubicacion);
+	    capturoAlLadron=false;
+	}
+	
+	public void capturoAlLadron() {
+		if (jefatura.ordenEstaEmitida()){
+			capturoAlLadron=true;
+		}
+		else{
+			System.out.print("No se ha emitido la orden. Perdiste.");
+		}
 	}
 	
 	public void viajarA(Pais destino){

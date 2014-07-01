@@ -170,7 +170,7 @@ public class Ladron extends Sospechoso{
 	public void esconderse(Edificio primerEdificio,Edificio segundoEdificio, Edificio tercerEdificio){
 		Complice unComplice= new Complice(this,new Bala());
 		Complice otroComplice = new Complice(this, new Cuchillo());
-		Complice ladron= new Complice (this, null);
+		Complice ladron= new Complice (this, new ActaDeRendicion());
 		primerEdificio.setComplice(unComplice);
 		segundoEdificio.setComplice(ladron);
 		tercerEdificio.setComplice(otroComplice);
