@@ -123,9 +123,13 @@ public class Jefatura {
 			dBuilder = dbFactory.newDocumentBuilder();
 		} catch (ParserConfigurationException e) {}
 		Document doc = null;
+		
 		try {
 			doc = dBuilder.parse(tesorosXML);
-		} catch (SAXException | IOException e) {}
+		} catch (SAXException e) {
+		} catch (IOException e) {}
+
+
 		doc.getDocumentElement().normalize();
 		
 		NodeList nodosPersonajes = doc.getElementsByTagName("Personaje");
@@ -139,7 +143,7 @@ public class Jefatura {
 				
 		}
 		
-		//Se recorrieron todos los personajes y el buscado no tenía historial
+		//Se recorrieron todos los personajes y el buscado no tenia historial
 		return new PersonajeNovato(150, this.ladron.getPais(0), 900);
 	}
 	
