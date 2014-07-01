@@ -18,30 +18,50 @@ public class Edificio {
 
 	
 	public Pista darPistaA(PersonajeNovato unPersonaje){
-		unPersonaje.restarHoras(complice.getHorasARestar(unPersonaje.getUbicacion()));
-		vecesVisitado += 1;
-		unPersonaje.restarHoras(vecesVisitado);
+		if (complice.esElLadron(unPersonaje.getUbicacion())){
+			unPersonaje.capturoAlLadron();
+		}
+		else{
+			unPersonaje.restarHoras(complice.getHorasARestar(unPersonaje.getUbicacion()));
+			vecesVisitado += 1;
+			unPersonaje.restarHoras(vecesVisitado);
+		}
 		return complice.darPistaFacil();
 	}
 	
 	public Pista darPistaA(PersonajeDetective unPersonaje){
-		unPersonaje.restarHoras(complice.getHorasARestar(unPersonaje.getUbicacion()));
-		vecesVisitado += 1;
-		unPersonaje.restarHoras(vecesVisitado);
+		if (complice.esElLadron(unPersonaje.getUbicacion())){
+			unPersonaje.capturoAlLadron();
+		}
+		else{
+			unPersonaje.restarHoras(complice.getHorasARestar(unPersonaje.getUbicacion()));
+			vecesVisitado += 1;
+			unPersonaje.restarHoras(vecesVisitado);
+		}
 		return complice.darPistaMedia();
 	}
 	
 	public Pista darPistaA(PersonajeInvestigador unPersonaje){
-		unPersonaje.restarHoras(complice.getHorasARestar(unPersonaje.getUbicacion()));
-		vecesVisitado += 1;
-		unPersonaje.restarHoras(vecesVisitado);
+		if (complice.esElLadron(unPersonaje.getUbicacion())){
+			unPersonaje.capturoAlLadron();
+		}
+		else{
+			unPersonaje.restarHoras(complice.getHorasARestar(unPersonaje.getUbicacion()));
+			vecesVisitado += 1;
+			unPersonaje.restarHoras(vecesVisitado);
+		}
 		return complice.darPistaDificil();
 	}
 	
 	public Pista darPistaA(PersonajeSargento unPersonaje){
-		unPersonaje.restarHoras(complice.getHorasARestar(unPersonaje.getUbicacion()));
-		vecesVisitado += 1;
-		unPersonaje.restarHoras(vecesVisitado);
+		if (complice.esElLadron(unPersonaje.getUbicacion())){
+			unPersonaje.capturoAlLadron();
+		}
+		else{
+			unPersonaje.restarHoras(complice.getHorasARestar(unPersonaje.getUbicacion()));
+			vecesVisitado += 1;
+			unPersonaje.restarHoras(vecesVisitado);
+		}
 		return complice.darPistaDificil();
 	}
 	

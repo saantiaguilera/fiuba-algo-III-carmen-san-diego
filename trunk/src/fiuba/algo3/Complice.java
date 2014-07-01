@@ -51,4 +51,13 @@ public class Complice {
 		pistaMedia.concatenar(texto);
 		pistaDificil.concatenar(texto);
 	}
+
+	public boolean esElLadron(Pais ubicacion) {
+		if (ladron.esUltimoPais(ubicacion)){
+			if (arma.haceDanio()==false){
+				return true;
+			}
+		}
+		return false;
+	}
 }
