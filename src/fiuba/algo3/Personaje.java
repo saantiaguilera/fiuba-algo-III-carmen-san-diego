@@ -29,12 +29,13 @@ public abstract class Personaje {
 	    capturoAlLadron=false;
 	}
 	
-	public void capturoAlLadron() {
+	public boolean capturoAlLadron() {
 		if (jefatura.ordenEstaEmitida()){
 			capturoAlLadron=true;
+			return true;
 		}
 		else{
-			System.out.print("No se ha emitido la orden. Perdiste.");
+			return false;
 		}
 	}
 	
