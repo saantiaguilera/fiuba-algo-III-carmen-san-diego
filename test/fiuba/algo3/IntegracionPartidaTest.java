@@ -39,8 +39,8 @@ public class IntegracionPartidaTest {
 		return ladron;
 	}
 	
-	public PersonajeNovato generarPersonajeNovato(){
-		return new PersonajeNovato(HORAS_LIMITE, ARGENTINA , 1000);
+	public PersonajeNovato generarPersonajeNovato(Jefatura jefatura){
+		return new PersonajeNovato(HORAS_LIMITE, ARGENTINA , 1000, jefatura);
 	}
 	
 	public Edificio generarBibliotecaConPistaFacilDe(Pais pais){
@@ -91,8 +91,8 @@ public class IntegracionPartidaTest {
 	@Test
 	public void personajeAtrapaALadron(){
 		Ladron ladron = generarLadron();
-		Personaje personaje = generarPersonajeNovato();
 		Jefatura jefatura = new Jefatura(ladron);
+		Personaje personaje = generarPersonajeNovato(jefatura);
 		
 		Edificio biblioteca = generarBibliotecaConPistaFacilDe(PARAGUAY);
 		Edificio puerto = generarPuertoConPistaFacilDe(PARAGUAY);
@@ -123,7 +123,7 @@ public class IntegracionPartidaTest {
 		sospechoso.setCabello(new Rasgo("Rojo"));
 		Assert.assertTrue(ladron.coincideRasgosCon(sospechoso));
 		
-		personaje.emitirOrdenA(jefatura, sospechoso);
+		personaje.emitirOrdenA(sospechoso);
 		
 		personaje.viajarA(ECUADOR);
 		

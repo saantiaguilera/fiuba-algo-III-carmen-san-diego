@@ -10,7 +10,7 @@ public class PersonajeInvestigadorTest {
 
 	@Test
 	public void deberiaDevolverHorasLimiteCorrectas() {
-		PersonajeInvestigador personaje = new PersonajeInvestigador(10,new Pais(1,1,"Argentina"),5);
+		PersonajeInvestigador personaje = new PersonajeInvestigador(10,new Pais(1,1,"Argentina"),5,null);
 		
 		Assert.assertTrue(personaje.getHorasRestantes() == 10);
 	}
@@ -18,14 +18,14 @@ public class PersonajeInvestigadorTest {
 	@Test
 	public void deberiaDevolverUbicacionCorrecta(){
 		Pais pais = new Pais(1,1,"Argentina");
-		PersonajeInvestigador personaje = new PersonajeInvestigador(10,pais,5);
+		PersonajeInvestigador personaje = new PersonajeInvestigador(10,pais,5,null);
 		
 		Assert.assertEquals(personaje.getUbicacion() , pais);
 	}
 	
 	@Test
 	public void deberiaDevolverHorasRestantesCorrectas(){
-		PersonajeInvestigador personaje = new PersonajeInvestigador(10,new Pais(1,1,"Argentina"),5);	
+		PersonajeInvestigador personaje = new PersonajeInvestigador(10,new Pais(1,1,"Argentina"),5,null);	
 		personaje.restarHoras(7);
 	
 		Assert.assertTrue(personaje.getHorasRestantes() == 3);

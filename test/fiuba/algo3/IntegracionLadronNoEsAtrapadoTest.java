@@ -80,8 +80,8 @@ public class IntegracionLadronNoEsAtrapadoTest {
 	@Test
 	public void faltaOrdenDeArrestoParaAtraparAlLadron(){
 		Ladron ladron = generarLadron();
-		Personaje personaje = new PersonajeDetective(168,argentina,1100);
 		Jefatura jefatura = new Jefatura(ladron);
+		Personaje personaje = new PersonajeDetective(168,argentina,1100, jefatura);
 		Sospechoso sospechoso = new Sospechoso();
 		
 		Edificio biblioteca = generarBibliotecaConPistaMediaDe(argentina);
@@ -114,8 +114,8 @@ public class IntegracionLadronNoEsAtrapadoTest {
 	@Test
 	public void ordenDeArrestoIncorrectaParaAtraparAlLadron(){
 		Ladron ladron = generarLadron();
-		Personaje personaje = new PersonajeDetective(168,argentina,1100);
 		Jefatura jefatura = new Jefatura(ladron);
+		Personaje personaje = new PersonajeDetective(168,argentina,1100, jefatura);
 		Sospechoso sospechoso = new Sospechoso();
 		
 		Edificio biblioteca = generarBibliotecaConPistaMediaDe(argentina);
@@ -129,7 +129,7 @@ public class IntegracionLadronNoEsAtrapadoTest {
 		personaje.pedirPistaA(banco);
 		sospechoso.setCabello(new Rasgo("Rojo"));
 		
-		personaje.emitirOrdenA(jefatura, sospechoso);
+		personaje.emitirOrdenA(sospechoso);
 		personaje.viajarA(brasil);
 		
 		biblioteca = generarBibliotecaConPistaMediaDe(brasil);
@@ -149,8 +149,8 @@ public class IntegracionLadronNoEsAtrapadoTest {
 	@Test
 	public void noSeVisitaElEdificioDelLadron(){
 		Ladron ladron = generarLadron();
-		Personaje personaje = new PersonajeDetective(168,argentina,1100);
 		Jefatura jefatura = new Jefatura(ladron);
+		Personaje personaje = new PersonajeDetective(168,argentina,1100,jefatura);
 		Sospechoso sospechoso = new Sospechoso();
 		
 		Edificio biblioteca = generarBibliotecaConPistaMediaDe(argentina);

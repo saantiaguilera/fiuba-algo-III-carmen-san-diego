@@ -20,10 +20,10 @@ public class IntegracionPistasTest {
 	PersonajeNovato novato;
 	
 	public IntegracionPistasTest(){
-		this.sargento = new PersonajeSargento(10, new Pais(1,1, "Argentina"), 5);
-		this.investigador = new PersonajeInvestigador(10, new Pais(1,1, "Argentina"), 5);
-		this.detective = new PersonajeDetective(10, new Pais(1,1, "Argentina"), 5);
-		this.novato = new PersonajeNovato(10, new Pais(1,1, "Argentina"), 5);
+		this.sargento = new PersonajeSargento(10, new Pais(1,1, "Argentina"), 5, null);
+		this.investigador = new PersonajeInvestigador(10, new Pais(1,1, "Argentina"), 5, null);
+		this.detective = new PersonajeDetective(10, new Pais(1,1, "Argentina"), 5, null);
+		this.novato = new PersonajeNovato(10, new Pais(1,1, "Argentina"), 5, null);
 	}
 			
 	@Test
@@ -52,7 +52,7 @@ public class IntegracionPistasTest {
 	
 	@Test
 	public void DetectiveDeberiaRecibirPistaMedia(){
-		Personaje personaje= new PersonajeDetective(10,new Pais(1,1,"Argentina"),5);
+		Personaje personaje= new PersonajeDetective(10,new Pais(1,1,"Argentina"),5, null);
 		Edificio edificio = new Edificio();
 		Pista pistaFacil = new Pista("Pista Facil");
 		Pista pistaMedia = new Pista("Pista Media");
@@ -66,7 +66,7 @@ public class IntegracionPistasTest {
 	
 	@Test
 	public void NovatoDebeRecibirPistaFacil(){
-		PersonajeNovato personaje = new PersonajeNovato(10,new Pais(1,1,"Argentina"),1);
+		PersonajeNovato personaje = new PersonajeNovato(10,new Pais(1,1,"Argentina"),1, null);
 		Edificio edificio = new Edificio();
 		Pista pistaFacil = new Pista("Pista Facil");
 		Pista pistaDificil = new Pista("Pista Dificil");

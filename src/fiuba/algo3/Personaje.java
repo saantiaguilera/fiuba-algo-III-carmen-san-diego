@@ -1,6 +1,11 @@
 package fiuba.algo3;
 
+import java.io.IOException;
 import java.util.Calendar;
+import java.util.Stack;
+
+
+import org.w3c.dom.Document;
 
 public abstract class Personaje {
 	protected Pais ubicacion;
@@ -8,18 +13,24 @@ public abstract class Personaje {
 	protected Calendar horaActual;
 	protected static int horasADormir = 8;
 	protected Calendar tiempoLimite;
+	protected Jefatura jefatura;
+	protected Stack<Pais> paisesVisitados;
 	
-	public Personaje(int horasMaxima) {
+	public Personaje(int horasMaxima, Jefatura unaJefatura) {
 		horaActual = Calendar.getInstance();
 		horaActual.set(2014,7,1,8,0,0);//1 de julio de 2014 8 am
 		tiempoLimite = Calendar.getInstance();
 		tiempoLimite.set(2014,7,1,8,0,0);
 	    tiempoLimite.add(Calendar.HOUR_OF_DAY, horasMaxima);
+	    jefatura=unaJefatura;
+	    paisesVisitados = new Stack<Pais>();
+	    paisesVisitados.push(ubicacion);
 	}
 	
 	public void viajarA(Pais destino){
 		restarHoras(this.calcularTiempo(destino));
 		this.ubicacion = destino;
+		paisesVisitados.push(ubicacion);
 	}
 	
 	public void restarHoras(int horas){
@@ -29,6 +40,45 @@ public abstract class Personaje {
 		}
 	}
 	
+	public void elegirPaisAViajar(Mundo mundo, Document doc) throws IOException{
+		System.out.println("Seleccione un pais a viajar:");
+		Pais paisCorrecto;
+		if (seConfundioDePais()){
+			Pais miPaisActual = paisesVisitados.pop();
+			paisCorrecto = paisesVisitados.peek();
+			System.out.println("1. " + paisCorrecto.getNombre());
+			paisesVisitados.push(miPaisActual);
+		}
+		else{
+			paisCorrecto = jefatura.paisActualDelLadron(ubicacion);
+			System.out.println("1. " + paisCorrecto.getNombre());
+		}
+		String unStringDePaisIncorrecto = mundo.getUnPaisDistintoDe(paisCorrecto.getNombre());
+		Pais unPaisIncorrecto = Pais.hidratar(doc, unStringDePaisIncorrecto, null, null);
+		System.out.println("2. " + unPaisIncorrecto.getNombre());
+		
+		String otroStringDePaisIncorrecto = mundo.getUnPaisDistintoDe(paisCorrecto.getNombre());
+		Pais otroPaisIncorrecto = Pais.hidratar(doc, otroStringDePaisIncorrecto, null, null);
+		System.out.println("3. " + otroPaisIncorrecto.getNombre());
+		
+		char numero = (char)System.in.read();
+		switch (numero){
+		case 1:
+				viajarA(paisCorrecto);
+				break;
+		case 2:
+				viajarA(unPaisIncorrecto);
+				break;
+		case 3:
+				viajarA(otroPaisIncorrecto);
+				break;
+		}
+	}
+	
+	private boolean seConfundioDePais() {
+		return jefatura.verificarSiElLadronPasoPor(ubicacion);
+	}
+
 	private int calcularTiempo(Pais destino){
 		double distancia = ubicacion.calcularDistanciaCon(destino);
 		return (int)(distancia/velocidad);			
@@ -51,7 +101,7 @@ public abstract class Personaje {
 
 	public abstract Pista pedirPistaA(Edificio edificio);
 	
-	public void emitirOrdenA(Jefatura jefatura, Sospechoso sospechoso) {
+	public void emitirOrdenA(Sospechoso sospechoso) {
 		this.restarHoras(3);
 		jefatura.emitirOrden(sospechoso);
 	}

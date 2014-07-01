@@ -7,7 +7,7 @@ public class IntegracionViajesTest {
 	
 	@Test
 	public void SargentoNoDeberiaDescontarHorasAlViajarAlMismoLugarDeOrigen(){
-		PersonajeSargento personaje = new PersonajeSargento(10,new Pais(1,1,"Argentina"),5);
+		PersonajeSargento personaje = new PersonajeSargento(10,new Pais(1,1,"Argentina"),5, null);
 		int horasParaResolverElCaso = personaje.getHorasRestantes();
 		Pais pais = new Pais(1,1,"Argentina");
 		personaje.viajarA(pais);
@@ -17,7 +17,7 @@ public class IntegracionViajesTest {
 	
 	@Test
 	public void InvestigadorNoDeberiaDescontarHorasAlViajarAlMismoLugarDeOrigen(){
-		PersonajeInvestigador personaje = new PersonajeInvestigador(10,new Pais(1,1,"Argentina"),5);
+		PersonajeInvestigador personaje = new PersonajeInvestigador(10,new Pais(1,1,"Argentina"),5, null);
 		int horasParaResolverElCaso = personaje.getHorasRestantes();
 		Pais pais = new Pais(1,1,"Argentina");
 		personaje.viajarA(pais);
@@ -27,7 +27,7 @@ public class IntegracionViajesTest {
 	
 	@Test
 	public void DetectiveNoDeberiaDescontarHorasAlViajarAlMismoLugarDeOrigen(){
-		PersonajeDetective personaje = new PersonajeDetective(10,new Pais(1,1,"Argentina"),5);
+		PersonajeDetective personaje = new PersonajeDetective(10,new Pais(1,1,"Argentina"),5, null);
 		int horasParaResolverElCaso = personaje.getHorasRestantes();
 		Pais pais = new Pais(1,1,"Argentina");
 		personaje.viajarA(pais);
@@ -37,7 +37,7 @@ public class IntegracionViajesTest {
 	
 	@Test
 	public void NovatoNoDeberiaDescontarHorasAlViajarAlMismoLugarDeOrigen(){
-		PersonajeNovato personaje = new PersonajeNovato(10,new Pais(1,1,"Argentina"),1);
+		PersonajeNovato personaje = new PersonajeNovato(10,new Pais(1,1,"Argentina"),1, null);
 		int horasParaResolverElCaso = personaje.getHorasRestantes();
 		Pais pais = new Pais(1,1,"Argentina");
 		personaje.viajarA(pais);
@@ -47,7 +47,7 @@ public class IntegracionViajesTest {
 	
 	@Test
 	public void SargentoDeberiaDescontarHorasAlViajar(){
-		PersonajeSargento personaje = new PersonajeSargento(10,new Pais(1,1,"Argentina"),5);
+		PersonajeSargento personaje = new PersonajeSargento(10,new Pais(1,1,"Argentina"),5, null);
 
 		Pais pais = new Pais(5,4,"Espania");
 		personaje.viajarA(pais);
@@ -57,7 +57,7 @@ public class IntegracionViajesTest {
 	
 	@Test
 	public void InvestigadorDeberiaDescontarHorasAlViajar(){
-		PersonajeInvestigador personaje = new PersonajeInvestigador(10,new Pais(1,1,"Argentina"),5);
+		PersonajeInvestigador personaje = new PersonajeInvestigador(10,new Pais(1,1,"Argentina"),5, null);
 		Pais pais = new Pais(5,4,"Espania");
 		personaje.viajarA(pais);
 		
@@ -66,7 +66,7 @@ public class IntegracionViajesTest {
 	
 	@Test
 	public void DetectiveDeberiaDescontarHorasAlViajar(){
-		PersonajeDetective personaje = new PersonajeDetective(10,new Pais(1,1,"Argentina"),5);
+		PersonajeDetective personaje = new PersonajeDetective(10,new Pais(1,1,"Argentina"),5, null);
 		Pais pais = new Pais(5,4,"Espania");
 		personaje.viajarA(pais);
 		
@@ -75,7 +75,7 @@ public class IntegracionViajesTest {
 	
 	@Test
 	public void NovatoDeberiaDescontarHorasAlViajar(){
-		PersonajeNovato personaje = new PersonajeNovato(10,new Pais(1,1,"Argentina"),1);
+		PersonajeNovato personaje = new PersonajeNovato(10,new Pais(1,1,"Argentina"),1, null);
 		Pais pais = new Pais(5,4,"Espania");
 		personaje.viajarA(pais);
 		
@@ -84,7 +84,7 @@ public class IntegracionViajesTest {
 	
 	@Test
 	public void SargentoDeberiaSituarAlPersonajeEnElPaisDestino(){
-		PersonajeSargento personaje = new PersonajeSargento(10,new Pais(1,1,"Argentina"),5);
+		PersonajeSargento personaje = new PersonajeSargento(10,new Pais(1,1,"Argentina"),5, null);
 		Pais pais = new Pais(12,9,"Italia");
 		personaje.viajarA(pais);
 		
@@ -93,7 +93,7 @@ public class IntegracionViajesTest {
 	
 	@Test
 	public void InvestigadorDeberiaSituarAlPersonajeEnElPaisDestino(){
-		PersonajeInvestigador personaje = new PersonajeInvestigador(10,new Pais(1,1,"Argentina"),5);
+		PersonajeInvestigador personaje = new PersonajeInvestigador(10,new Pais(1,1,"Argentina"),5,null);
 		Pais pais = new Pais(12,9,"Italia");
 		personaje.viajarA(pais);
 		
@@ -102,7 +102,7 @@ public class IntegracionViajesTest {
 	
 	@Test
 	public void DetectiveDeberiaSituarAlPersonajeEnElPaisDestino(){
-		PersonajeDetective personaje = new PersonajeDetective(10,new Pais(1,1,"Argentina"),5);
+		PersonajeDetective personaje = new PersonajeDetective(10,new Pais(1,1,"Argentina"),5, null);
 		Pais pais = new Pais(12,9,"Italia");
 		personaje.viajarA(pais);
 		
@@ -111,7 +111,7 @@ public class IntegracionViajesTest {
 	
 	@Test
 	public void NovatoDeberiaSituarAlPersonajeEnElPaisDestino(){
-		PersonajeNovato personaje = new PersonajeNovato(10,new Pais(1,1,"Argentina"),1);
+		PersonajeNovato personaje = new PersonajeNovato(10,new Pais(1,1,"Argentina"),1,null);
 		Pais pais = new Pais(12,9,"Italia");
 		personaje.viajarA(pais);
 		

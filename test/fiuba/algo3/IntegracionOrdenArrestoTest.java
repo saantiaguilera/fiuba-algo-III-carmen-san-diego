@@ -93,10 +93,11 @@ public class IntegracionOrdenArrestoTest {
 	
 	@Test
 	public void emitirUnaOrdenRestaTiempo(){
-		PersonajeNovato personaje = new PersonajeNovato(150, new Pais(2,2, "Brasil"), 5);
 		Jefatura jefatura = new Jefatura(generarLadron());
+		PersonajeNovato personaje = new PersonajeNovato(150, new Pais(2,2, "Brasil"), 5,jefatura);
+		
 				
-		personaje.emitirOrdenA(jefatura, new Sospechoso());
+		personaje.emitirOrdenA(new Sospechoso());
 		
 		Assert.assertEquals(147, personaje.getHorasRestantes());
 	}

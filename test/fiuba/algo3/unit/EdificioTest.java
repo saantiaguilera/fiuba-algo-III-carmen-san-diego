@@ -16,8 +16,8 @@ public class EdificioTest {
 	@Test
 	public void deberiaDevolverTresVisitas(){
 		Edificio edificio = new Edificio();
-		PersonajeDetective personajeDetective = new PersonajeDetective(10,new Pais(1,1,"Argentina"),5);
-		PersonajeNovato personajeNovato = new PersonajeNovato(10,new Pais(1,1,"Argentina"),1);
+		PersonajeDetective personajeDetective = new PersonajeDetective(10,new Pais(1,1,"Argentina"),5,null);
+		PersonajeNovato personajeNovato = new PersonajeNovato(10,new Pais(1,1,"Argentina"),1,null);
 		
 		personajeDetective.pedirPistaA(edificio);
 		personajeNovato.pedirPistaA(edificio);
