@@ -207,6 +207,7 @@ public class Ladron extends Sospechoso{
 			edificio.concatenarRasgo(" Le gustaba lucir su ", vehiculo);
 		}
 	}
+	
 	public boolean estuvoEn(Pais ubicacion) {
 		return listaPaises.contains(ubicacion);
 	}
