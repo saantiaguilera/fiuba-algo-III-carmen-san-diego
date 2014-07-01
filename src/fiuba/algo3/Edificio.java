@@ -19,7 +19,7 @@ public class Edificio {
 	
 	public Pista darPistaA(PersonajeNovato unPersonaje){
 		if (complice.esElLadron(unPersonaje.getUbicacion())){
-			unPersonaje.capturoAlLadron();
+			unPersonaje.capturarLadron();
 		}
 		else{
 			unPersonaje.restarHoras(complice.getHorasARestar(unPersonaje.getUbicacion()));
@@ -31,7 +31,7 @@ public class Edificio {
 	
 	public Pista darPistaA(PersonajeDetective unPersonaje){
 		if (complice.esElLadron(unPersonaje.getUbicacion())){
-			unPersonaje.capturoAlLadron();
+			unPersonaje.capturarLadron();
 		}
 		else{
 			unPersonaje.restarHoras(complice.getHorasARestar(unPersonaje.getUbicacion()));
@@ -43,7 +43,7 @@ public class Edificio {
 	
 	public Pista darPistaA(PersonajeInvestigador unPersonaje){
 		if (complice.esElLadron(unPersonaje.getUbicacion())){
-			unPersonaje.capturoAlLadron();
+			unPersonaje.capturarLadron();
 		}
 		else{
 			unPersonaje.restarHoras(complice.getHorasARestar(unPersonaje.getUbicacion()));
@@ -55,7 +55,7 @@ public class Edificio {
 	
 	public Pista darPistaA(PersonajeSargento unPersonaje){
 		if (complice.esElLadron(unPersonaje.getUbicacion())){
-			unPersonaje.capturoAlLadron();
+			unPersonaje.capturarLadron();
 		}
 		else{
 			unPersonaje.restarHoras(complice.getHorasARestar(unPersonaje.getUbicacion()));

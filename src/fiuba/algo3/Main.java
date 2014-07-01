@@ -68,7 +68,7 @@ public class Main {
 		char numero;
 		char otroNumero;
 		
-		while (!personaje.capturoAlLadron() & personaje.getHorasRestantes()>0){
+		while (!personaje.ladronCapturado() & personaje.getHorasRestantes()>0){
 			System.out.println();
 			System.out.print("HORAS: ");
 			System.out.println(personaje.getHorasRestantes());
@@ -82,7 +82,6 @@ public class Main {
 			switch (numero){
 			case '1':
 				Pais paisActual = personaje.getUbicacion();
-				paisActual = Pais.hidratar(docPaises, paisActual.getNombre(), ladron.getPaisActual(paisActual).getNombre(), ladron);//Hace falta esto?
 				System.out.println("Que edificio desea visitar?");
 				System.out.println("1. Biblioteca");
 				System.out.println("2. Puerto");
@@ -108,7 +107,16 @@ public class Main {
 				personaje.elegirPaisAViajar(mundo, docPaises);
 				break;
 			case '3':
-				//emitir orden de arresto
+				if(!jefatura.ordenEstaEmitida()){
+					personaje.emitirOrdenA(personaje.describirSospechoso());
+					if(jefatura.ordenEstaEmitida())
+						System.out.println("Orden emitida a " + ladron.getNombre());
+					else
+						System.out.println("Lo siento, no se a encontrado un sospechoso");
+				}
+				else{
+					System.out.println("Orden ya emitida " + ladron.getNombre());
+				}
 				break;
 			}
 			

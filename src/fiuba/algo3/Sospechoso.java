@@ -62,27 +62,27 @@ public class Sospechoso {
 		int COINCIDENCIAS_MINIMAS = 3;
 		
 		if(sospechoso.getSexo().hayRasgo())
-			if(sexo.getRasgo() == sospechoso.getSexo().getRasgo())
+			if(sexo.getRasgo().matches(sospechoso.getSexo().getRasgo()))
 				cantidadCoincidencias++;
 			else return false;
 		
 		if(sospechoso.getHobby().hayRasgo())
-			if(hobby.getRasgo() == sospechoso.getHobby().getRasgo())
+			if(hobby.getRasgo().matches(sospechoso.getHobby().getRasgo()))
 				cantidadCoincidencias++;
 			else return false;
 		
 		if(sospechoso.getCabello().hayRasgo())	
-			if(cabello.getRasgo() == sospechoso.getCabello().getRasgo())
+			if(cabello.getRasgo().matches(sospechoso.getCabello().getRasgo()))
 				cantidadCoincidencias++;
 			else return false;
 		
 		if(sospechoso.getSenia().hayRasgo())
-			if(senia.getRasgo() == sospechoso.getSenia().getRasgo())
+			if(senia.getRasgo().matches(sospechoso.getSenia().getRasgo()))
 				cantidadCoincidencias++;
 			else return false;
 		
 		if(sospechoso.getVehiculo().hayRasgo())
-			if(vehiculo.getRasgo() == sospechoso.getVehiculo().getRasgo())
+			if(vehiculo.getRasgo().matches(sospechoso.getVehiculo().getRasgo()))
 				cantidadCoincidencias++;
 			else return false;
 		

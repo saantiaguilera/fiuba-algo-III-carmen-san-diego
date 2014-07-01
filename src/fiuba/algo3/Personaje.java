@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.Calendar;
 import java.util.Stack;
 
-
 import org.w3c.dom.Document;
 
 public abstract class Personaje {
@@ -29,14 +28,12 @@ public abstract class Personaje {
 	    capturoAlLadron=false;
 	}
 	
-	public boolean capturoAlLadron() {
-		if (jefatura.ordenEstaEmitida()){
-			capturoAlLadron=true;
-			return true;
-		}
-		else{
-			return false;
-		}
+	public boolean ladronCapturado(){
+		return capturoAlLadron;
+	}
+	
+	public void capturarLadron(){
+		capturoAlLadron = true;
 	}
 	
 	public void viajarA(Pais destino){
@@ -138,5 +135,98 @@ public abstract class Personaje {
 		hora = Integer.toString(horaActual.get(Calendar.HOUR_OF_DAY)) +" hs del dia " + Integer.toString(horaActual.get(Calendar.DATE)) +"/" + Integer.toString(horaActual.get(Calendar.MONTH));
 		return hora;
 	}
+	
+	public Sospechoso describirSospechoso() throws IOException{
+		Sospechoso sospechoso = new Sospechoso();
+		char opcion;
+		System.out.println("SEXO\n1. Masculino\n2. Femenino\n3. Desconocido");
+		System.in.read(); System.in.read();
+		opcion = (char)System.in.read();
+		switch(opcion){
+		case '1':
+			sospechoso.setSexo(new Rasgo("masculino"));
+			break;
+		case '2':
+			sospechoso.setSexo(new Rasgo("femenino"));
+			break;
+		}
+		System.out.println("HOBBY\n1. Alpinismo\n2. Croquet\n3. Tenis");
+		System.out.println("4. Musica\n5. Paracaidismo\n6. Natacion\n7. Desconocido");
+		System.in.read(); System.in.read();
+		opcion = (char) System.in.read();
+		switch(opcion){
+		case '1':
+			sospechoso.setHobby(new Rasgo("alpinismo"));
+			break;
+		case '2':
+			sospechoso.setHobby(new Rasgo("croquet"));
+			break;
+		case '3':
+			sospechoso.setHobby(new Rasgo("tenis"));
+			break;
+		case '4':
+			sospechoso.setHobby(new Rasgo("musica"));
+			break;
+		case '5':
+			sospechoso.setHobby(new Rasgo("paracaidismo"));
+			break;
+		case '6':
+			sospechoso.setHobby(new Rasgo("natacion"));
+			break;
+		}
+		System.out.println("CABELLO\n1. Negro\n2. Colorado\n3. Rubio");
+		System.out.println("4. Castanio\n5. Desconocido");
+		System.in.read(); System.in.read();
+		opcion = (char)System.in.read();
+		switch(opcion){
+		case '1':
+			sospechoso.setCabello(new Rasgo("negro"));
+			break;
+		case '2':
+			sospechoso.setCabello(new Rasgo("colorado"));
+			break;
+		case '3':
+			sospechoso.setCabello(new Rasgo("rubio"));
+			break;
+		case '4':
+			sospechoso.setCabello(new Rasgo("castanio"));
+		}
+		System.out.println("SENIA\n1. Anillos\n2. Tatuajes\n3. Joyas");
+		System.out.println("4. Cicatrices\n5. Desconocido");
+		System.in.read(); System.in.read();
+		opcion = (char)System.in.read();
+		switch(opcion){
+		case '1':
+			sospechoso.setSenia(new Rasgo("anillos"));
+			break;
+		case '2':
+			sospechoso.setSenia(new Rasgo("tatuajes"));
+			break;
+		case '3':
+			sospechoso.setSenia(new Rasgo("joyas"));
+			break;
+		case '4':
+			sospechoso.setSenia(new Rasgo("cicactrices"));
+		}
+		System.out.println("VEHICULO\n1. Moto\n2. Descapotable\n3. Limusina");
+		System.out.println("4. Deportivo\n5. Desconocido");
+		System.in.read(); System.in.read();
+		opcion = (char)System.in.read();
+		switch(opcion){
+		case '1':
+			sospechoso.setVehiculo(new Rasgo("moto"));
+			break;
+		case '2':
+			sospechoso.setVehiculo(new Rasgo("descapotable"));
+			break;
+		case '3':
+			sospechoso.setVehiculo(new Rasgo("limusina"));
+			break;
+		case '4':
+			sospechoso.setVehiculo(new Rasgo("deportivo"));
+		}
 		
+		return sospechoso;
+	}
+	
 }
