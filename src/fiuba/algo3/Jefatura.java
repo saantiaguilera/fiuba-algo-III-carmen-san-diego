@@ -1,10 +1,17 @@
 package fiuba.algo3;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.*;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 
 public class Jefatura {
 	
@@ -106,4 +113,51 @@ public class Jefatura {
 		
 		return jefatura;
 	}
+
+	public Personaje asignarPersonajeConNombre(String nombrePersonaje) {
+	//POST: retorna el personaje correspondiente a los casos resueltos.
+		File tesorosXML = new File("personajes.xml");
+		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder dBuilder = null;
+		try {
+			dBuilder = dbFactory.newDocumentBuilder();
+		} catch (ParserConfigurationException e) {}
+		Document doc = null;
+		try {
+			doc = dBuilder.parse(tesorosXML);
+		} catch (SAXException | IOException e) {}
+		doc.getDocumentElement().normalize();
+		
+		NodeList nodosPersonajes = doc.getElementsByTagName("Personaje");
+		for(int i=0; i<nodosPersonajes.getLength(); i++){
+			Element elementoPersonaje = (Element)nodosPersonajes.item(i);
+			int casosResueltos = 
+					Integer.parseInt(elementoPersonaje.getAttribute("casosResueltos"));
+			if(elementoPersonaje.getAttribute("nombre").equals(nombrePersonaje)){
+				return personajeSegunCasos(casosResueltos);
+			}
+				
+		}
+		
+		//Se recorrieron todos los personajes y el buscado no tenía historial
+		return new PersonajeNovato(150, this.ladron.getPais(0), 900);
+	}
+	
+	private Personaje personajeSegunCasos(int casosResueltos){
+		if(casosResueltos < 5){
+			return new PersonajeNovato(150, this.ladron.getPais(0), 900);
+		}
+		else
+			if(casosResueltos < 10){
+				return new PersonajeDetective(150, this.ladron.getPais(0), 1100);
+			}
+			else{
+				if(casosResueltos < 20){
+					return new PersonajeInvestigador(150, this.ladron.getPais(0), 1300);
+				}
+				else
+					return new PersonajeSargento(150, this.ladron.getPais(0), 1500);
+			}
+	}
 }
+

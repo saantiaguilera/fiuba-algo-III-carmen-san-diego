@@ -102,8 +102,8 @@ public class JefaturaTest {
 		
 		Jefatura jefatura = Jefatura.Hidratar(doc, new Ladron());
 
-		Assert.assertEquals(jefatura.getListaDeSenias().get(0) , "anillo");
-		Assert.assertEquals(jefatura.getListaDeSenias().get(1) , "tatuaje");
+		Assert.assertEquals(jefatura.getListaDeSenias().get(0) , "anillos");
+		Assert.assertEquals(jefatura.getListaDeSenias().get(1) , "tatuajes");
 		Assert.assertEquals(jefatura.getListaDeSenias().get(2) , "joyas");
 	}	
 	
@@ -120,7 +120,7 @@ public class JefaturaTest {
 		Jefatura jefatura = Jefatura.Hidratar(doc, new Ladron());
 
 		Assert.assertEquals(jefatura.getListaDeVehiculos().get(0) , "moto");
-		Assert.assertEquals(jefatura.getListaDeVehiculos().get(1) , "convertible");
+		Assert.assertEquals(jefatura.getListaDeVehiculos().get(1) , "descapotable");
 		Assert.assertEquals(jefatura.getListaDeVehiculos().get(2) , "limusina");
 	}
 }

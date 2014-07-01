@@ -76,7 +76,7 @@ public class Edificio {
 
 		Random rand = new Random();
 		if(rand.nextInt(5) == 4){
-			ladron.dejarRasgoAleatorioEn(nuevoEdificio);
+			if(ladron != null) ladron.dejarRasgoAleatorioEn(nuevoEdificio);
 		}
 		
 		return nuevoEdificio;

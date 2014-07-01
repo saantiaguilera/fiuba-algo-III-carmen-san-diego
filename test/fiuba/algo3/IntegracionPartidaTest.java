@@ -101,9 +101,7 @@ public class IntegracionPartidaTest {
 		personaje.pedirPistaA(biblioteca);
 		personaje.pedirPistaA(puerto);
 		personaje.pedirPistaA(banco);
-		System.out.println ("Mensaje a mostrar");
 		personaje.viajarA(PARAGUAY);
-		System.out.println(personaje.getHorasRestantes());
 		Assert.assertEquals(146, personaje.getHorasRestantes());
 		
 		biblioteca = generarBibliotecaConPistaFacilDe(ECUADOR);
