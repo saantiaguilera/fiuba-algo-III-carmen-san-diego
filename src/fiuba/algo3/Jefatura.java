@@ -144,24 +144,32 @@ public class Jefatura {
 		}
 		
 		//Se recorrieron todos los personajes y el buscado no tenia historial
-		return new PersonajeNovato(150, this.ladron.getPais(0), 900);
+		return new PersonajeNovato(150, this.ladron.getPais(0), 900,this);
 	}
 	
 	private Personaje personajeSegunCasos(int casosResueltos){
 		if(casosResueltos < 5){
-			return new PersonajeNovato(150, this.ladron.getPais(0), 900);
+			return new PersonajeNovato(150, this.ladron.getPais(0), 900,this);
 		}
 		else
 			if(casosResueltos < 10){
-				return new PersonajeDetective(150, this.ladron.getPais(0), 1100);
+				return new PersonajeDetective(150, this.ladron.getPais(0), 1100,this);
 			}
 			else{
 				if(casosResueltos < 20){
-					return new PersonajeInvestigador(150, this.ladron.getPais(0), 1300);
+					return new PersonajeInvestigador(150, this.ladron.getPais(0), 1300,this);
 				}
 				else
-					return new PersonajeSargento(150, this.ladron.getPais(0), 1500);
+					return new PersonajeSargento(150, this.ladron.getPais(0), 1500,this);
 			}
+	}
+
+	public Pais paisActualDelLadron(Pais ubicacion) {
+		return ladron.getPaisActual(ubicacion);
+	}
+
+	public boolean verificarSiElLadronPasoPor(Pais ubicacion) {
+		return ladron.estuvoEn(ubicacion);
 	}
 }
 
