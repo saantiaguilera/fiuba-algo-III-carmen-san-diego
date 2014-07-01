@@ -11,7 +11,7 @@ public class IntegracionHeridasTest {
 	public void heridaCuchilloEnPersonajeNovatoRetrasaDosHoras(){
 		int horasLimite = 15;
 		Pais pais=new Pais(1,1,"Argentina");
-		PersonajeNovato personaje = new PersonajeNovato(horasLimite,pais,5);
+		PersonajeNovato personaje = new PersonajeNovato(horasLimite,pais,5, null);
 		Edificio edificio = new Edificio();
 		Cuchillo cuchillo=new Cuchillo();
 		Ladron ladron = new Ladron();
@@ -27,7 +27,7 @@ public class IntegracionHeridasTest {
 	public void heridaBalaEnPersonajeNovatoRetrasaCuatroHoras(){
 		int horasLimite = 15;
 		Pais pais=new Pais(1,1,"Argentina");
-		PersonajeNovato personaje = new PersonajeNovato(horasLimite,pais,5);
+		PersonajeNovato personaje = new PersonajeNovato(horasLimite,pais,5, null);
 		Edificio edificio = new Edificio();
 		Bala bala= new Bala();
 		Ladron ladron = new Ladron();

@@ -36,6 +36,11 @@ public class Ladron extends Sospechoso{
 		this.nombre = unNombre;
 	}
 	
+	public Pais getPaisActual(Pais paisDelPersonaje){
+		int posision=listaPaises.indexOf(paisDelPersonaje);
+		return listaPaises.get(posision+1);
+	}
+	
 	
 	public void robarUnTesoroRandom(Tesoros tesoro ,Document doc) {
 		Random rnd = new Random();
@@ -201,6 +206,9 @@ public class Ladron extends Sospechoso{
 		case 3:
 			edificio.concatenarRasgo(" Le gustaba lucir su ", vehiculo);
 		}
+	}
+	public boolean estuvoEn(Pais ubicacion) {
+		return listaPaises.contains(ubicacion);
 	}
 	
 }

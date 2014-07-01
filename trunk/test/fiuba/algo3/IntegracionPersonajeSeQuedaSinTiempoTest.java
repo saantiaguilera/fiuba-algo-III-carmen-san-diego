@@ -16,7 +16,7 @@ public class IntegracionPersonajeSeQuedaSinTiempoTest {
 		ladron.agregarPais(segundoPais);
 		ladron.agregarPais(tercerPais);
 		//Jefatura jefatura = new Jefatura(ladron); No lo uso porque no necesito emitir orden
-		PersonajeNovato jugador = new PersonajeNovato(10,primerPais,1);
+		PersonajeNovato jugador = new PersonajeNovato(10,primerPais,1,null);
 		
 		
 

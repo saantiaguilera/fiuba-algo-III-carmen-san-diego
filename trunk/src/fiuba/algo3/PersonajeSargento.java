@@ -2,8 +2,8 @@ package fiuba.algo3;
 
 public class PersonajeSargento extends Personaje {
 
-	public PersonajeSargento(int horasMaxima, Pais pais , int velocidad){
-		super(horasMaxima);
+	public PersonajeSargento(int horasMaxima, Pais pais , int velocidad, Jefatura unaJefatura){
+		super(horasMaxima, unaJefatura);
 		this.ubicacion= pais ;
 		this.velocidad = velocidad;
 	}

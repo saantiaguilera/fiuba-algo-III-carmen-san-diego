@@ -1,7 +1,6 @@
 package fiuba.algo3;
 
 import java.io.*; 
-import java.util.Scanner;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -52,7 +51,7 @@ public class Main {
 		Ladron ladron = Ladron.Hidratar(docLadron,1);
 		Jefatura jefatura = Jefatura.Hidratar(docJefatura, ladron);
 		ladron.robarUnTesoroRandom(tesoro, docPaises);
-		Personaje personaje = new PersonajeNovato(150,ladron.getPais(0),900); 
+		Personaje personaje = new PersonajeNovato(150,ladron.getPais(0),900, jefatura); 
 		
 		System.out.print("se ha robado un tesoro en ");
 		System.out.print(ladron.getPais(0).getNombre());
