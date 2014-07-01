@@ -1,7 +1,6 @@
 package fiuba.algo3;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.*;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -17,7 +16,6 @@ import javax.xml.transform.stream.StreamResult;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;
 
 public class Jefatura {
 	
@@ -120,23 +118,10 @@ public class Jefatura {
 		return jefatura;
 	}
 
-	public Personaje asignarPersonajeConNombre(File personajesXML, String nombrePersonaje) {
+	public Personaje asignarPersonajeConNombre(Document docPersonajes, String nombrePersonaje) {
 	//POST: retorna el personaje correspondiente a los casos resueltos.
-		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-		DocumentBuilder dBuilder = null;
-		try {
-			dBuilder = dbFactory.newDocumentBuilder();
-		} catch (ParserConfigurationException e) {}
-		Document doc = null;
-		
-		try {
-			doc = dBuilder.parse(personajesXML);
-		} catch (SAXException e) {
-		} catch (IOException e) {}
-
-		doc.getDocumentElement().normalize();
-		
-		NodeList nodosPersonajes = doc.getElementsByTagName("Personaje");
+	
+		NodeList nodosPersonajes = docPersonajes.getElementsByTagName("Personaje");
 		for(int i=0; i<nodosPersonajes.getLength(); i++){
 			Element elementoPersonaje = (Element)nodosPersonajes.item(i);
 			int casosResueltos = 

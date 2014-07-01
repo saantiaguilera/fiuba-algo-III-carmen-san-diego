@@ -1,36 +1,28 @@
 package fiuba.algo3;
 
 import java.io.*; 
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-
-
-
-
-
-//import org.junit.Assert;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
+
 public class Main {
 	
 	public static void main (String [] args) throws IOException{
-		//Scanner stdin = new Scanner (System.in); 
-		System.out.println("Bievenido detective, su rango actual es novato"); 
-		//int numero= stdin.nextInt(); 
-		//System.out.println(numero); 
 		
 		File sospechososXML = new File("sospechosos.xml");
 		File rasgosXML = new File("rasgos.xml");
 		File tesorosXML = new File("tesoros.xml");
 		File paisesXML = new File("paises.xml");
+		File personajesXML = new File("personajes.xml");
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 		DocumentBuilder db;
 		Document docLadron = null;
 		Document docJefatura = null;
 		Document docTesoros = null;
 		Document docPaises = null;
+		Document docPersonajes = null;
 		try{
 			db = dbf.newDocumentBuilder();
 			docLadron = db.newDocument();
@@ -41,6 +33,7 @@ public class Main {
 			docTesoros = db.parse(tesorosXML);
 			docPaises = db.newDocument();
 			docPaises = db.parse(paisesXML);
+			docPersonajes = db.parse(personajesXML);
 			}
 		catch (ParserConfigurationException  e) {}
 		catch (SAXException e){} 
@@ -55,10 +48,17 @@ public class Main {
 		Ladron ladron = Ladron.Hidratar(docLadron,1);
 		Jefatura jefatura = Jefatura.Hidratar(docJefatura, ladron);
 		ladron.robarUnTesoroRandom(tesoro, docPaises);
-		//Aca hay que fijarse que si ya existe tu personaje no se cree un novato y te "cargue" el tuyo, no puede ser
-		//Personaje solo porque perdemos dispatching
-		PersonajeNovato personaje = new PersonajeNovato(150,ladron.getPais(0),900, jefatura); 
 		
+		//Empieza la partida para el jugador
+		String nombrePersonaje;
+		System.out.println("Ingrese su nombre:");
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		nombrePersonaje = br.readLine();		
+		Personaje personaje = jefatura.asignarPersonajeConNombre(docPersonajes, nombrePersonaje);
+		System.out.println("Bienvenido, " + personaje.rango());
+		System.out.println();
+		
+		System.out.println("ULTIMA NOTICIA");
 		System.out.print("Ladron de sexo ");
 		System.out.print(ladron.getSexo().getRasgo());
 		System.out.print(" se ha robado un tesoro en ");
@@ -93,13 +93,13 @@ public class Main {
 
 				switch(otroNumero){
 				case '1':
-					System.out.println(paisActual.biblioteca.darPistaA(personaje).getPista());
+					System.out.println(personaje.pedirPistaA(paisActual.biblioteca).getPista());
 					break;
 				case '2':
-					System.out.println(paisActual.puerto.darPistaA(personaje).getPista());
+					System.out.println(personaje.pedirPistaA(paisActual.puerto).getPista());
 					break;
 				case '3':
-					System.out.println(paisActual.banco.darPistaA(personaje).getPista());
+					System.out.println(personaje.pedirPistaA(paisActual.banco).getPista());
 					break;
 				}
 				break;
