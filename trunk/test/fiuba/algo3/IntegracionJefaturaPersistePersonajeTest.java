@@ -2,21 +2,24 @@ package fiuba.algo3;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.junit.Assert;
+
 import org.junit.Test;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
-public class IntegracionLadronGeneraPaises {
+public class IntegracionJefaturaPersistePersonajeTest {
 	
-	@Test
-	public void ladronDeberiaElegirseAleatorioLosPaises() throws ParserConfigurationException, SAXException, IOException{
+	Ladron ladron;
+	
+	public IntegracionJefaturaPersistePersonajeTest() throws ParserConfigurationException, SAXException, IOException{
+		ladron = new Ladron();
+		
 		File tesorosXML = new File("tesoros.xml");
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -30,23 +33,20 @@ public class IntegracionLadronGeneraPaises {
 		Document docPaises = dBuilder.parse(paisesXML);
 		docPaises.getDocumentElement().normalize();
 		
-		Ladron ladron = new Ladron("Juan Perez");
-		ladron.setCabello(new Rasgo("rojo"));
-		ladron.setSenia(new Rasgo("tatuajes"));
+		ladron.setCabello(new Rasgo("rubio"));
 		ladron.setSexo(new Rasgo("masculino"));
 		ladron.setHobby(new Rasgo("alpinismo"));
-		ladron.setVehiculo(new Rasgo("moto"));
+		ladron.setSenia(new Rasgo("tatuajes"));
+		ladron.setVehiculo(new Rasgo("descapotable"));		
 		
 		ladron.robarUnTesoroRandom(tesoros, docPaises);
-		
-		Assert.assertTrue(ladron.getCantPaises() >= 4);
-		
-		ArrayList<String> nombrePaises = new ArrayList<String>();
-		for(int i=0; i<ladron.getCantPaises(); i++){
-			Assert.assertFalse(nombrePaises.contains(ladron.getPais(i).getNombre()));
-			nombrePaises.add(ladron.getPais(i).getNombre());
-			
-		}
 	}
 	
+	@Test
+	public void jefaturaDevuelveUnaInstanciaDePersonaje(){
+		Jefatura jefatura = new Jefatura(this.ladron);
+		Personaje personaje = jefatura.asignarPersonajeConNombre("juanma");
+		
+		Assert.assertNotNull(personaje);
+	}
 }
