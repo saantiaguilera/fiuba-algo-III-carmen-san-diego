@@ -83,7 +83,6 @@ public class IntegracionJefaturaPersistePersonajeTest {
 		jefatura.sumarCasoAXML(personajesXML, "pepito");
 		
 		Assert.assertNotNull(personajesXML.toString());
-		Assert.assertNotEquals("", personajesXML.toString());
 		
 		
 		//Verifico la lectura
