@@ -8,6 +8,9 @@ public class PersonajeDetective extends Personaje {
 		this.velocidad = velocidad;
 	}
 	
+	public String rango(){
+		return "detective";
+	}
 	
 	public Pista pedirPistaA(Edificio edificio){
 		return edificio.darPistaA(this);

@@ -229,4 +229,5 @@ public abstract class Personaje {
 		return sospechoso;
 	}
 	
+	public abstract String rango();
 }

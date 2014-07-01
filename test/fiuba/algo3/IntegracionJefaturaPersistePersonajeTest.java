@@ -63,7 +63,7 @@ public class IntegracionJefaturaPersistePersonajeTest {
 	}
 	
 	@Test
-	public void jefaturaDevuelveUnaInstanciaDePersonajeYActualiza() throws ParserConfigurationException, TransformerException{
+	public void jefaturaDevuelveUnaInstanciaDePersonajeYActualiza() throws ParserConfigurationException, TransformerException, SAXException, IOException{
 		Jefatura jefatura = new Jefatura(this.ladron);
 		File personajesXML = new File(this.nombreDeArchivo);
 		
@@ -86,7 +86,8 @@ public class IntegracionJefaturaPersistePersonajeTest {
 		
 		
 		//Verifico la lectura
-		Personaje personaje = jefatura.asignarPersonajeConNombre(personajesXML, "pepito");
+		Document docPersonajes = db.parse(personajesXML);
+		Personaje personaje = jefatura.asignarPersonajeConNombre(docPersonajes, "pepito");
 		Assert.assertNotNull(personaje);
 	}
 
