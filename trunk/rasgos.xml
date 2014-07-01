@@ -1,5 +1,5 @@
 <Rasgos>
-	<Sexo opcion1="hombre" opcion2="mujer"></Sexo>
+	<Sexo opcion1="masculino" opcion2="femenino"></Sexo>
 	<Hobby opcion1="alpinismo" opcion2="croquet" opcion3="tenis" opcion4="musica" opcion5="paracaidismo" opcion6="natacion"></Hobby>
 	<Cabello opcion1="negro" opcion2="colorado" opcion3="rubio" opcion4="castanio"></Cabello>
 	<Senia opcion1="anillos" opcion2="tatuajes" opcion3="joyas" opcion4="cicatrices"></Senia>
