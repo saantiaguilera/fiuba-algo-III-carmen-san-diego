@@ -1,6 +1,1 @@
-<Personajes>
-	<Personaje nombre="juanma" casosResueltos="10">
-	</Personaje>
-	<Personaje nombre="chano" casosResueltos="0">
-	</Personaje>
-</Personajes>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Personajes><Personaje casosResueltos="3" nombre="pepito"/></Personajes>
