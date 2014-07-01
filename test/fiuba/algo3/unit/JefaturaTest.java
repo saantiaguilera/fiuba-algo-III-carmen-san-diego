@@ -51,8 +51,8 @@ public class JefaturaTest {
 		
 		Jefatura jefatura = Jefatura.Hidratar(doc, new Ladron());
 
-		Assert.assertEquals(jefatura.getListaDeSexo().get(0) , "hombre");
-		Assert.assertEquals(jefatura.getListaDeSexo().get(1) , "mujer");
+		Assert.assertEquals(jefatura.getListaDeSexo().get(0) , "masculino");
+		Assert.assertEquals(jefatura.getListaDeSexo().get(1) , "femenino");
 	}
 	
 	@Test
