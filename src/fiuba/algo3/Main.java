@@ -59,47 +59,61 @@ public class Main {
 		//Personaje solo porque perdemos dispatching
 		PersonajeNovato personaje = new PersonajeNovato(150,ladron.getPais(0),900, jefatura); 
 		
-		System.out.print("se ha robado un tesoro en ");
+		System.out.print("Ladron de sexo ");
+		System.out.print(ladron.getSexo().getRasgo());
+		System.out.print(" se ha robado un tesoro en ");
 		System.out.print(ladron.getPais(0).getNombre());
-		System.out.println(" debe seguir las pistas hasta encontrar al ladron");
+		System.out.println(". Debe seguir las pistas hasta encontrar al ladron");
 		
-		int numero;
-		int otroNumero;
+		char numero;
+		char otroNumero;
 		
-		while (personaje.capturoAlLadron()!=true & personaje.getHorasRestantes()>0){
+		while (!personaje.capturoAlLadron() & personaje.getHorasRestantes()>0){
+			System.out.println();
+			System.out.print("HORAS: ");
+			System.out.println(personaje.getHorasRestantes());
+			System.out.print("PAIS: ");
+			System.out.println(personaje.getUbicacion().getNombre());
 			System.out.println("Elija una opcion");
 			System.out.println("1. Pedir pista a un edificio");
 			System.out.println("2. Viajar a un pais");
 			System.out.println("3. Emitir orden de arresto");
-			numero = System.in.read();
+			numero = (char)System.in.read();
 			switch (numero){
-			case 1:
+			case '1':
 				Pais paisActual = personaje.getUbicacion();
 				paisActual = Pais.hidratar(docPaises, paisActual.getNombre(), ladron.getPaisActual(paisActual).getNombre(), ladron);//Hace falta esto?
 				System.out.println("Que edificio desea visitar?");
 				System.out.println("1. Biblioteca");
 				System.out.println("2. Puerto");
 				System.out.println("3. Banco");
-				otroNumero = System.in.read();
+				
+				System.in.read();	//Lee el enter
+				System.in.read();	//Lee el retorno al carro
+				otroNumero = (char)System.in.read();
+
 				switch(otroNumero){
-				case 1:
-					paisActual.biblioteca.darPistaA(personaje);
+				case '1':
+					System.out.println(paisActual.biblioteca.darPistaA(personaje).getPista());
 					break;
-				case 2:
-					paisActual.puerto.darPistaA(personaje);
+				case '2':
+					System.out.println(paisActual.puerto.darPistaA(personaje).getPista());
 					break;
-				case 3:
-					paisActual.banco.darPistaA(personaje);
+				case '3':
+					System.out.println(paisActual.banco.darPistaA(personaje).getPista());
 					break;
 				}
-			case 2:
+				break;
+			case '2':
 				personaje.elegirPaisAViajar(mundo, docPaises);
 				break;
-			case 3:
+			case '3':
 				//emitir orden de arresto
 				break;
 			}
 			
+			System.in.read();	//Lee el enter
+			System.in.read();	//Lee el retorno al carro
 		}
 		System.out.println(ladron.getPais(0).getNombre());
 		System.out.println(ladron.getPais(1).getNombre());

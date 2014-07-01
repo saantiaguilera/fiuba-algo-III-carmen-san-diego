@@ -9,14 +9,17 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
 public class IntegracionLadronGeneraPaises {
 	
-	@Test
-	public void ladronDeberiaElegirseAleatorioLosPaises() throws ParserConfigurationException, SAXException, IOException{
+	Ladron ladron;
+	
+	@Before
+	public void before() throws ParserConfigurationException, SAXException, IOException{
 		File tesorosXML = new File("tesoros.xml");
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -30,7 +33,7 @@ public class IntegracionLadronGeneraPaises {
 		Document docPaises = dBuilder.parse(paisesXML);
 		docPaises.getDocumentElement().normalize();
 		
-		Ladron ladron = new Ladron("Juan Perez");
+		ladron = new Ladron("Juan Perez");
 		ladron.setCabello(new Rasgo("rojo"));
 		ladron.setSenia(new Rasgo("tatuajes"));
 		ladron.setSexo(new Rasgo("masculino"));
@@ -38,15 +41,25 @@ public class IntegracionLadronGeneraPaises {
 		ladron.setVehiculo(new Rasgo("moto"));
 		
 		ladron.robarUnTesoroRandom(tesoros, docPaises);
-		
-		Assert.assertTrue(ladron.getCantPaises() >= 4);
+	}
+	
+	@Test
+	public void ladronDeberiaElegirseAleatorioLosPaises() throws ParserConfigurationException, SAXException, IOException{
+
+		Assert.assertTrue(this.ladron.getCantPaises() >= 4);
 		
 		ArrayList<String> nombrePaises = new ArrayList<String>();
-		for(int i=0; i<ladron.getCantPaises(); i++){
-			Assert.assertFalse(nombrePaises.contains(ladron.getPais(i).getNombre()));
-			nombrePaises.add(ladron.getPais(i).getNombre());
+		for(int i=0; i<this.ladron.getCantPaises(); i++){
+			Assert.assertFalse(nombrePaises.contains(this.ladron.getPais(i).getNombre()));
+			nombrePaises.add(this.ladron.getPais(i).getNombre());
 			
 		}
+	}
+	
+	@Test
+	public void ladronVerificaSiEstuvoEnUnPais(){
+		Pais paisPrimero = this.ladron.getPais(0);
+		Assert.assertTrue(this.ladron.estuvoEn(paisPrimero));
 	}
 	
 }

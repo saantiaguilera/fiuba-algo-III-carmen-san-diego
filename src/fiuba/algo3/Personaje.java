@@ -69,26 +69,31 @@ public abstract class Personaje {
 		Pais unPaisIncorrecto = Pais.hidratar(doc, unStringDePaisIncorrecto, null, null);
 		System.out.println("2. " + unPaisIncorrecto.getNombre());
 		
-		String otroStringDePaisIncorrecto = mundo.getUnPaisDistintoDe(paisCorrecto.getNombre());
+		String otroStringDePaisIncorrecto = unStringDePaisIncorrecto;
+		while(otroStringDePaisIncorrecto.matches(unStringDePaisIncorrecto)){
+			otroStringDePaisIncorrecto = mundo.getUnPaisDistintoDe(paisCorrecto.getNombre());
+		}
 		Pais otroPaisIncorrecto = Pais.hidratar(doc, otroStringDePaisIncorrecto, null, null);
 		System.out.println("3. " + otroPaisIncorrecto.getNombre());
 		
+		System.in.read();	//Lee el enter
+		System.in.read();	//Lee el retorno al carro
 		char numero = (char)System.in.read();
 		switch (numero){
-		case 1:
+		case '1':
 				viajarA(paisCorrecto);
 				break;
-		case 2:
+		case '2':
 				viajarA(unPaisIncorrecto);
 				break;
-		case 3:
+		case '3':
 				viajarA(otroPaisIncorrecto);
 				break;
 		}
 	}
 	
 	private boolean seConfundioDePais() {
-		return jefatura.verificarSiElLadronPasoPor(ubicacion);
+		return !jefatura.verificarSiElLadronPasoPor(ubicacion);
 	}
 
 	private int calcularTiempo(Pais destino){
