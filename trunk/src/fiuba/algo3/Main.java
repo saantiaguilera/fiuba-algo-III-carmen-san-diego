@@ -115,7 +115,7 @@ public class Main {
 						System.out.println("Lo siento, no se a encontrado un sospechoso");
 				}
 				else{
-					System.out.println("Orden ya emitida " + ladron.getNombre());
+					System.out.println("Orden ya emitida a " + ladron.getNombre());
 				}
 				break;
 			}
@@ -123,11 +123,19 @@ public class Main {
 			System.in.read();	//Lee el enter
 			System.in.read();	//Lee el retorno al carro
 		}
-		System.out.println(ladron.getPais(0).getNombre());
-		System.out.println(ladron.getPais(1).getNombre());
-		System.out.println(ladron.getPais(2).getNombre());
-		System.out.println(personaje.pedirPistaA(ladron.getPais(0).banco).getPista());
-		
+
+		if(personaje.ladronCapturado()){
+			if(jefatura.ordenEstaEmitida()){
+				jefatura.sumarCasoAXML(personajesXML, nombrePersonaje);
+				System.out.println("Felicidades! Ahora vivira sus dias en Azkaban");
+			}
+			else{
+				System.out.println("Pero como colgaste mal en emitir la orden, se fue no mas. Gil.");
+			}
+		}
+		else{
+			System.out.println("Dale macho, media pila! Ni sigas, se te re fue el ladron");
+		}
 	}
 
 }

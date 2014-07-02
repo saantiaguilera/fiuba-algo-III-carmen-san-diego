@@ -12,10 +12,8 @@ public class Complice {
 		ladron=unLadron;
 	}
 		
-	//REFACTOR: Podria preguntarse directamente si arma!=null,
-	//	y encontes Complice no necesitaria saber de Ladron
 	public int getHorasARestar(Pais unPais){
-		if (ladron.esUltimoPais(unPais)){
+		if(arma!=null){
 			return arma.daniar();
 		}
 		else { return 0;}
@@ -53,8 +51,8 @@ public class Complice {
 	}
 
 	public boolean esElLadron(Pais ubicacion) {
-		if (ladron.esUltimoPais(ubicacion)){
-			if (arma.haceDanio()==false){
+		if (arma!= null && ladron.esUltimoPais(ubicacion)){
+			if (!arma.haceDanio()){
 				return true;
 			}
 		}
