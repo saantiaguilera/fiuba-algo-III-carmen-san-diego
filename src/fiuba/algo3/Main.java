@@ -2,6 +2,7 @@ package fiuba.algo3;
 
 import java.io.*; 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -163,6 +164,12 @@ public class Main {
 		return sospechoso;
 	}
 	
+	private static String convertirHoras(Calendar tiempo){
+		String hora = new String();
+		hora = Integer.toString(tiempo.get(Calendar.HOUR_OF_DAY)) +" hs del dia " + Integer.toString(tiempo.get(Calendar.DATE)) +"/" + Integer.toString(tiempo.get(Calendar.MONTH));
+		return hora;
+	}
+	
 	
 	public static void main (String [] args) throws IOException{
 		
@@ -219,7 +226,7 @@ public class Main {
 		System.out.print(" se ha robado un tesoro en ");
 		System.out.print(ladron.getPais(0).getNombre());
 		System.out.println(". Debe seguir las pistas hasta encontrar al ladron");
-		System.out.println("Fecha limite: "+personaje.getTiempoLimite());
+		System.out.println("Fecha limite: "+ Main.convertirHoras(personaje.getTiempoLimite()));
 		
 		char numero;
 		char otroNumero;
@@ -227,7 +234,7 @@ public class Main {
 		while (!personaje.ladronCapturado() & personaje.getHorasRestantes()>0){
 			System.out.println();
 			System.out.print("Hora : ");
-			System.out.println(personaje.getHoraActual());
+			System.out.println(Main.convertirHoras(personaje.getHoraActual()));
 			System.out.print("PAIS: ");
 			System.out.println(personaje.getUbicacion().getNombre());
 			System.out.println("Elija una opcion");
