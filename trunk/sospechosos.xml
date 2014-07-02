@@ -1,5 +1,13 @@
-<Sospechosos>
-	<Sospechoso nombre="Nick Brunch" sexo="masculino" hobby="alpinismo" cabello="negro" senia="anillos" vehiculo="moto" ></Sospechoso>
-	<Sospechoso nombre="Len Bulk" sexo="masculino" hobby="alpinismo" cabello="colorado" senia="tatuajes" vehiculo="descapotable" ></Sospechoso>
+<Sospechosos cantidad="10">
+  <Sospechoso nombre="Nick Brunch" sexo="masculino" hobby="alpinismo" cabello="negro" senia="anillos" vehiculo="moto"/>
+  <Sospechoso nombre="Len Bulk" sexo="masculino" hobby="alpinismo" cabello="colorado" senia="tatuajes" vehiculo="descapotable"/>
+  <Sospechoso nombre="Ihor Ihorovitch" sexo="masculino" hobby="croquet" cabello="rubio" senia="tatuajes" vehiculo="limusina"/>
+  <Sospechoso nombre="Fast Eddie B." sexo="masculino" hobby="natacion" cabello="negro" senia="joyas" vehiculo="descapotable"/>
+  <Sospechoso nombre="Scar Graynolt" sexo="masculino" hobby="musica" cabello="colorado" senia="anillos" vehiculo="limusina"/>
+  <Sospechoso nombre="Merey Laroc" sexo="femenino" hobby="croquet" cabello="castanio" senia="joyas" vehiculo="limusina"/>
+  <Sospechoso nombre="Lady Agatha" sexo="femenino" hobby="musica" cabello="colorado" senia="anillos" vehiculo="descapotable"/>
+  <Sospechoso nombre="Katherine Drib" sexo="femenino" hobby="alpinismo" cabello="castanio" senia="tatuajes" vehiculo="moto"/>
+  <Sospechoso nombre="Dazzle Annie" sexo="femenino" hobby="natacion" cabello="rubio" senia="tatuajes" vehiculo="limusina"/>
+  <Sospechoso nombre="Carmen Sandiego" sexo="femenino" hobby="tenis" cabello="colorado" senia="joyas" vehiculo="descapotable"/>
 </Sospechosos>
 			
