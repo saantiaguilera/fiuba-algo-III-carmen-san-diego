@@ -1,12 +1,8 @@
 package fiuba.algo3;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Collections;
-import java.util.Stack;
 
-import org.w3c.dom.Document;
+import java.util.Calendar;
+import java.util.Stack;
 
 public abstract class Personaje {
 	protected Pais ubicacion;

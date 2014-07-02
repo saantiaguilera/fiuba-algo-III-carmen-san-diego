@@ -2,7 +2,7 @@ package fiuba.algo3;
 
 public class Arma {
 	protected int danio;
-	boolean haceDanio;
+	protected boolean haceDanio;
 	
 	public Arma(){
 		danio = 0;
