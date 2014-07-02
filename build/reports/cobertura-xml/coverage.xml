@@ -1,0 +1,2936 @@
+<?xml version="1.0"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+
+<coverage line-rate="0.6226175349428208" branch-rate="0.42473118279569894" lines-covered="490" lines-valid="787" branches-covered="79" branches-valid="186" complexity="1.9183673469387754" version="1.9.4.1" timestamp="1404317294827">
+	<sources>
+		<source>C:/Chano/UBA/Algoritmos y Programacion III/Eclipse-Workspace/AlgoThief/src</source>
+	</sources>
+	<packages>
+		<package name="fiuba.algo3" line-rate="0.6226175349428208" branch-rate="0.42473118279569894" complexity="1.9183673469387754">
+			<classes>
+				<class name="fiuba.algo3.ActaDeRendicion" filename="fiuba/algo3/ActaDeRendicion.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="4" hits="2" branch="false"/>
+								<line number="5" hits="2" branch="false"/>
+								<line number="6" hits="2" branch="false"/>
+								<line number="7" hits="2" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="4" hits="2" branch="false"/>
+						<line number="5" hits="2" branch="false"/>
+						<line number="6" hits="2" branch="false"/>
+						<line number="7" hits="2" branch="false"/>
+					</lines>
+				</class>
+				<class name="fiuba.algo3.Arma" filename="fiuba/algo3/Arma.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="7" hits="8" branch="false"/>
+								<line number="8" hits="8" branch="false"/>
+								<line number="9" hits="8" branch="false"/>
+								<line number="10" hits="8" branch="false"/>
+							</lines>
+						</method>
+						<method name="daniar" signature="()I" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="13" hits="4" branch="false"/>
+							</lines>
+						</method>
+						<method name="haceDanio" signature="()Z" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="17" hits="4" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="7" hits="8" branch="false"/>
+						<line number="8" hits="8" branch="false"/>
+						<line number="9" hits="8" branch="false"/>
+						<line number="10" hits="8" branch="false"/>
+						<line number="13" hits="4" branch="false"/>
+						<line number="17" hits="4" branch="false"/>
+					</lines>
+				</class>
+				<class name="fiuba.algo3.Bala" filename="fiuba/algo3/Bala.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="5" hits="3" branch="false"/>
+								<line number="6" hits="3" branch="false"/>
+								<line number="7" hits="3" branch="false"/>
+								<line number="8" hits="3" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="5" hits="3" branch="false"/>
+						<line number="6" hits="3" branch="false"/>
+						<line number="7" hits="3" branch="false"/>
+						<line number="8" hits="3" branch="false"/>
+					</lines>
+				</class>
+				<class name="fiuba.algo3.Complice" filename="fiuba/algo3/Complice.java" line-rate="0.9583333333333334" branch-rate="0.75" complexity="1.6">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Lfiuba/algo3/Ladron;Lfiuba/algo3/Arma;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="10" hits="75" branch="false"/>
+								<line number="11" hits="75" branch="false"/>
+								<line number="12" hits="75" branch="false"/>
+								<line number="13" hits="75" branch="false"/>
+							</lines>
+						</method>
+						<method name="agregarPistaDificil" signature="(Lfiuba/algo3/Pista;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="32" hits="31" branch="false"/>
+								<line number="33" hits="31" branch="false"/>
+							</lines>
+						</method>
+						<method name="agregarPistaFacil" signature="(Lfiuba/algo3/Pista;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="24" hits="36" branch="false"/>
+								<line number="25" hits="36" branch="false"/>
+							</lines>
+						</method>
+						<method name="agregarPistaMedia" signature="(Lfiuba/algo3/Pista;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="28" hits="47" branch="false"/>
+								<line number="29" hits="47" branch="false"/>
+							</lines>
+						</method>
+						<method name="concatenarAPistas" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="48" hits="2" branch="false"/>
+								<line number="49" hits="2" branch="false"/>
+								<line number="50" hits="2" branch="false"/>
+								<line number="51" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="darPistaDificil" signature="()Lfiuba/algo3/Pista;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="44" hits="11" branch="false"/>
+							</lines>
+						</method>
+						<method name="darPistaFacil" signature="()Lfiuba/algo3/Pista;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="36" hits="23" branch="false"/>
+							</lines>
+						</method>
+						<method name="darPistaMedia" signature="()Lfiuba/algo3/Pista;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="40" hits="24" branch="false"/>
+							</lines>
+						</method>
+						<method name="esElLadron" signature="(Lfiuba/algo3/Pais;)Z" line-rate="0.75" branch-rate="0.6666666666666666">
+							<lines>
+								<line number="54" hits="55" branch="true" condition-coverage="75% (3/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+										<condition number="1" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+								<line number="55" hits="4" branch="true" condition-coverage="50% (1/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+								<line number="56" hits="0" branch="false"/>
+								<line number="59" hits="55" branch="false"/>
+							</lines>
+						</method>
+						<method name="getHorasARestar" signature="(Lfiuba/algo3/Pais;)I" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="16" hits="55" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="17" hits="4" branch="false"/>
+								<line number="19" hits="51" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="10" hits="75" branch="false"/>
+						<line number="11" hits="75" branch="false"/>
+						<line number="12" hits="75" branch="false"/>
+						<line number="13" hits="75" branch="false"/>
+						<line number="16" hits="55" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="17" hits="4" branch="false"/>
+						<line number="19" hits="51" branch="false"/>
+						<line number="24" hits="36" branch="false"/>
+						<line number="25" hits="36" branch="false"/>
+						<line number="28" hits="47" branch="false"/>
+						<line number="29" hits="47" branch="false"/>
+						<line number="32" hits="31" branch="false"/>
+						<line number="33" hits="31" branch="false"/>
+						<line number="36" hits="23" branch="false"/>
+						<line number="40" hits="24" branch="false"/>
+						<line number="44" hits="11" branch="false"/>
+						<line number="48" hits="2" branch="false"/>
+						<line number="49" hits="2" branch="false"/>
+						<line number="50" hits="2" branch="false"/>
+						<line number="51" hits="2" branch="false"/>
+						<line number="54" hits="55" branch="true" condition-coverage="75% (3/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+								<condition number="1" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+						<line number="55" hits="4" branch="true" condition-coverage="50% (1/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+						<line number="56" hits="0" branch="false"/>
+						<line number="59" hits="55" branch="false"/>
+					</lines>
+				</class>
+				<class name="fiuba.algo3.Cuchillo" filename="fiuba/algo3/Cuchillo.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="6" hits="3" branch="false"/>
+								<line number="7" hits="3" branch="false"/>
+								<line number="8" hits="3" branch="false"/>
+								<line number="9" hits="3" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="6" hits="3" branch="false"/>
+						<line number="7" hits="3" branch="false"/>
+						<line number="8" hits="3" branch="false"/>
+						<line number="9" hits="3" branch="false"/>
+					</lines>
+				</class>
+				<class name="fiuba.algo3.Edificio" filename="fiuba/algo3/Edificio.java" line-rate="0.8979591836734694" branch-rate="0.5833333333333334" complexity="1.4615384615384615">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="14" hits="66" branch="false"/>
+								<line number="15" hits="66" branch="false"/>
+								<line number="16" hits="66" branch="false"/>
+								<line number="17" hits="66" branch="false"/>
+							</lines>
+						</method>
+						<method name="agregarPistaDificil" signature="(Lfiuba/algo3/Pista;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="76" hits="24" branch="false"/>
+								<line number="77" hits="24" branch="false"/>
+							</lines>
+						</method>
+						<method name="agregarPistaFacil" signature="(Lfiuba/algo3/Pista;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="68" hits="29" branch="false"/>
+								<line number="69" hits="29" branch="false"/>
+							</lines>
+						</method>
+						<method name="agregarPistaMedia" signature="(Lfiuba/algo3/Pista;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="72" hits="40" branch="false"/>
+								<line number="73" hits="40" branch="false"/>
+							</lines>
+						</method>
+						<method name="concatenarRasgo" signature="(Ljava/lang/String;Lfiuba/algo3/Rasgo;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="105" hits="2" branch="false"/>
+								<line number="106" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="darPistaA" signature="(Lfiuba/algo3/PersonajeDetective;)Lfiuba/algo3/Pista;" line-rate="0.8333333333333334" branch-rate="0.5">
+							<lines>
+								<line number="32" hits="23" branch="true" condition-coverage="50% (1/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+								<line number="33" hits="0" branch="false"/>
+								<line number="36" hits="23" branch="false"/>
+								<line number="37" hits="23" branch="false"/>
+								<line number="38" hits="23" branch="false"/>
+								<line number="40" hits="23" branch="false"/>
+							</lines>
+						</method>
+						<method name="darPistaA" signature="(Lfiuba/algo3/PersonajeInvestigador;)Lfiuba/algo3/Pista;" line-rate="0.8333333333333334" branch-rate="0.5">
+							<lines>
+								<line number="44" hits="4" branch="true" condition-coverage="50% (1/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+								<line number="45" hits="0" branch="false"/>
+								<line number="48" hits="4" branch="false"/>
+								<line number="49" hits="4" branch="false"/>
+								<line number="50" hits="4" branch="false"/>
+								<line number="52" hits="4" branch="false"/>
+							</lines>
+						</method>
+						<method name="darPistaA" signature="(Lfiuba/algo3/PersonajeNovato;)Lfiuba/algo3/Pista;" line-rate="0.8333333333333334" branch-rate="0.5">
+							<lines>
+								<line number="20" hits="22" branch="true" condition-coverage="50% (1/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+								<line number="21" hits="0" branch="false"/>
+								<line number="24" hits="22" branch="false"/>
+								<line number="25" hits="22" branch="false"/>
+								<line number="26" hits="22" branch="false"/>
+								<line number="28" hits="22" branch="false"/>
+							</lines>
+						</method>
+						<method name="darPistaA" signature="(Lfiuba/algo3/PersonajeSargento;)Lfiuba/algo3/Pista;" line-rate="0.8333333333333334" branch-rate="0.5">
+							<lines>
+								<line number="56" hits="6" branch="true" condition-coverage="50% (1/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+								<line number="57" hits="0" branch="false"/>
+								<line number="60" hits="6" branch="false"/>
+								<line number="61" hits="6" branch="false"/>
+								<line number="62" hits="6" branch="false"/>
+								<line number="64" hits="6" branch="false"/>
+							</lines>
+						</method>
+						<method name="getPistas" signature="()Ljava/lang/String;" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="110" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="hidratar" signature="(Lorg/w3c/dom/Node;Lfiuba/algo3/Ladron;)Lfiuba/algo3/Edificio;" line-rate="1.0" branch-rate="0.75">
+							<lines>
+								<line number="88" hits="15" branch="false"/>
+								<line number="89" hits="15" branch="false"/>
+								<line number="91" hits="15" branch="false"/>
+								<line number="92" hits="15" branch="false"/>
+								<line number="93" hits="15" branch="false"/>
+								<line number="96" hits="15" branch="false"/>
+								<line number="97" hits="15" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="98" hits="2" branch="true" condition-coverage="50% (1/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+								<line number="101" hits="15" branch="false"/>
+							</lines>
+						</method>
+						<method name="setComplice" signature="(Lfiuba/algo3/Complice;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="84" hits="8" branch="false"/>
+								<line number="85" hits="8" branch="false"/>
+							</lines>
+						</method>
+						<method name="vecesVisitado" signature="()I" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="80" hits="6" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="14" hits="66" branch="false"/>
+						<line number="15" hits="66" branch="false"/>
+						<line number="16" hits="66" branch="false"/>
+						<line number="17" hits="66" branch="false"/>
+						<line number="20" hits="22" branch="true" condition-coverage="50% (1/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+						<line number="21" hits="0" branch="false"/>
+						<line number="24" hits="22" branch="false"/>
+						<line number="25" hits="22" branch="false"/>
+						<line number="26" hits="22" branch="false"/>
+						<line number="28" hits="22" branch="false"/>
+						<line number="32" hits="23" branch="true" condition-coverage="50% (1/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+						<line number="33" hits="0" branch="false"/>
+						<line number="36" hits="23" branch="false"/>
+						<line number="37" hits="23" branch="false"/>
+						<line number="38" hits="23" branch="false"/>
+						<line number="40" hits="23" branch="false"/>
+						<line number="44" hits="4" branch="true" condition-coverage="50% (1/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+						<line number="45" hits="0" branch="false"/>
+						<line number="48" hits="4" branch="false"/>
+						<line number="49" hits="4" branch="false"/>
+						<line number="50" hits="4" branch="false"/>
+						<line number="52" hits="4" branch="false"/>
+						<line number="56" hits="6" branch="true" condition-coverage="50% (1/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+						<line number="57" hits="0" branch="false"/>
+						<line number="60" hits="6" branch="false"/>
+						<line number="61" hits="6" branch="false"/>
+						<line number="62" hits="6" branch="false"/>
+						<line number="64" hits="6" branch="false"/>
+						<line number="68" hits="29" branch="false"/>
+						<line number="69" hits="29" branch="false"/>
+						<line number="72" hits="40" branch="false"/>
+						<line number="73" hits="40" branch="false"/>
+						<line number="76" hits="24" branch="false"/>
+						<line number="77" hits="24" branch="false"/>
+						<line number="80" hits="6" branch="false"/>
+						<line number="84" hits="8" branch="false"/>
+						<line number="85" hits="8" branch="false"/>
+						<line number="88" hits="15" branch="false"/>
+						<line number="89" hits="15" branch="false"/>
+						<line number="91" hits="15" branch="false"/>
+						<line number="92" hits="15" branch="false"/>
+						<line number="93" hits="15" branch="false"/>
+						<line number="96" hits="15" branch="false"/>
+						<line number="97" hits="15" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="98" hits="2" branch="true" condition-coverage="50% (1/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+						<line number="101" hits="15" branch="false"/>
+						<line number="105" hits="2" branch="false"/>
+						<line number="106" hits="2" branch="false"/>
+						<line number="110" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="fiuba.algo3.Jefatura" filename="fiuba/algo3/Jefatura.java" line-rate="0.8018018018018018" branch-rate="0.3888888888888889" complexity="1.8">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Lfiuba/algo3/Ladron;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="30" hits="16" branch="false"/>
+								<line number="31" hits="16" branch="false"/>
+								<line number="32" hits="16" branch="false"/>
+								<line number="33" hits="16" branch="false"/>
+								<line number="34" hits="16" branch="false"/>
+								<line number="35" hits="16" branch="false"/>
+								<line number="36" hits="16" branch="false"/>
+								<line number="37" hits="16" branch="false"/>
+								<line number="38" hits="16" branch="false"/>
+							</lines>
+						</method>
+						<method name="Hidratar" signature="(Lorg/w3c/dom/Document;Lfiuba/algo3/Ladron;)Lfiuba/algo3/Jefatura;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="110" hits="6" branch="false"/>
+								<line number="111" hits="6" branch="false"/>
+								<line number="112" hits="6" branch="false"/>
+								<line number="113" hits="6" branch="false"/>
+								<line number="114" hits="6" branch="false"/>
+								<line number="115" hits="6" branch="false"/>
+								<line number="117" hits="6" branch="false"/>
+							</lines>
+						</method>
+						<method name="asignarPersonajeConNombre" signature="(Lorg/w3c/dom/Document;Ljava/lang/String;)Lfiuba/algo3/Personaje;" line-rate="0.875" branch-rate="0.5">
+							<lines>
+								<line number="123" hits="1" branch="false"/>
+								<line number="124" hits="1" branch="true" condition-coverage="50% (1/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+								<line number="125" hits="1" branch="false"/>
+								<line number="126" hits="1" branch="false"/>
+								<line number="127" hits="1" branch="false"/>
+								<line number="128" hits="1" branch="true" condition-coverage="50% (1/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+								<line number="129" hits="1" branch="false"/>
+								<line number="135" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="cargarListaDeCabellos" signature="(Lorg/w3c/dom/Document;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="85" hits="6" branch="false"/>
+								<line number="86" hits="6" branch="false"/>
+								<line number="87" hits="6" branch="false"/>
+								<line number="88" hits="6" branch="false"/>
+								<line number="89" hits="6" branch="false"/>
+								<line number="90" hits="6" branch="false"/>
+								<line number="91" hits="6" branch="false"/>
+							</lines>
+						</method>
+						<method name="cargarListaDeHobbys" signature="(Lorg/w3c/dom/Document;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="77" hits="6" branch="false"/>
+								<line number="78" hits="6" branch="false"/>
+								<line number="79" hits="6" branch="false"/>
+								<line number="80" hits="6" branch="false"/>
+								<line number="81" hits="6" branch="false"/>
+								<line number="82" hits="6" branch="false"/>
+							</lines>
+						</method>
+						<method name="cargarListaDeSenias" signature="(Lorg/w3c/dom/Document;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="94" hits="6" branch="false"/>
+								<line number="95" hits="6" branch="false"/>
+								<line number="96" hits="6" branch="false"/>
+								<line number="97" hits="6" branch="false"/>
+								<line number="98" hits="6" branch="false"/>
+								<line number="99" hits="6" branch="false"/>
+							</lines>
+						</method>
+						<method name="cargarListaDeSexo" signature="(Lorg/w3c/dom/Document;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="70" hits="6" branch="false"/>
+								<line number="71" hits="6" branch="false"/>
+								<line number="72" hits="6" branch="false"/>
+								<line number="73" hits="6" branch="false"/>
+								<line number="74" hits="6" branch="false"/>
+							</lines>
+						</method>
+						<method name="cargarListaDeVehiculos" signature="(Lorg/w3c/dom/Document;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="102" hits="6" branch="false"/>
+								<line number="103" hits="6" branch="false"/>
+								<line number="104" hits="6" branch="false"/>
+								<line number="105" hits="6" branch="false"/>
+								<line number="106" hits="6" branch="false"/>
+								<line number="107" hits="6" branch="false"/>
+							</lines>
+						</method>
+						<method name="emitirOrden" signature="(Lfiuba/algo3/Sospechoso;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="61" hits="6" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="62" hits="2" branch="false"/>
+								<line number="63" hits="6" branch="false"/>
+							</lines>
+						</method>
+						<method name="esUltimoPais" signature="(Lfiuba/algo3/Pais;)Z" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="218" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getListaDeCabellos" signature="()Ljava/util/ArrayList;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="49" hits="4" branch="false"/>
+							</lines>
+						</method>
+						<method name="getListaDeHobys" signature="()Ljava/util/ArrayList;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="45" hits="3" branch="false"/>
+							</lines>
+						</method>
+						<method name="getListaDeSenias" signature="()Ljava/util/ArrayList;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="53" hits="3" branch="false"/>
+							</lines>
+						</method>
+						<method name="getListaDeSexo" signature="()Ljava/util/ArrayList;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="41" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="getListaDeVehiculos" signature="()Ljava/util/ArrayList;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="57" hits="3" branch="false"/>
+							</lines>
+						</method>
+						<method name="ordenEstaEmitida" signature="()Z" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="66" hits="8" branch="false"/>
+							</lines>
+						</method>
+						<method name="paisActualDelLadron" signature="(Lfiuba/algo3/Pais;)Lfiuba/algo3/Pais;" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="156" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="personajeSegunCasos" signature="(I)Lfiuba/algo3/Personaje;" line-rate="0.2857142857142857" branch-rate="0.16666666666666666">
+							<lines>
+								<line number="139" hits="1" branch="true" condition-coverage="50% (1/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+								<line number="140" hits="1" branch="false"/>
+								<line number="143" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="144" hits="0" branch="false"/>
+								<line number="147" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="148" hits="0" branch="false"/>
+								<line number="151" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="sumarCasoAXML" signature="(Ljava/io/File;Ljava/lang/String;)V" line-rate="0.6578947368421053" branch-rate="0.3333333333333333">
+							<lines>
+								<line number="165" hits="1" branch="false"/>
+								<line number="166" hits="1" branch="false"/>
+								<line number="169" hits="1" branch="false"/>
+								<line number="170" hits="1" branch="false"/>
+								<line number="172" hits="1" branch="false"/>
+								<line number="173" hits="1" branch="false"/>
+								<line number="174" hits="1" branch="false"/>
+								<line number="175" hits="1" branch="false"/>
+								<line number="176" hits="1" branch="false"/>
+								<line number="178" hits="1" branch="true" condition-coverage="50% (1/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+								<line number="179" hits="0" branch="false"/>
+								<line number="181" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="182" hits="0" branch="false"/>
+								<line number="183" hits="0" branch="false"/>
+								<line number="184" hits="0" branch="false"/>
+								<line number="185" hits="0" branch="false"/>
+								<line number="186" hits="0" branch="false"/>
+								<line number="187" hits="0" branch="false"/>
+								<line number="188" hits="0" branch="false"/>
+								<line number="190" hits="0" branch="false"/>
+								<line number="191" hits="0" branch="false"/>
+								<line number="194" hits="0" branch="false"/>
+								<line number="195" hits="0" branch="false"/>
+								<line number="196" hits="1" branch="true" condition-coverage="50% (1/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+								<line number="197" hits="1" branch="false"/>
+								<line number="198" hits="1" branch="false"/>
+								<line number="199" hits="1" branch="false"/>
+								<line number="200" hits="1" branch="false"/>
+								<line number="203" hits="1" branch="false"/>
+								<line number="204" hits="1" branch="false"/>
+								<line number="205" hits="1" branch="false"/>
+								<line number="207" hits="1" branch="false"/>
+								<line number="208" hits="1" branch="false"/>
+								<line number="209" hits="1" branch="false"/>
+								<line number="210" hits="1" branch="false"/>
+								<line number="212" hits="1" branch="false"/>
+								<line number="213" hits="1" branch="false"/>
+								<line number="215" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="verificarSiElLadronPasoPor" signature="(Lfiuba/algo3/Pais;)Z" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="160" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="30" hits="16" branch="false"/>
+						<line number="31" hits="16" branch="false"/>
+						<line number="32" hits="16" branch="false"/>
+						<line number="33" hits="16" branch="false"/>
+						<line number="34" hits="16" branch="false"/>
+						<line number="35" hits="16" branch="false"/>
+						<line number="36" hits="16" branch="false"/>
+						<line number="37" hits="16" branch="false"/>
+						<line number="38" hits="16" branch="false"/>
+						<line number="41" hits="2" branch="false"/>
+						<line number="45" hits="3" branch="false"/>
+						<line number="49" hits="4" branch="false"/>
+						<line number="53" hits="3" branch="false"/>
+						<line number="57" hits="3" branch="false"/>
+						<line number="61" hits="6" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="62" hits="2" branch="false"/>
+						<line number="63" hits="6" branch="false"/>
+						<line number="66" hits="8" branch="false"/>
+						<line number="70" hits="6" branch="false"/>
+						<line number="71" hits="6" branch="false"/>
+						<line number="72" hits="6" branch="false"/>
+						<line number="73" hits="6" branch="false"/>
+						<line number="74" hits="6" branch="false"/>
+						<line number="77" hits="6" branch="false"/>
+						<line number="78" hits="6" branch="false"/>
+						<line number="79" hits="6" branch="false"/>
+						<line number="80" hits="6" branch="false"/>
+						<line number="81" hits="6" branch="false"/>
+						<line number="82" hits="6" branch="false"/>
+						<line number="85" hits="6" branch="false"/>
+						<line number="86" hits="6" branch="false"/>
+						<line number="87" hits="6" branch="false"/>
+						<line number="88" hits="6" branch="false"/>
+						<line number="89" hits="6" branch="false"/>
+						<line number="90" hits="6" branch="false"/>
+						<line number="91" hits="6" branch="false"/>
+						<line number="94" hits="6" branch="false"/>
+						<line number="95" hits="6" branch="false"/>
+						<line number="96" hits="6" branch="false"/>
+						<line number="97" hits="6" branch="false"/>
+						<line number="98" hits="6" branch="false"/>
+						<line number="99" hits="6" branch="false"/>
+						<line number="102" hits="6" branch="false"/>
+						<line number="103" hits="6" branch="false"/>
+						<line number="104" hits="6" branch="false"/>
+						<line number="105" hits="6" branch="false"/>
+						<line number="106" hits="6" branch="false"/>
+						<line number="107" hits="6" branch="false"/>
+						<line number="110" hits="6" branch="false"/>
+						<line number="111" hits="6" branch="false"/>
+						<line number="112" hits="6" branch="false"/>
+						<line number="113" hits="6" branch="false"/>
+						<line number="114" hits="6" branch="false"/>
+						<line number="115" hits="6" branch="false"/>
+						<line number="117" hits="6" branch="false"/>
+						<line number="123" hits="1" branch="false"/>
+						<line number="124" hits="1" branch="true" condition-coverage="50% (1/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+						<line number="125" hits="1" branch="false"/>
+						<line number="126" hits="1" branch="false"/>
+						<line number="127" hits="1" branch="false"/>
+						<line number="128" hits="1" branch="true" condition-coverage="50% (1/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+						<line number="129" hits="1" branch="false"/>
+						<line number="135" hits="0" branch="false"/>
+						<line number="139" hits="1" branch="true" condition-coverage="50% (1/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+						<line number="140" hits="1" branch="false"/>
+						<line number="143" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="144" hits="0" branch="false"/>
+						<line number="147" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="148" hits="0" branch="false"/>
+						<line number="151" hits="0" branch="false"/>
+						<line number="156" hits="0" branch="false"/>
+						<line number="160" hits="0" branch="false"/>
+						<line number="165" hits="1" branch="false"/>
+						<line number="166" hits="1" branch="false"/>
+						<line number="169" hits="1" branch="false"/>
+						<line number="170" hits="1" branch="false"/>
+						<line number="172" hits="1" branch="false"/>
+						<line number="173" hits="1" branch="false"/>
+						<line number="174" hits="1" branch="false"/>
+						<line number="175" hits="1" branch="false"/>
+						<line number="176" hits="1" branch="false"/>
+						<line number="178" hits="1" branch="true" condition-coverage="50% (1/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+						<line number="179" hits="0" branch="false"/>
+						<line number="181" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="182" hits="0" branch="false"/>
+						<line number="183" hits="0" branch="false"/>
+						<line number="184" hits="0" branch="false"/>
+						<line number="185" hits="0" branch="false"/>
+						<line number="186" hits="0" branch="false"/>
+						<line number="187" hits="0" branch="false"/>
+						<line number="188" hits="0" branch="false"/>
+						<line number="190" hits="0" branch="false"/>
+						<line number="191" hits="0" branch="false"/>
+						<line number="194" hits="0" branch="false"/>
+						<line number="195" hits="0" branch="false"/>
+						<line number="196" hits="1" branch="true" condition-coverage="50% (1/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+						<line number="197" hits="1" branch="false"/>
+						<line number="198" hits="1" branch="false"/>
+						<line number="199" hits="1" branch="false"/>
+						<line number="200" hits="1" branch="false"/>
+						<line number="203" hits="1" branch="false"/>
+						<line number="204" hits="1" branch="false"/>
+						<line number="205" hits="1" branch="false"/>
+						<line number="207" hits="1" branch="false"/>
+						<line number="208" hits="1" branch="false"/>
+						<line number="209" hits="1" branch="false"/>
+						<line number="210" hits="1" branch="false"/>
+						<line number="212" hits="1" branch="false"/>
+						<line number="213" hits="1" branch="false"/>
+						<line number="215" hits="1" branch="false"/>
+						<line number="218" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="fiuba.algo3.Ladron" filename="fiuba/algo3/Ladron.java" line-rate="0.7355371900826446" branch-rate="0.7894736842105263" complexity="2.1578947368421053">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="23" hits="83" branch="false"/>
+								<line number="24" hits="83" branch="false"/>
+								<line number="25" hits="83" branch="false"/>
+								<line number="26" hits="83" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="35" hits="0" branch="false"/>
+								<line number="36" hits="0" branch="false"/>
+								<line number="37" hits="0" branch="false"/>
+								<line number="38" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Ljava/util/ArrayList;Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="29" hits="9" branch="false"/>
+								<line number="30" hits="9" branch="false"/>
+								<line number="31" hits="9" branch="false"/>
+								<line number="32" hits="9" branch="false"/>
+							</lines>
+						</method>
+						<method name="Hidratar" signature="(Lorg/w3c/dom/Document;)Lfiuba/algo3/Ladron;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="188" hits="2" branch="false"/>
+								<line number="189" hits="2" branch="false"/>
+								<line number="190" hits="2" branch="false"/>
+								<line number="191" hits="2" branch="false"/>
+								<line number="193" hits="2" branch="false"/>
+								<line number="194" hits="2" branch="false"/>
+								<line number="195" hits="2" branch="false"/>
+								<line number="196" hits="2" branch="false"/>
+								<line number="197" hits="2" branch="false"/>
+								<line number="198" hits="2" branch="false"/>
+								<line number="199" hits="2" branch="false"/>
+								<line number="201" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="agregarPais" signature="(Lfiuba/algo3/Pais;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="136" hits="5" branch="false"/>
+								<line number="137" hits="5" branch="false"/>
+							</lines>
+						</method>
+						<method name="dejarRasgoAleatorioEn" signature="(Lfiuba/algo3/Edificio;)V" line-rate="0.6" branch-rate="0.6">
+							<lines>
+								<line number="205" hits="2" branch="false"/>
+								<line number="206" hits="2" branch="true" condition-coverage="60% (3/5)">
+									<conditions>
+										<condition number="0" type="switch" coverage="60%"/>
+									</conditions>
+								</line>
+								<line number="208" hits="0" branch="false"/>
+								<line number="209" hits="0" branch="false"/>
+								<line number="211" hits="1" branch="false"/>
+								<line number="212" hits="1" branch="false"/>
+								<line number="214" hits="0" branch="false"/>
+								<line number="215" hits="0" branch="false"/>
+								<line number="217" hits="1" branch="false"/>
+								<line number="219" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="esUltimoPais" signature="(Lfiuba/algo3/Pais;)Z" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="156" hits="7" branch="false"/>
+								<line number="157" hits="7" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="158" hits="5" branch="false"/>
+								<line number="160" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="esconderse" signature="(Lfiuba/algo3/Edificio;Lfiuba/algo3/Edificio;Lfiuba/algo3/Edificio;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="164" hits="2" branch="false"/>
+								<line number="165" hits="2" branch="false"/>
+								<line number="166" hits="2" branch="false"/>
+								<line number="167" hits="2" branch="false"/>
+								<line number="168" hits="2" branch="false"/>
+								<line number="170" hits="2" branch="false"/>
+								<line number="171" hits="2" branch="false"/>
+								<line number="172" hits="2" branch="false"/>
+								<line number="173" hits="2" branch="false"/>
+								<line number="174" hits="2" branch="false"/>
+								<line number="176" hits="2" branch="false"/>
+								<line number="177" hits="2" branch="false"/>
+								<line number="178" hits="2" branch="false"/>
+								<line number="179" hits="2" branch="false"/>
+								<line number="180" hits="2" branch="false"/>
+								<line number="182" hits="2" branch="false"/>
+								<line number="183" hits="2" branch="false"/>
+								<line number="184" hits="2" branch="false"/>
+								<line number="185" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="estuvoEn" signature="(Lfiuba/algo3/Pais;)Z" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="222" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="generarListaPaisesDeTamanio" signature="(ILorg/w3c/dom/Document;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="98" hits="1" branch="false"/>
+								<line number="99" hits="1" branch="false"/>
+								<line number="102" hits="1" branch="false"/>
+								<line number="103" hits="1" branch="false"/>
+								<line number="104" hits="1" branch="false"/>
+								<line number="106" hits="6" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="108" hits="5" branch="false"/>
+								<line number="109" hits="19" branch="true" condition-coverage="100% (4/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+										<condition number="1" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="110" hits="14" branch="false"/>
+								<line number="112" hits="5" branch="false"/>
+								<line number="114" hits="5" branch="false"/>
+								<line number="115" hits="5" branch="false"/>
+								<line number="116" hits="5" branch="false"/>
+								<line number="117" hits="5" branch="false"/>
+								<line number="120" hits="5" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="121" hits="4" branch="false"/>
+								<line number="122" hits="4" branch="false"/>
+								<line number="123" hits="4" branch="false"/>
+								<line number="125" hits="1" branch="false"/>
+								<line number="126" hits="1" branch="false"/>
+								<line number="127" hits="1" branch="false"/>
+								<line number="131" hits="5" branch="false"/>
+								<line number="132" hits="5" branch="false"/>
+								<line number="133" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="generarListaPaisesPara" signature="(Lfiuba/algo3/ObjetoExotico;Lorg/w3c/dom/Document;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="86" hits="1" branch="false"/>
+								<line number="87" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="generarListaPaisesPara" signature="(Lfiuba/algo3/ObjetoLegendario;Lorg/w3c/dom/Document;)V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="81" hits="0" branch="false"/>
+								<line number="82" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="generarListaPaisesPara" signature="(Lfiuba/algo3/ObjetoRaro;Lorg/w3c/dom/Document;)V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="91" hits="0" branch="false"/>
+								<line number="92" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getCantPaises" signature="()I" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="152" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getNombre" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="144" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="getPais" signature="(I)Lfiuba/algo3/Pais;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="140" hits="3" branch="false"/>
+							</lines>
+						</method>
+						<method name="getPaisActual" signature="(Lfiuba/algo3/Pais;)Lfiuba/algo3/Pais;" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="41" hits="0" branch="false"/>
+								<line number="42" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="robarUnTesoroRandom" signature="(Lfiuba/algo3/Tesoros;Lorg/w3c/dom/Document;)V" line-rate="0.3333333333333333" branch-rate="0.5">
+							<lines>
+								<line number="46" hits="1" branch="false"/>
+								<line number="47" hits="1" branch="false"/>
+								<line number="48" hits="1" branch="true" condition-coverage="50% (2/4)">
+									<conditions>
+										<condition number="0" type="switch" coverage="50%"/>
+									</conditions>
+								</line>
+								<line number="50" hits="0" branch="false"/>
+								<line number="51" hits="0" branch="false"/>
+								<line number="53" hits="0" branch="false"/>
+								<line number="54" hits="0" branch="false"/>
+								<line number="55" hits="0" branch="false"/>
+								<line number="56" hits="0" branch="false"/>
+								<line number="57" hits="0" branch="false"/>
+								<line number="59" hits="1" branch="false"/>
+								<line number="60" hits="1" branch="false"/>
+								<line number="62" hits="1" branch="false"/>
+								<line number="63" hits="0" branch="false"/>
+								<line number="64" hits="0" branch="false"/>
+								<line number="65" hits="1" branch="false"/>
+								<line number="66" hits="0" branch="false"/>
+								<line number="68" hits="0" branch="false"/>
+								<line number="69" hits="0" branch="false"/>
+								<line number="71" hits="0" branch="false"/>
+								<line number="72" hits="0" branch="false"/>
+								<line number="73" hits="0" branch="false"/>
+								<line number="74" hits="0" branch="false"/>
+								<line number="77" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="setNombre" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="148" hits="2" branch="false"/>
+								<line number="149" hits="2" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="23" hits="83" branch="false"/>
+						<line number="24" hits="83" branch="false"/>
+						<line number="25" hits="83" branch="false"/>
+						<line number="26" hits="83" branch="false"/>
+						<line number="29" hits="9" branch="false"/>
+						<line number="30" hits="9" branch="false"/>
+						<line number="31" hits="9" branch="false"/>
+						<line number="32" hits="9" branch="false"/>
+						<line number="35" hits="0" branch="false"/>
+						<line number="36" hits="0" branch="false"/>
+						<line number="37" hits="0" branch="false"/>
+						<line number="38" hits="0" branch="false"/>
+						<line number="41" hits="0" branch="false"/>
+						<line number="42" hits="0" branch="false"/>
+						<line number="46" hits="1" branch="false"/>
+						<line number="47" hits="1" branch="false"/>
+						<line number="48" hits="1" branch="true" condition-coverage="50% (2/4)">
+							<conditions>
+								<condition number="0" type="switch" coverage="50%"/>
+							</conditions>
+						</line>
+						<line number="50" hits="0" branch="false"/>
+						<line number="51" hits="0" branch="false"/>
+						<line number="53" hits="0" branch="false"/>
+						<line number="54" hits="0" branch="false"/>
+						<line number="55" hits="0" branch="false"/>
+						<line number="56" hits="0" branch="false"/>
+						<line number="57" hits="0" branch="false"/>
+						<line number="59" hits="1" branch="false"/>
+						<line number="60" hits="1" branch="false"/>
+						<line number="62" hits="1" branch="false"/>
+						<line number="63" hits="0" branch="false"/>
+						<line number="64" hits="0" branch="false"/>
+						<line number="65" hits="1" branch="false"/>
+						<line number="66" hits="0" branch="false"/>
+						<line number="68" hits="0" branch="false"/>
+						<line number="69" hits="0" branch="false"/>
+						<line number="71" hits="0" branch="false"/>
+						<line number="72" hits="0" branch="false"/>
+						<line number="73" hits="0" branch="false"/>
+						<line number="74" hits="0" branch="false"/>
+						<line number="77" hits="1" branch="false"/>
+						<line number="81" hits="0" branch="false"/>
+						<line number="82" hits="0" branch="false"/>
+						<line number="86" hits="1" branch="false"/>
+						<line number="87" hits="1" branch="false"/>
+						<line number="91" hits="0" branch="false"/>
+						<line number="92" hits="0" branch="false"/>
+						<line number="98" hits="1" branch="false"/>
+						<line number="99" hits="1" branch="false"/>
+						<line number="102" hits="1" branch="false"/>
+						<line number="103" hits="1" branch="false"/>
+						<line number="104" hits="1" branch="false"/>
+						<line number="106" hits="6" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="108" hits="5" branch="false"/>
+						<line number="109" hits="19" branch="true" condition-coverage="100% (4/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+								<condition number="1" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="110" hits="14" branch="false"/>
+						<line number="112" hits="5" branch="false"/>
+						<line number="114" hits="5" branch="false"/>
+						<line number="115" hits="5" branch="false"/>
+						<line number="116" hits="5" branch="false"/>
+						<line number="117" hits="5" branch="false"/>
+						<line number="120" hits="5" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="121" hits="4" branch="false"/>
+						<line number="122" hits="4" branch="false"/>
+						<line number="123" hits="4" branch="false"/>
+						<line number="125" hits="1" branch="false"/>
+						<line number="126" hits="1" branch="false"/>
+						<line number="127" hits="1" branch="false"/>
+						<line number="131" hits="5" branch="false"/>
+						<line number="132" hits="5" branch="false"/>
+						<line number="133" hits="1" branch="false"/>
+						<line number="136" hits="5" branch="false"/>
+						<line number="137" hits="5" branch="false"/>
+						<line number="140" hits="3" branch="false"/>
+						<line number="144" hits="1" branch="false"/>
+						<line number="148" hits="2" branch="false"/>
+						<line number="149" hits="2" branch="false"/>
+						<line number="152" hits="0" branch="false"/>
+						<line number="156" hits="7" branch="false"/>
+						<line number="157" hits="7" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="158" hits="5" branch="false"/>
+						<line number="160" hits="2" branch="false"/>
+						<line number="164" hits="2" branch="false"/>
+						<line number="165" hits="2" branch="false"/>
+						<line number="166" hits="2" branch="false"/>
+						<line number="167" hits="2" branch="false"/>
+						<line number="168" hits="2" branch="false"/>
+						<line number="170" hits="2" branch="false"/>
+						<line number="171" hits="2" branch="false"/>
+						<line number="172" hits="2" branch="false"/>
+						<line number="173" hits="2" branch="false"/>
+						<line number="174" hits="2" branch="false"/>
+						<line number="176" hits="2" branch="false"/>
+						<line number="177" hits="2" branch="false"/>
+						<line number="178" hits="2" branch="false"/>
+						<line number="179" hits="2" branch="false"/>
+						<line number="180" hits="2" branch="false"/>
+						<line number="182" hits="2" branch="false"/>
+						<line number="183" hits="2" branch="false"/>
+						<line number="184" hits="2" branch="false"/>
+						<line number="185" hits="2" branch="false"/>
+						<line number="188" hits="2" branch="false"/>
+						<line number="189" hits="2" branch="false"/>
+						<line number="190" hits="2" branch="false"/>
+						<line number="191" hits="2" branch="false"/>
+						<line number="193" hits="2" branch="false"/>
+						<line number="194" hits="2" branch="false"/>
+						<line number="195" hits="2" branch="false"/>
+						<line number="196" hits="2" branch="false"/>
+						<line number="197" hits="2" branch="false"/>
+						<line number="198" hits="2" branch="false"/>
+						<line number="199" hits="2" branch="false"/>
+						<line number="201" hits="2" branch="false"/>
+						<line number="205" hits="2" branch="false"/>
+						<line number="206" hits="2" branch="true" condition-coverage="60% (3/5)">
+							<conditions>
+								<condition number="0" type="switch" coverage="60%"/>
+							</conditions>
+						</line>
+						<line number="208" hits="0" branch="false"/>
+						<line number="209" hits="0" branch="false"/>
+						<line number="211" hits="1" branch="false"/>
+						<line number="212" hits="1" branch="false"/>
+						<line number="214" hits="0" branch="false"/>
+						<line number="215" hits="0" branch="false"/>
+						<line number="217" hits="1" branch="false"/>
+						<line number="219" hits="2" branch="false"/>
+						<line number="222" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="fiuba.algo3.Main" filename="fiuba/algo3/Main.java" line-rate="0.0" branch-rate="0.0" complexity="18.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="12" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="describirSospechoso" signature="()Lfiuba/algo3/Sospechoso;" line-rate="0.0" branch-rate="0.0">
+							<lines>
+								<line number="15" hits="0" branch="false"/>
+								<line number="17" hits="0" branch="false"/>
+								<line number="18" hits="0" branch="false"/>
+								<line number="19" hits="0" branch="false"/>
+								<line number="20" hits="0" branch="true" condition-coverage="0% (0/3)">
+									<conditions>
+										<condition number="0" type="switch" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="22" hits="0" branch="false"/>
+								<line number="23" hits="0" branch="false"/>
+								<line number="25" hits="0" branch="false"/>
+								<line number="28" hits="0" branch="false"/>
+								<line number="29" hits="0" branch="false"/>
+								<line number="30" hits="0" branch="false"/>
+								<line number="31" hits="0" branch="false"/>
+								<line number="32" hits="0" branch="true" condition-coverage="0% (0/7)">
+									<conditions>
+										<condition number="0" type="switch" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="34" hits="0" branch="false"/>
+								<line number="35" hits="0" branch="false"/>
+								<line number="37" hits="0" branch="false"/>
+								<line number="38" hits="0" branch="false"/>
+								<line number="40" hits="0" branch="false"/>
+								<line number="41" hits="0" branch="false"/>
+								<line number="43" hits="0" branch="false"/>
+								<line number="44" hits="0" branch="false"/>
+								<line number="46" hits="0" branch="false"/>
+								<line number="47" hits="0" branch="false"/>
+								<line number="49" hits="0" branch="false"/>
+								<line number="52" hits="0" branch="false"/>
+								<line number="53" hits="0" branch="false"/>
+								<line number="54" hits="0" branch="false"/>
+								<line number="55" hits="0" branch="false"/>
+								<line number="56" hits="0" branch="true" condition-coverage="0% (0/5)">
+									<conditions>
+										<condition number="0" type="switch" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="58" hits="0" branch="false"/>
+								<line number="59" hits="0" branch="false"/>
+								<line number="61" hits="0" branch="false"/>
+								<line number="62" hits="0" branch="false"/>
+								<line number="64" hits="0" branch="false"/>
+								<line number="65" hits="0" branch="false"/>
+								<line number="67" hits="0" branch="false"/>
+								<line number="69" hits="0" branch="false"/>
+								<line number="70" hits="0" branch="false"/>
+								<line number="71" hits="0" branch="false"/>
+								<line number="72" hits="0" branch="false"/>
+								<line number="73" hits="0" branch="true" condition-coverage="0% (0/5)">
+									<conditions>
+										<condition number="0" type="switch" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="75" hits="0" branch="false"/>
+								<line number="76" hits="0" branch="false"/>
+								<line number="78" hits="0" branch="false"/>
+								<line number="79" hits="0" branch="false"/>
+								<line number="81" hits="0" branch="false"/>
+								<line number="82" hits="0" branch="false"/>
+								<line number="84" hits="0" branch="false"/>
+								<line number="86" hits="0" branch="false"/>
+								<line number="87" hits="0" branch="false"/>
+								<line number="88" hits="0" branch="false"/>
+								<line number="89" hits="0" branch="false"/>
+								<line number="90" hits="0" branch="true" condition-coverage="0% (0/5)">
+									<conditions>
+										<condition number="0" type="switch" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="92" hits="0" branch="false"/>
+								<line number="93" hits="0" branch="false"/>
+								<line number="95" hits="0" branch="false"/>
+								<line number="96" hits="0" branch="false"/>
+								<line number="98" hits="0" branch="false"/>
+								<line number="99" hits="0" branch="false"/>
+								<line number="101" hits="0" branch="false"/>
+								<line number="104" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="main" signature="([Ljava/lang/String;)V" line-rate="0.0" branch-rate="0.0">
+							<lines>
+								<line number="110" hits="0" branch="false"/>
+								<line number="111" hits="0" branch="false"/>
+								<line number="112" hits="0" branch="false"/>
+								<line number="113" hits="0" branch="false"/>
+								<line number="114" hits="0" branch="false"/>
+								<line number="115" hits="0" branch="false"/>
+								<line number="117" hits="0" branch="false"/>
+								<line number="118" hits="0" branch="false"/>
+								<line number="119" hits="0" branch="false"/>
+								<line number="120" hits="0" branch="false"/>
+								<line number="121" hits="0" branch="false"/>
+								<line number="123" hits="0" branch="false"/>
+								<line number="124" hits="0" branch="false"/>
+								<line number="125" hits="0" branch="false"/>
+								<line number="126" hits="0" branch="false"/>
+								<line number="127" hits="0" branch="false"/>
+								<line number="128" hits="0" branch="false"/>
+								<line number="129" hits="0" branch="false"/>
+								<line number="130" hits="0" branch="false"/>
+								<line number="131" hits="0" branch="false"/>
+								<line number="132" hits="0" branch="false"/>
+								<line number="134" hits="0" branch="false"/>
+								<line number="135" hits="0" branch="false"/>
+								<line number="136" hits="0" branch="false"/>
+								<line number="137" hits="0" branch="false"/>
+								<line number="138" hits="0" branch="false"/>
+								<line number="139" hits="0" branch="false"/>
+								<line number="140" hits="0" branch="false"/>
+								<line number="142" hits="0" branch="false"/>
+								<line number="143" hits="0" branch="false"/>
+								<line number="144" hits="0" branch="false"/>
+								<line number="145" hits="0" branch="false"/>
+								<line number="146" hits="0" branch="false"/>
+								<line number="150" hits="0" branch="false"/>
+								<line number="151" hits="0" branch="false"/>
+								<line number="152" hits="0" branch="false"/>
+								<line number="153" hits="0" branch="false"/>
+								<line number="154" hits="0" branch="false"/>
+								<line number="155" hits="0" branch="false"/>
+								<line number="157" hits="0" branch="false"/>
+								<line number="158" hits="0" branch="false"/>
+								<line number="159" hits="0" branch="false"/>
+								<line number="160" hits="0" branch="false"/>
+								<line number="161" hits="0" branch="false"/>
+								<line number="162" hits="0" branch="false"/>
+								<line number="163" hits="0" branch="false"/>
+								<line number="168" hits="0" branch="true" condition-coverage="0% (0/6)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+										<condition number="1" type="jump" coverage="0%"/>
+										<condition number="2" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="169" hits="0" branch="false"/>
+								<line number="170" hits="0" branch="false"/>
+								<line number="171" hits="0" branch="false"/>
+								<line number="172" hits="0" branch="false"/>
+								<line number="173" hits="0" branch="false"/>
+								<line number="174" hits="0" branch="false"/>
+								<line number="175" hits="0" branch="false"/>
+								<line number="176" hits="0" branch="false"/>
+								<line number="177" hits="0" branch="false"/>
+								<line number="178" hits="0" branch="false"/>
+								<line number="179" hits="0" branch="true" condition-coverage="0% (0/4)">
+									<conditions>
+										<condition number="0" type="switch" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="181" hits="0" branch="false"/>
+								<line number="182" hits="0" branch="false"/>
+								<line number="183" hits="0" branch="false"/>
+								<line number="184" hits="0" branch="false"/>
+								<line number="185" hits="0" branch="false"/>
+								<line number="187" hits="0" branch="false"/>
+								<line number="188" hits="0" branch="false"/>
+								<line number="189" hits="0" branch="false"/>
+								<line number="191" hits="0" branch="true" condition-coverage="0% (0/4)">
+									<conditions>
+										<condition number="0" type="switch" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="193" hits="0" branch="false"/>
+								<line number="194" hits="0" branch="false"/>
+								<line number="196" hits="0" branch="false"/>
+								<line number="197" hits="0" branch="false"/>
+								<line number="199" hits="0" branch="false"/>
+								<line number="202" hits="0" branch="false"/>
+								<line number="204" hits="0" branch="false"/>
+								<line number="205" hits="0" branch="false"/>
+								<line number="207" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="209" hits="0" branch="false"/>
+								<line number="210" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="211" hits="0" branch="false"/>
+								<line number="213" hits="0" branch="false"/>
+								<line number="216" hits="0" branch="false"/>
+								<line number="221" hits="0" branch="false"/>
+								<line number="222" hits="0" branch="false"/>
+								<line number="225" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="226" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="227" hits="0" branch="false"/>
+								<line number="228" hits="0" branch="false"/>
+								<line number="231" hits="0" branch="false"/>
+								<line number="235" hits="0" branch="false"/>
+								<line number="237" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="12" hits="0" branch="false"/>
+						<line number="15" hits="0" branch="false"/>
+						<line number="17" hits="0" branch="false"/>
+						<line number="18" hits="0" branch="false"/>
+						<line number="19" hits="0" branch="false"/>
+						<line number="20" hits="0" branch="true" condition-coverage="0% (0/3)">
+							<conditions>
+								<condition number="0" type="switch" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="22" hits="0" branch="false"/>
+						<line number="23" hits="0" branch="false"/>
+						<line number="25" hits="0" branch="false"/>
+						<line number="28" hits="0" branch="false"/>
+						<line number="29" hits="0" branch="false"/>
+						<line number="30" hits="0" branch="false"/>
+						<line number="31" hits="0" branch="false"/>
+						<line number="32" hits="0" branch="true" condition-coverage="0% (0/7)">
+							<conditions>
+								<condition number="0" type="switch" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="34" hits="0" branch="false"/>
+						<line number="35" hits="0" branch="false"/>
+						<line number="37" hits="0" branch="false"/>
+						<line number="38" hits="0" branch="false"/>
+						<line number="40" hits="0" branch="false"/>
+						<line number="41" hits="0" branch="false"/>
+						<line number="43" hits="0" branch="false"/>
+						<line number="44" hits="0" branch="false"/>
+						<line number="46" hits="0" branch="false"/>
+						<line number="47" hits="0" branch="false"/>
+						<line number="49" hits="0" branch="false"/>
+						<line number="52" hits="0" branch="false"/>
+						<line number="53" hits="0" branch="false"/>
+						<line number="54" hits="0" branch="false"/>
+						<line number="55" hits="0" branch="false"/>
+						<line number="56" hits="0" branch="true" condition-coverage="0% (0/5)">
+							<conditions>
+								<condition number="0" type="switch" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="58" hits="0" branch="false"/>
+						<line number="59" hits="0" branch="false"/>
+						<line number="61" hits="0" branch="false"/>
+						<line number="62" hits="0" branch="false"/>
+						<line number="64" hits="0" branch="false"/>
+						<line number="65" hits="0" branch="false"/>
+						<line number="67" hits="0" branch="false"/>
+						<line number="69" hits="0" branch="false"/>
+						<line number="70" hits="0" branch="false"/>
+						<line number="71" hits="0" branch="false"/>
+						<line number="72" hits="0" branch="false"/>
+						<line number="73" hits="0" branch="true" condition-coverage="0% (0/5)">
+							<conditions>
+								<condition number="0" type="switch" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="75" hits="0" branch="false"/>
+						<line number="76" hits="0" branch="false"/>
+						<line number="78" hits="0" branch="false"/>
+						<line number="79" hits="0" branch="false"/>
+						<line number="81" hits="0" branch="false"/>
+						<line number="82" hits="0" branch="false"/>
+						<line number="84" hits="0" branch="false"/>
+						<line number="86" hits="0" branch="false"/>
+						<line number="87" hits="0" branch="false"/>
+						<line number="88" hits="0" branch="false"/>
+						<line number="89" hits="0" branch="false"/>
+						<line number="90" hits="0" branch="true" condition-coverage="0% (0/5)">
+							<conditions>
+								<condition number="0" type="switch" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="92" hits="0" branch="false"/>
+						<line number="93" hits="0" branch="false"/>
+						<line number="95" hits="0" branch="false"/>
+						<line number="96" hits="0" branch="false"/>
+						<line number="98" hits="0" branch="false"/>
+						<line number="99" hits="0" branch="false"/>
+						<line number="101" hits="0" branch="false"/>
+						<line number="104" hits="0" branch="false"/>
+						<line number="110" hits="0" branch="false"/>
+						<line number="111" hits="0" branch="false"/>
+						<line number="112" hits="0" branch="false"/>
+						<line number="113" hits="0" branch="false"/>
+						<line number="114" hits="0" branch="false"/>
+						<line number="115" hits="0" branch="false"/>
+						<line number="117" hits="0" branch="false"/>
+						<line number="118" hits="0" branch="false"/>
+						<line number="119" hits="0" branch="false"/>
+						<line number="120" hits="0" branch="false"/>
+						<line number="121" hits="0" branch="false"/>
+						<line number="123" hits="0" branch="false"/>
+						<line number="124" hits="0" branch="false"/>
+						<line number="125" hits="0" branch="false"/>
+						<line number="126" hits="0" branch="false"/>
+						<line number="127" hits="0" branch="false"/>
+						<line number="128" hits="0" branch="false"/>
+						<line number="129" hits="0" branch="false"/>
+						<line number="130" hits="0" branch="false"/>
+						<line number="131" hits="0" branch="false"/>
+						<line number="132" hits="0" branch="false"/>
+						<line number="134" hits="0" branch="false"/>
+						<line number="135" hits="0" branch="false"/>
+						<line number="136" hits="0" branch="false"/>
+						<line number="137" hits="0" branch="false"/>
+						<line number="138" hits="0" branch="false"/>
+						<line number="139" hits="0" branch="false"/>
+						<line number="140" hits="0" branch="false"/>
+						<line number="142" hits="0" branch="false"/>
+						<line number="143" hits="0" branch="false"/>
+						<line number="144" hits="0" branch="false"/>
+						<line number="145" hits="0" branch="false"/>
+						<line number="146" hits="0" branch="false"/>
+						<line number="150" hits="0" branch="false"/>
+						<line number="151" hits="0" branch="false"/>
+						<line number="152" hits="0" branch="false"/>
+						<line number="153" hits="0" branch="false"/>
+						<line number="154" hits="0" branch="false"/>
+						<line number="155" hits="0" branch="false"/>
+						<line number="157" hits="0" branch="false"/>
+						<line number="158" hits="0" branch="false"/>
+						<line number="159" hits="0" branch="false"/>
+						<line number="160" hits="0" branch="false"/>
+						<line number="161" hits="0" branch="false"/>
+						<line number="162" hits="0" branch="false"/>
+						<line number="163" hits="0" branch="false"/>
+						<line number="168" hits="0" branch="true" condition-coverage="0% (0/6)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+								<condition number="1" type="jump" coverage="0%"/>
+								<condition number="2" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="169" hits="0" branch="false"/>
+						<line number="170" hits="0" branch="false"/>
+						<line number="171" hits="0" branch="false"/>
+						<line number="172" hits="0" branch="false"/>
+						<line number="173" hits="0" branch="false"/>
+						<line number="174" hits="0" branch="false"/>
+						<line number="175" hits="0" branch="false"/>
+						<line number="176" hits="0" branch="false"/>
+						<line number="177" hits="0" branch="false"/>
+						<line number="178" hits="0" branch="false"/>
+						<line number="179" hits="0" branch="true" condition-coverage="0% (0/4)">
+							<conditions>
+								<condition number="0" type="switch" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="181" hits="0" branch="false"/>
+						<line number="182" hits="0" branch="false"/>
+						<line number="183" hits="0" branch="false"/>
+						<line number="184" hits="0" branch="false"/>
+						<line number="185" hits="0" branch="false"/>
+						<line number="187" hits="0" branch="false"/>
+						<line number="188" hits="0" branch="false"/>
+						<line number="189" hits="0" branch="false"/>
+						<line number="191" hits="0" branch="true" condition-coverage="0% (0/4)">
+							<conditions>
+								<condition number="0" type="switch" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="193" hits="0" branch="false"/>
+						<line number="194" hits="0" branch="false"/>
+						<line number="196" hits="0" branch="false"/>
+						<line number="197" hits="0" branch="false"/>
+						<line number="199" hits="0" branch="false"/>
+						<line number="202" hits="0" branch="false"/>
+						<line number="204" hits="0" branch="false"/>
+						<line number="205" hits="0" branch="false"/>
+						<line number="207" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="209" hits="0" branch="false"/>
+						<line number="210" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="211" hits="0" branch="false"/>
+						<line number="213" hits="0" branch="false"/>
+						<line number="216" hits="0" branch="false"/>
+						<line number="221" hits="0" branch="false"/>
+						<line number="222" hits="0" branch="false"/>
+						<line number="225" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="226" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="227" hits="0" branch="false"/>
+						<line number="228" hits="0" branch="false"/>
+						<line number="231" hits="0" branch="false"/>
+						<line number="235" hits="0" branch="false"/>
+						<line number="237" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="fiuba.algo3.Mundo" filename="fiuba/algo3/Mundo.java" line-rate="0.9285714285714286" branch-rate="0.75" complexity="1.6666666666666667">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Lorg/w3c/dom/Document;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="14" hits="1" branch="false"/>
+								<line number="15" hits="1" branch="false"/>
+								<line number="16" hits="1" branch="false"/>
+								<line number="17" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="getUnPaisDistintoDe" signature="(Ljava/lang/String;)Ljava/lang/String;" line-rate="0.8" branch-rate="0.5">
+							<lines>
+								<line number="29" hits="1" branch="false"/>
+								<line number="30" hits="1" branch="false"/>
+								<line number="31" hits="1" branch="true" condition-coverage="50% (1/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+								<line number="32" hits="0" branch="false"/>
+								<line number="34" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="hidratar" signature="(Lorg/w3c/dom/Document;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="20" hits="1" branch="false"/>
+								<line number="22" hits="9" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="23" hits="8" branch="false"/>
+								<line number="24" hits="8" branch="false"/>
+								<line number="26" hits="1" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="14" hits="1" branch="false"/>
+						<line number="15" hits="1" branch="false"/>
+						<line number="16" hits="1" branch="false"/>
+						<line number="17" hits="1" branch="false"/>
+						<line number="20" hits="1" branch="false"/>
+						<line number="22" hits="9" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="23" hits="8" branch="false"/>
+						<line number="24" hits="8" branch="false"/>
+						<line number="26" hits="1" branch="false"/>
+						<line number="29" hits="1" branch="false"/>
+						<line number="30" hits="1" branch="false"/>
+						<line number="31" hits="1" branch="true" condition-coverage="50% (1/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+						<line number="32" hits="0" branch="false"/>
+						<line number="34" hits="1" branch="false"/>
+					</lines>
+				</class>
+				<class name="fiuba.algo3.NodoXMLPersonaje" filename="fiuba/algo3/NodoXMLPersonaje.java" line-rate="0.6" branch-rate="0.5" complexity="3.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="21" hits="0" branch="false"/>
+								<line number="22" hits="0" branch="false"/>
+								<line number="23" hits="0" branch="false"/>
+								<line number="24" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="generarLista" signature="(Ljava/io/File;)Ljava/util/ArrayList;" line-rate="0.75" branch-rate="0.5">
+							<lines>
+								<line number="27" hits="1" branch="false"/>
+								<line number="28" hits="1" branch="false"/>
+								<line number="30" hits="1" branch="false"/>
+								<line number="31" hits="1" branch="false"/>
+								<line number="32" hits="1" branch="false"/>
+								<line number="34" hits="1" branch="false"/>
+								<line number="35" hits="0" branch="false"/>
+								<line number="36" hits="1" branch="false"/>
+								<line number="37" hits="1" branch="false"/>
+								<line number="38" hits="1" branch="false"/>
+								<line number="40" hits="1" branch="false"/>
+								<line number="41" hits="1" branch="true" condition-coverage="50% (1/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+								<line number="42" hits="0" branch="false"/>
+								<line number="43" hits="0" branch="false"/>
+								<line number="44" hits="0" branch="false"/>
+								<line number="47" hits="1" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="21" hits="0" branch="false"/>
+						<line number="22" hits="0" branch="false"/>
+						<line number="23" hits="0" branch="false"/>
+						<line number="24" hits="0" branch="false"/>
+						<line number="27" hits="1" branch="false"/>
+						<line number="28" hits="1" branch="false"/>
+						<line number="30" hits="1" branch="false"/>
+						<line number="31" hits="1" branch="false"/>
+						<line number="32" hits="1" branch="false"/>
+						<line number="34" hits="1" branch="false"/>
+						<line number="35" hits="0" branch="false"/>
+						<line number="36" hits="1" branch="false"/>
+						<line number="37" hits="1" branch="false"/>
+						<line number="38" hits="1" branch="false"/>
+						<line number="40" hits="1" branch="false"/>
+						<line number="41" hits="1" branch="true" condition-coverage="50% (1/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+						<line number="42" hits="0" branch="false"/>
+						<line number="43" hits="0" branch="false"/>
+						<line number="44" hits="0" branch="false"/>
+						<line number="47" hits="1" branch="false"/>
+					</lines>
+				</class>
+				<class name="fiuba.algo3.ObjetoExotico" filename="fiuba/algo3/ObjetoExotico.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="6" hits="2" branch="false"/>
+								<line number="7" hits="2" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="6" hits="2" branch="false"/>
+						<line number="7" hits="2" branch="false"/>
+					</lines>
+				</class>
+				<class name="fiuba.algo3.ObjetoLegendario" filename="fiuba/algo3/ObjetoLegendario.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="6" hits="2" branch="false"/>
+								<line number="7" hits="2" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="6" hits="2" branch="false"/>
+						<line number="7" hits="2" branch="false"/>
+					</lines>
+				</class>
+				<class name="fiuba.algo3.ObjetoRaro" filename="fiuba/algo3/ObjetoRaro.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="6" hits="2" branch="false"/>
+								<line number="7" hits="2" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="6" hits="2" branch="false"/>
+						<line number="7" hits="2" branch="false"/>
+					</lines>
+				</class>
+				<class name="fiuba.algo3.ObjetoValioso" filename="fiuba/algo3/ObjetoValioso.java" line-rate="0.75" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="6" hits="6" branch="false"/>
+								<line number="7" hits="6" branch="false"/>
+								<line number="8" hits="6" branch="false"/>
+							</lines>
+						</method>
+						<method name="getNombre" signature="()Ljava/lang/String;" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="11" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="6" hits="6" branch="false"/>
+						<line number="7" hits="6" branch="false"/>
+						<line number="8" hits="6" branch="false"/>
+						<line number="11" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="fiuba.algo3.Pais" filename="fiuba/algo3/Pais.java" line-rate="1.0" branch-rate="1.0" complexity="1.4285714285714286">
+					<methods>
+						<method name="&lt;init&gt;" signature="(IILjava/lang/String;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="15" hits="118" branch="false"/>
+								<line number="16" hits="118" branch="false"/>
+								<line number="17" hits="118" branch="false"/>
+								<line number="18" hits="118" branch="false"/>
+								<line number="19" hits="118" branch="false"/>
+								<line number="20" hits="118" branch="false"/>
+								<line number="21" hits="118" branch="false"/>
+								<line number="22" hits="118" branch="false"/>
+							</lines>
+						</method>
+						<method name="asignarPistasDePaisIncorrecto" signature="()V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="42" hits="2" branch="false"/>
+								<line number="43" hits="2" branch="false"/>
+								<line number="44" hits="2" branch="false"/>
+								<line number="45" hits="2" branch="false"/>
+								<line number="47" hits="2" branch="false"/>
+								<line number="48" hits="2" branch="false"/>
+								<line number="49" hits="2" branch="false"/>
+								<line number="50" hits="2" branch="false"/>
+								<line number="51" hits="2" branch="false"/>
+								<line number="52" hits="2" branch="false"/>
+								<line number="53" hits="2" branch="false"/>
+								<line number="54" hits="2" branch="false"/>
+								<line number="55" hits="2" branch="false"/>
+								<line number="56" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="calcularDistanciaCon" signature="(Lfiuba/algo3/Pais;)D" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="37" hits="40" branch="false"/>
+								<line number="38" hits="20" branch="false"/>
+							</lines>
+						</method>
+						<method name="getNombre" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="33" hits="24" branch="false"/>
+							</lines>
+						</method>
+						<method name="getPosicionX" signature="()I" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="25" hits="21" branch="false"/>
+							</lines>
+						</method>
+						<method name="getPosicionY" signature="()I" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="29" hits="21" branch="false"/>
+							</lines>
+						</method>
+						<method name="hidratar" signature="(Lorg/w3c/dom/Document;Ljava/lang/String;Ljava/lang/String;Lfiuba/algo3/Ladron;)Lfiuba/algo3/Pais;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="63" hits="7" branch="false"/>
+								<line number="67" hits="7" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="70" hits="7" branch="false"/>
+								<line number="71" hits="7" branch="false"/>
+								<line number="72" hits="7" branch="false"/>
+								<line number="73" hits="7" branch="false"/>
+								<line number="75" hits="7" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="77" hits="5" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="80" hits="5" branch="false"/>
+								<line number="81" hits="5" branch="false"/>
+								<line number="82" hits="5" branch="false"/>
+								<line number="83" hits="5" branch="false"/>
+								<line number="84" hits="5" branch="false"/>
+								<line number="85" hits="5" branch="false"/>
+								<line number="88" hits="2" branch="false"/>
+								<line number="91" hits="7" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="15" hits="118" branch="false"/>
+						<line number="16" hits="118" branch="false"/>
+						<line number="17" hits="118" branch="false"/>
+						<line number="18" hits="118" branch="false"/>
+						<line number="19" hits="118" branch="false"/>
+						<line number="20" hits="118" branch="false"/>
+						<line number="21" hits="118" branch="false"/>
+						<line number="22" hits="118" branch="false"/>
+						<line number="25" hits="21" branch="false"/>
+						<line number="29" hits="21" branch="false"/>
+						<line number="33" hits="24" branch="false"/>
+						<line number="37" hits="40" branch="false"/>
+						<line number="38" hits="20" branch="false"/>
+						<line number="42" hits="2" branch="false"/>
+						<line number="43" hits="2" branch="false"/>
+						<line number="44" hits="2" branch="false"/>
+						<line number="45" hits="2" branch="false"/>
+						<line number="47" hits="2" branch="false"/>
+						<line number="48" hits="2" branch="false"/>
+						<line number="49" hits="2" branch="false"/>
+						<line number="50" hits="2" branch="false"/>
+						<line number="51" hits="2" branch="false"/>
+						<line number="52" hits="2" branch="false"/>
+						<line number="53" hits="2" branch="false"/>
+						<line number="54" hits="2" branch="false"/>
+						<line number="55" hits="2" branch="false"/>
+						<line number="56" hits="2" branch="false"/>
+						<line number="63" hits="7" branch="false"/>
+						<line number="67" hits="7" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="70" hits="7" branch="false"/>
+						<line number="71" hits="7" branch="false"/>
+						<line number="72" hits="7" branch="false"/>
+						<line number="73" hits="7" branch="false"/>
+						<line number="75" hits="7" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="77" hits="5" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="80" hits="5" branch="false"/>
+						<line number="81" hits="5" branch="false"/>
+						<line number="82" hits="5" branch="false"/>
+						<line number="83" hits="5" branch="false"/>
+						<line number="84" hits="5" branch="false"/>
+						<line number="85" hits="5" branch="false"/>
+						<line number="88" hits="2" branch="false"/>
+						<line number="91" hits="7" branch="false"/>
+					</lines>
+				</class>
+				<class name="fiuba.algo3.Personaje" filename="fiuba/algo3/Personaje.java" line-rate="0.4594594594594595" branch-rate="0.3333333333333333" complexity="1.5625">
+					<methods>
+						<method name="&lt;clinit&gt;" signature="()V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="13" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(ILfiuba/algo3/Jefatura;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="19" hits="77" branch="false"/>
+								<line number="20" hits="77" branch="false"/>
+								<line number="21" hits="77" branch="false"/>
+								<line number="22" hits="77" branch="false"/>
+								<line number="23" hits="77" branch="false"/>
+								<line number="24" hits="77" branch="false"/>
+								<line number="25" hits="77" branch="false"/>
+								<line number="26" hits="77" branch="false"/>
+								<line number="27" hits="77" branch="false"/>
+								<line number="28" hits="77" branch="false"/>
+								<line number="29" hits="77" branch="false"/>
+							</lines>
+						</method>
+						<method name="calcularTiempo" signature="(Lfiuba/algo3/Pais;)I" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="103" hits="19" branch="false"/>
+								<line number="104" hits="19" branch="false"/>
+							</lines>
+						</method>
+						<method name="capturarLadron" signature="()V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="36" hits="0" branch="false"/>
+								<line number="37" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="dormir" signature="()V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="130" hits="2" branch="false"/>
+								<line number="131" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="elegirPaisAViajar" signature="(Lfiuba/algo3/Mundo;Lorg/w3c/dom/Document;)V" line-rate="0.0" branch-rate="0.0">
+							<lines>
+								<line number="54" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="55" hits="0" branch="false"/>
+								<line number="57" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="58" hits="0" branch="false"/>
+								<line number="59" hits="0" branch="false"/>
+								<line number="60" hits="0" branch="false"/>
+								<line number="61" hits="0" branch="false"/>
+								<line number="62" hits="0" branch="false"/>
+								<line number="64" hits="0" branch="false"/>
+								<line number="65" hits="0" branch="false"/>
+								<line number="67" hits="0" branch="false"/>
+								<line number="68" hits="0" branch="false"/>
+								<line number="69" hits="0" branch="false"/>
+								<line number="71" hits="0" branch="false"/>
+								<line number="72" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="73" hits="0" branch="false"/>
+								<line number="75" hits="0" branch="false"/>
+								<line number="76" hits="0" branch="false"/>
+								<line number="78" hits="0" branch="false"/>
+								<line number="79" hits="0" branch="false"/>
+								<line number="80" hits="0" branch="false"/>
+								<line number="81" hits="0" branch="true" condition-coverage="0% (0/4)">
+									<conditions>
+										<condition number="0" type="switch" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="83" hits="0" branch="false"/>
+								<line number="84" hits="0" branch="false"/>
+								<line number="86" hits="0" branch="false"/>
+								<line number="87" hits="0" branch="false"/>
+								<line number="89" hits="0" branch="false"/>
+								<line number="92" hits="0" branch="false"/>
+								<line number="94" hits="0" branch="false"/>
+								<line number="96" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="emitirOrdenA" signature="(Lfiuba/algo3/Sospechoso;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="125" hits="3" branch="false"/>
+								<line number="126" hits="3" branch="false"/>
+								<line number="127" hits="3" branch="false"/>
+							</lines>
+						</method>
+						<method name="getHoraActual" signature="()Ljava/lang/String;" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="140" hits="0" branch="false"/>
+								<line number="141" hits="0" branch="false"/>
+								<line number="142" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getHorasRestantes" signature="()I" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="108" hits="42" branch="false"/>
+								<line number="109" hits="42" branch="false"/>
+								<line number="110" hits="42" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="111" hits="38" branch="false"/>
+								<line number="113" hits="4" branch="false"/>
+								<line number="115" hits="42" branch="false"/>
+							</lines>
+						</method>
+						<method name="getTiempoLimite" signature="()Ljava/lang/String;" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="134" hits="0" branch="false"/>
+								<line number="135" hits="0" branch="false"/>
+								<line number="136" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getUbicacion" signature="()Lfiuba/algo3/Pais;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="119" hits="124" branch="false"/>
+							</lines>
+						</method>
+						<method name="ladronCapturado" signature="()Z" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="32" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="restarHoras" signature="(I)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="46" hits="136" branch="false"/>
+								<line number="47" hits="136" branch="true" condition-coverage="100% (4/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+										<condition number="1" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="48" hits="2" branch="false"/>
+								<line number="50" hits="136" branch="false"/>
+							</lines>
+						</method>
+						<method name="seConfundioDePais" signature="()Z" line-rate="0.0" branch-rate="0.0">
+							<lines>
+								<line number="99" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+							</lines>
+						</method>
+						<method name="viajarA" signature="(Lfiuba/algo3/Pais;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="40" hits="19" branch="false"/>
+								<line number="41" hits="19" branch="false"/>
+								<line number="42" hits="19" branch="false"/>
+								<line number="43" hits="19" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="13" hits="1" branch="false"/>
+						<line number="19" hits="77" branch="false"/>
+						<line number="20" hits="77" branch="false"/>
+						<line number="21" hits="77" branch="false"/>
+						<line number="22" hits="77" branch="false"/>
+						<line number="23" hits="77" branch="false"/>
+						<line number="24" hits="77" branch="false"/>
+						<line number="25" hits="77" branch="false"/>
+						<line number="26" hits="77" branch="false"/>
+						<line number="27" hits="77" branch="false"/>
+						<line number="28" hits="77" branch="false"/>
+						<line number="29" hits="77" branch="false"/>
+						<line number="32" hits="0" branch="false"/>
+						<line number="36" hits="0" branch="false"/>
+						<line number="37" hits="0" branch="false"/>
+						<line number="40" hits="19" branch="false"/>
+						<line number="41" hits="19" branch="false"/>
+						<line number="42" hits="19" branch="false"/>
+						<line number="43" hits="19" branch="false"/>
+						<line number="46" hits="136" branch="false"/>
+						<line number="47" hits="136" branch="true" condition-coverage="100% (4/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+								<condition number="1" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="48" hits="2" branch="false"/>
+						<line number="50" hits="136" branch="false"/>
+						<line number="54" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="55" hits="0" branch="false"/>
+						<line number="57" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="58" hits="0" branch="false"/>
+						<line number="59" hits="0" branch="false"/>
+						<line number="60" hits="0" branch="false"/>
+						<line number="61" hits="0" branch="false"/>
+						<line number="62" hits="0" branch="false"/>
+						<line number="64" hits="0" branch="false"/>
+						<line number="65" hits="0" branch="false"/>
+						<line number="67" hits="0" branch="false"/>
+						<line number="68" hits="0" branch="false"/>
+						<line number="69" hits="0" branch="false"/>
+						<line number="71" hits="0" branch="false"/>
+						<line number="72" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="73" hits="0" branch="false"/>
+						<line number="75" hits="0" branch="false"/>
+						<line number="76" hits="0" branch="false"/>
+						<line number="78" hits="0" branch="false"/>
+						<line number="79" hits="0" branch="false"/>
+						<line number="80" hits="0" branch="false"/>
+						<line number="81" hits="0" branch="true" condition-coverage="0% (0/4)">
+							<conditions>
+								<condition number="0" type="switch" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="83" hits="0" branch="false"/>
+						<line number="84" hits="0" branch="false"/>
+						<line number="86" hits="0" branch="false"/>
+						<line number="87" hits="0" branch="false"/>
+						<line number="89" hits="0" branch="false"/>
+						<line number="92" hits="0" branch="false"/>
+						<line number="94" hits="0" branch="false"/>
+						<line number="96" hits="0" branch="false"/>
+						<line number="99" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="103" hits="19" branch="false"/>
+						<line number="104" hits="19" branch="false"/>
+						<line number="108" hits="42" branch="false"/>
+						<line number="109" hits="42" branch="false"/>
+						<line number="110" hits="42" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="111" hits="38" branch="false"/>
+						<line number="113" hits="4" branch="false"/>
+						<line number="115" hits="42" branch="false"/>
+						<line number="119" hits="124" branch="false"/>
+						<line number="125" hits="3" branch="false"/>
+						<line number="126" hits="3" branch="false"/>
+						<line number="127" hits="3" branch="false"/>
+						<line number="130" hits="2" branch="false"/>
+						<line number="131" hits="2" branch="false"/>
+						<line number="134" hits="0" branch="false"/>
+						<line number="135" hits="0" branch="false"/>
+						<line number="136" hits="0" branch="false"/>
+						<line number="140" hits="0" branch="false"/>
+						<line number="141" hits="0" branch="false"/>
+						<line number="142" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="fiuba.algo3.PersonajeDetective" filename="fiuba/algo3/PersonajeDetective.java" line-rate="0.8571428571428571" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="(ILfiuba/algo3/Pais;ILfiuba/algo3/Jefatura;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="6" hits="21" branch="false"/>
+								<line number="7" hits="21" branch="false"/>
+								<line number="8" hits="21" branch="false"/>
+								<line number="9" hits="21" branch="false"/>
+								<line number="10" hits="21" branch="false"/>
+							</lines>
+						</method>
+						<method name="pedirPistaA" signature="(Lfiuba/algo3/Edificio;)Lfiuba/algo3/Pista;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="17" hits="23" branch="false"/>
+							</lines>
+						</method>
+						<method name="rango" signature="()Ljava/lang/String;" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="13" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="6" hits="21" branch="false"/>
+						<line number="7" hits="21" branch="false"/>
+						<line number="8" hits="21" branch="false"/>
+						<line number="9" hits="21" branch="false"/>
+						<line number="10" hits="21" branch="false"/>
+						<line number="13" hits="0" branch="false"/>
+						<line number="17" hits="23" branch="false"/>
+					</lines>
+				</class>
+				<class name="fiuba.algo3.PersonajeInvestigador" filename="fiuba/algo3/PersonajeInvestigador.java" line-rate="0.8571428571428571" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="(ILfiuba/algo3/Pais;ILfiuba/algo3/Jefatura;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="6" hits="16" branch="false"/>
+								<line number="7" hits="16" branch="false"/>
+								<line number="8" hits="16" branch="false"/>
+								<line number="9" hits="16" branch="false"/>
+								<line number="10" hits="16" branch="false"/>
+							</lines>
+						</method>
+						<method name="pedirPistaA" signature="(Lfiuba/algo3/Edificio;)Lfiuba/algo3/Pista;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="17" hits="4" branch="false"/>
+							</lines>
+						</method>
+						<method name="rango" signature="()Ljava/lang/String;" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="13" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="6" hits="16" branch="false"/>
+						<line number="7" hits="16" branch="false"/>
+						<line number="8" hits="16" branch="false"/>
+						<line number="9" hits="16" branch="false"/>
+						<line number="10" hits="16" branch="false"/>
+						<line number="13" hits="0" branch="false"/>
+						<line number="17" hits="4" branch="false"/>
+					</lines>
+				</class>
+				<class name="fiuba.algo3.PersonajeNovato" filename="fiuba/algo3/PersonajeNovato.java" line-rate="0.8571428571428571" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="(ILfiuba/algo3/Pais;ILfiuba/algo3/Jefatura;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="6" hits="24" branch="false"/>
+								<line number="7" hits="24" branch="false"/>
+								<line number="8" hits="24" branch="false"/>
+								<line number="9" hits="24" branch="false"/>
+								<line number="10" hits="24" branch="false"/>
+							</lines>
+						</method>
+						<method name="pedirPistaA" signature="(Lfiuba/algo3/Edificio;)Lfiuba/algo3/Pista;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="17" hits="12" branch="false"/>
+							</lines>
+						</method>
+						<method name="rango" signature="()Ljava/lang/String;" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="13" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="6" hits="24" branch="false"/>
+						<line number="7" hits="24" branch="false"/>
+						<line number="8" hits="24" branch="false"/>
+						<line number="9" hits="24" branch="false"/>
+						<line number="10" hits="24" branch="false"/>
+						<line number="13" hits="0" branch="false"/>
+						<line number="17" hits="12" branch="false"/>
+					</lines>
+				</class>
+				<class name="fiuba.algo3.PersonajeSargento" filename="fiuba/algo3/PersonajeSargento.java" line-rate="0.8571428571428571" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="(ILfiuba/algo3/Pais;ILfiuba/algo3/Jefatura;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="6" hits="16" branch="false"/>
+								<line number="7" hits="16" branch="false"/>
+								<line number="8" hits="16" branch="false"/>
+								<line number="9" hits="16" branch="false"/>
+								<line number="10" hits="16" branch="false"/>
+							</lines>
+						</method>
+						<method name="pedirPistaA" signature="(Lfiuba/algo3/Edificio;)Lfiuba/algo3/Pista;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="17" hits="4" branch="false"/>
+							</lines>
+						</method>
+						<method name="rango" signature="()Ljava/lang/String;" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="13" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="6" hits="16" branch="false"/>
+						<line number="7" hits="16" branch="false"/>
+						<line number="8" hits="16" branch="false"/>
+						<line number="9" hits="16" branch="false"/>
+						<line number="10" hits="16" branch="false"/>
+						<line number="13" hits="0" branch="false"/>
+						<line number="17" hits="4" branch="false"/>
+					</lines>
+				</class>
+				<class name="fiuba.algo3.Pista" filename="fiuba/algo3/Pista.java" line-rate="0.8461538461538461" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="9" hits="1" branch="false"/>
+								<line number="10" hits="1" branch="false"/>
+								<line number="11" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="13" hits="87" branch="false"/>
+								<line number="14" hits="87" branch="false"/>
+								<line number="15" hits="87" branch="false"/>
+							</lines>
+						</method>
+						<method name="concatenar" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="31" hits="6" branch="false"/>
+								<line number="32" hits="6" branch="false"/>
+							</lines>
+						</method>
+						<method name="getPista" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="18" hits="7" branch="false"/>
+							</lines>
+						</method>
+						<method name="hidratar" signature="(Lorg/w3c/dom/Node;)Lfiuba/algo3/Pista;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="22" hits="45" branch="false"/>
+								<line number="23" hits="45" branch="false"/>
+							</lines>
+						</method>
+						<method name="setPista" signature="(Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="27" hits="0" branch="false"/>
+								<line number="28" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="9" hits="1" branch="false"/>
+						<line number="10" hits="1" branch="false"/>
+						<line number="11" hits="1" branch="false"/>
+						<line number="13" hits="87" branch="false"/>
+						<line number="14" hits="87" branch="false"/>
+						<line number="15" hits="87" branch="false"/>
+						<line number="18" hits="7" branch="false"/>
+						<line number="22" hits="45" branch="false"/>
+						<line number="23" hits="45" branch="false"/>
+						<line number="27" hits="0" branch="false"/>
+						<line number="28" hits="0" branch="false"/>
+						<line number="31" hits="6" branch="false"/>
+						<line number="32" hits="6" branch="false"/>
+					</lines>
+				</class>
+				<class name="fiuba.algo3.Rasgo" filename="fiuba/algo3/Rasgo.java" line-rate="0.8" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="11" hits="530" branch="false"/>
+								<line number="12" hits="530" branch="false"/>
+								<line number="13" hits="530" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="7" hits="104" branch="false"/>
+								<line number="8" hits="104" branch="false"/>
+								<line number="9" hits="104" branch="false"/>
+							</lines>
+						</method>
+						<method name="getRasgo" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="16" hits="64" branch="false"/>
+							</lines>
+						</method>
+						<method name="hayRasgo" signature="()Z" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="24" hits="40" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+							</lines>
+						</method>
+						<method name="setRasgo" signature="(Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="20" hits="0" branch="false"/>
+								<line number="21" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="7" hits="104" branch="false"/>
+						<line number="8" hits="104" branch="false"/>
+						<line number="9" hits="104" branch="false"/>
+						<line number="11" hits="530" branch="false"/>
+						<line number="12" hits="530" branch="false"/>
+						<line number="13" hits="530" branch="false"/>
+						<line number="16" hits="64" branch="false"/>
+						<line number="20" hits="0" branch="false"/>
+						<line number="21" hits="0" branch="false"/>
+						<line number="24" hits="40" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+					</lines>
+				</class>
+				<class name="fiuba.algo3.Sospechoso" filename="fiuba/algo3/Sospechoso.java" line-rate="0.6323529411764706" branch-rate="0.45454545454545453" complexity="3.3076923076923075">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="11" hits="106" branch="false"/>
+								<line number="12" hits="106" branch="false"/>
+								<line number="13" hits="106" branch="false"/>
+								<line number="14" hits="106" branch="false"/>
+								<line number="15" hits="106" branch="false"/>
+								<line number="16" hits="106" branch="false"/>
+								<line number="17" hits="106" branch="false"/>
+							</lines>
+						</method>
+						<method name="coincideRasgosCon" signature="(Lfiuba/algo3/Ladron;)Z" line-rate="0.0" branch-rate="0.0">
+							<lines>
+								<line number="93" hits="0" branch="false"/>
+								<line number="94" hits="0" branch="false"/>
+								<line number="96" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="97" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="98" hits="0" branch="false"/>
+								<line number="99" hits="0" branch="false"/>
+								<line number="101" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="102" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="103" hits="0" branch="false"/>
+								<line number="104" hits="0" branch="false"/>
+								<line number="106" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="107" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="108" hits="0" branch="false"/>
+								<line number="109" hits="0" branch="false"/>
+								<line number="111" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="112" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="113" hits="0" branch="false"/>
+								<line number="114" hits="0" branch="false"/>
+								<line number="116" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="117" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="118" hits="0" branch="false"/>
+								<line number="119" hits="0" branch="false"/>
+								<line number="121" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+							</lines>
+						</method>
+						<method name="coincideRasgosCon" signature="(Lfiuba/algo3/Sospechoso;)Z" line-rate="0.9130434782608695" branch-rate="0.9090909090909091">
+							<lines>
+								<line number="61" hits="10" branch="false"/>
+								<line number="62" hits="10" branch="false"/>
+								<line number="64" hits="10" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="65" hits="8" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="66" hits="6" branch="false"/>
+								<line number="67" hits="2" branch="false"/>
+								<line number="69" hits="8" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="70" hits="4" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="71" hits="3" branch="false"/>
+								<line number="72" hits="1" branch="false"/>
+								<line number="74" hits="7" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="75" hits="6" branch="true" condition-coverage="50% (1/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+								<line number="76" hits="6" branch="false"/>
+								<line number="77" hits="0" branch="false"/>
+								<line number="79" hits="7" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="80" hits="6" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="81" hits="5" branch="false"/>
+								<line number="82" hits="1" branch="false"/>
+								<line number="84" hits="6" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="85" hits="2" branch="true" condition-coverage="50% (1/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+								<line number="86" hits="2" branch="false"/>
+								<line number="87" hits="0" branch="false"/>
+								<line number="89" hits="6" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+							</lines>
+						</method>
+						<method name="getCabello" signature="()Lfiuba/algo3/Rasgo;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="36" hits="16" branch="false"/>
+							</lines>
+						</method>
+						<method name="getHobby" signature="()Lfiuba/algo3/Rasgo;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="28" hits="14" branch="false"/>
+							</lines>
+						</method>
+						<method name="getSenia" signature="()Lfiuba/algo3/Rasgo;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="44" hits="16" branch="false"/>
+							</lines>
+						</method>
+						<method name="getSexo" signature="()Lfiuba/algo3/Rasgo;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="20" hits="20" branch="false"/>
+							</lines>
+						</method>
+						<method name="getVehiculo" signature="()Lfiuba/algo3/Rasgo;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="52" hits="11" branch="false"/>
+							</lines>
+						</method>
+						<method name="setCabello" signature="(Lfiuba/algo3/Rasgo;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="40" hits="24" branch="false"/>
+								<line number="41" hits="24" branch="false"/>
+							</lines>
+						</method>
+						<method name="setHobby" signature="(Lfiuba/algo3/Rasgo;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="32" hits="20" branch="false"/>
+								<line number="33" hits="20" branch="false"/>
+							</lines>
+						</method>
+						<method name="setSenia" signature="(Lfiuba/algo3/Rasgo;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="48" hits="24" branch="false"/>
+								<line number="49" hits="24" branch="false"/>
+							</lines>
+						</method>
+						<method name="setSexo" signature="(Lfiuba/algo3/Rasgo;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="24" hits="24" branch="false"/>
+								<line number="25" hits="24" branch="false"/>
+							</lines>
+						</method>
+						<method name="setVehiculo" signature="(Lfiuba/algo3/Rasgo;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="56" hits="16" branch="false"/>
+								<line number="57" hits="16" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="11" hits="106" branch="false"/>
+						<line number="12" hits="106" branch="false"/>
+						<line number="13" hits="106" branch="false"/>
+						<line number="14" hits="106" branch="false"/>
+						<line number="15" hits="106" branch="false"/>
+						<line number="16" hits="106" branch="false"/>
+						<line number="17" hits="106" branch="false"/>
+						<line number="20" hits="20" branch="false"/>
+						<line number="24" hits="24" branch="false"/>
+						<line number="25" hits="24" branch="false"/>
+						<line number="28" hits="14" branch="false"/>
+						<line number="32" hits="20" branch="false"/>
+						<line number="33" hits="20" branch="false"/>
+						<line number="36" hits="16" branch="false"/>
+						<line number="40" hits="24" branch="false"/>
+						<line number="41" hits="24" branch="false"/>
+						<line number="44" hits="16" branch="false"/>
+						<line number="48" hits="24" branch="false"/>
+						<line number="49" hits="24" branch="false"/>
+						<line number="52" hits="11" branch="false"/>
+						<line number="56" hits="16" branch="false"/>
+						<line number="57" hits="16" branch="false"/>
+						<line number="61" hits="10" branch="false"/>
+						<line number="62" hits="10" branch="false"/>
+						<line number="64" hits="10" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="65" hits="8" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="66" hits="6" branch="false"/>
+						<line number="67" hits="2" branch="false"/>
+						<line number="69" hits="8" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="70" hits="4" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="71" hits="3" branch="false"/>
+						<line number="72" hits="1" branch="false"/>
+						<line number="74" hits="7" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="75" hits="6" branch="true" condition-coverage="50% (1/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+						<line number="76" hits="6" branch="false"/>
+						<line number="77" hits="0" branch="false"/>
+						<line number="79" hits="7" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="80" hits="6" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="81" hits="5" branch="false"/>
+						<line number="82" hits="1" branch="false"/>
+						<line number="84" hits="6" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="85" hits="2" branch="true" condition-coverage="50% (1/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+						<line number="86" hits="2" branch="false"/>
+						<line number="87" hits="0" branch="false"/>
+						<line number="89" hits="6" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="93" hits="0" branch="false"/>
+						<line number="94" hits="0" branch="false"/>
+						<line number="96" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="97" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="98" hits="0" branch="false"/>
+						<line number="99" hits="0" branch="false"/>
+						<line number="101" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="102" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="103" hits="0" branch="false"/>
+						<line number="104" hits="0" branch="false"/>
+						<line number="106" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="107" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="108" hits="0" branch="false"/>
+						<line number="109" hits="0" branch="false"/>
+						<line number="111" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="112" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="113" hits="0" branch="false"/>
+						<line number="114" hits="0" branch="false"/>
+						<line number="116" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="117" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="118" hits="0" branch="false"/>
+						<line number="119" hits="0" branch="false"/>
+						<line number="121" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+					</lines>
+				</class>
+				<class name="fiuba.algo3.Tesoros" filename="fiuba/algo3/Tesoros.java" line-rate="0.9375" branch-rate="1.0" complexity="1.375">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Lorg/w3c/dom/Document;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="17" hits="2" branch="false"/>
+								<line number="18" hits="2" branch="false"/>
+								<line number="19" hits="2" branch="false"/>
+								<line number="20" hits="2" branch="false"/>
+								<line number="21" hits="2" branch="false"/>
+								<line number="22" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="getCantidadDeTesorosExoticos" signature="()I" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="66" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="getCantidadDeTesorosLegendarios" signature="()I" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="70" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="getCantidadDeTesorosRaros" signature="()I" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="62" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="hidratar" signature="(Lorg/w3c/dom/Document;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="25" hits="2" branch="false"/>
+								<line number="26" hits="2" branch="false"/>
+								<line number="27" hits="4" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="28" hits="2" branch="false"/>
+								<line number="29" hits="2" branch="false"/>
+								<line number="30" hits="2" branch="false"/>
+								<line number="31" hits="2" branch="false"/>
+								<line number="33" hits="2" branch="false"/>
+								<line number="34" hits="4" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="35" hits="2" branch="false"/>
+								<line number="36" hits="2" branch="false"/>
+								<line number="37" hits="2" branch="false"/>
+								<line number="38" hits="2" branch="false"/>
+								<line number="40" hits="2" branch="false"/>
+								<line number="41" hits="4" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="42" hits="2" branch="false"/>
+								<line number="43" hits="2" branch="false"/>
+								<line number="44" hits="2" branch="false"/>
+								<line number="45" hits="2" branch="false"/>
+								<line number="47" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="obtenerObjetoExotico" signature="(I)Lfiuba/algo3/ObjetoExotico;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="54" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="obtenerObjetoLegendario" signature="(I)Lfiuba/algo3/ObjetoLegendario;" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="58" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="obtenerObjetoRaro" signature="(I)Lfiuba/algo3/ObjetoRaro;" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="50" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="17" hits="2" branch="false"/>
+						<line number="18" hits="2" branch="false"/>
+						<line number="19" hits="2" branch="false"/>
+						<line number="20" hits="2" branch="false"/>
+						<line number="21" hits="2" branch="false"/>
+						<line number="22" hits="2" branch="false"/>
+						<line number="25" hits="2" branch="false"/>
+						<line number="26" hits="2" branch="false"/>
+						<line number="27" hits="4" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="28" hits="2" branch="false"/>
+						<line number="29" hits="2" branch="false"/>
+						<line number="30" hits="2" branch="false"/>
+						<line number="31" hits="2" branch="false"/>
+						<line number="33" hits="2" branch="false"/>
+						<line number="34" hits="4" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="35" hits="2" branch="false"/>
+						<line number="36" hits="2" branch="false"/>
+						<line number="37" hits="2" branch="false"/>
+						<line number="38" hits="2" branch="false"/>
+						<line number="40" hits="2" branch="false"/>
+						<line number="41" hits="4" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="42" hits="2" branch="false"/>
+						<line number="43" hits="2" branch="false"/>
+						<line number="44" hits="2" branch="false"/>
+						<line number="45" hits="2" branch="false"/>
+						<line number="47" hits="2" branch="false"/>
+						<line number="50" hits="0" branch="false"/>
+						<line number="54" hits="1" branch="false"/>
+						<line number="58" hits="0" branch="false"/>
+						<line number="62" hits="1" branch="false"/>
+						<line number="66" hits="2" branch="false"/>
+						<line number="70" hits="1" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+	</packages>
+</coverage>

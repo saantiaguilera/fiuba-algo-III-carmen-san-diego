@@ -1,13 +1,109 @@
 package fiuba.algo3;
 
 import java.io.*; 
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
 public class Main {
+	
+	private static Sospechoso describirSospechoso() throws IOException{
+		Sospechoso sospechoso = new Sospechoso();
+		char opcion;
+		System.out.println("SEXO\n1. Masculino\n2. Femenino\n3. Desconocido");
+		System.in.read(); System.in.read();
+		opcion = (char)System.in.read();
+		switch(opcion){
+		case '1':
+			sospechoso.setSexo(new Rasgo("masculino"));
+			break;
+		case '2':
+			sospechoso.setSexo(new Rasgo("femenino"));
+			break;
+		}
+		System.out.println("HOBBY\n1. Alpinismo\n2. Croquet\n3. Tenis");
+		System.out.println("4. Musica\n5. Paracaidismo\n6. Natacion\n7. Desconocido");
+		System.in.read(); System.in.read();
+		opcion = (char) System.in.read();
+		switch(opcion){
+		case '1':
+			sospechoso.setHobby(new Rasgo("alpinismo"));
+			break;
+		case '2':
+			sospechoso.setHobby(new Rasgo("croquet"));
+			break;
+		case '3':
+			sospechoso.setHobby(new Rasgo("tenis"));
+			break;
+		case '4':
+			sospechoso.setHobby(new Rasgo("musica"));
+			break;
+		case '5':
+			sospechoso.setHobby(new Rasgo("paracaidismo"));
+			break;
+		case '6':
+			sospechoso.setHobby(new Rasgo("natacion"));
+			break;
+		}
+		System.out.println("CABELLO\n1. Negro\n2. Colorado\n3. Rubio");
+		System.out.println("4. Castanio\n5. Desconocido");
+		System.in.read(); System.in.read();
+		opcion = (char)System.in.read();
+		switch(opcion){
+		case '1':
+			sospechoso.setCabello(new Rasgo("negro"));
+			break;
+		case '2':
+			sospechoso.setCabello(new Rasgo("colorado"));
+			break;
+		case '3':
+			sospechoso.setCabello(new Rasgo("rubio"));
+			break;
+		case '4':
+			sospechoso.setCabello(new Rasgo("castanio"));
+		}
+		System.out.println("SENIA\n1. Anillos\n2. Tatuajes\n3. Joyas");
+		System.out.println("4. Cicatrices\n5. Desconocido");
+		System.in.read(); System.in.read();
+		opcion = (char)System.in.read();
+		switch(opcion){
+		case '1':
+			sospechoso.setSenia(new Rasgo("anillos"));
+			break;
+		case '2':
+			sospechoso.setSenia(new Rasgo("tatuajes"));
+			break;
+		case '3':
+			sospechoso.setSenia(new Rasgo("joyas"));
+			break;
+		case '4':
+			sospechoso.setSenia(new Rasgo("cicactrices"));
+		}
+		System.out.println("VEHICULO\n1. Moto\n2. Descapotable\n3. Limusina");
+		System.out.println("4. Deportivo\n5. Desconocido");
+		System.in.read(); System.in.read();
+		opcion = (char)System.in.read();
+		switch(opcion){
+		case '1':
+			sospechoso.setVehiculo(new Rasgo("moto"));
+			break;
+		case '2':
+			sospechoso.setVehiculo(new Rasgo("descapotable"));
+			break;
+		case '3':
+			sospechoso.setVehiculo(new Rasgo("limusina"));
+			break;
+		case '4':
+			sospechoso.setVehiculo(new Rasgo("deportivo"));
+		}
+		
+		return sospechoso;
+	}
+	
 	
 	public static void main (String [] args) throws IOException{
 		
@@ -45,7 +141,7 @@ public class Main {
 		
 		Mundo mundo = new Mundo(docPaises);
 		Tesoros tesoro = new Tesoros(docTesoros);
-		Ladron ladron = Ladron.Hidratar(docLadron,1);
+		Ladron ladron = Ladron.Hidratar(docLadron);
 		Jefatura jefatura = Jefatura.Hidratar(docJefatura, ladron);
 		ladron.robarUnTesoroRandom(tesoro, docPaises);
 		
@@ -64,14 +160,15 @@ public class Main {
 		System.out.print(" se ha robado un tesoro en ");
 		System.out.print(ladron.getPais(0).getNombre());
 		System.out.println(". Debe seguir las pistas hasta encontrar al ladron");
+		System.out.println("Fecha limite: "+personaje.getTiempoLimite());
 		
 		char numero;
 		char otroNumero;
 		
 		while (!personaje.ladronCapturado() & personaje.getHorasRestantes()>0){
 			System.out.println();
-			System.out.print("HORAS: ");
-			System.out.println(personaje.getHorasRestantes());
+			System.out.print("Hora : ");
+			System.out.println(personaje.getHoraActual());
 			System.out.print("PAIS: ");
 			System.out.println(personaje.getUbicacion().getNombre());
 			System.out.println("Elija una opcion");
@@ -108,7 +205,7 @@ public class Main {
 				break;
 			case '3':
 				if(!jefatura.ordenEstaEmitida()){
-					personaje.emitirOrdenA(personaje.describirSospechoso());
+					personaje.emitirOrdenA(Main.describirSospechoso());
 					if(jefatura.ordenEstaEmitida())
 						System.out.println("Orden emitida a " + ladron.getNombre());
 					else

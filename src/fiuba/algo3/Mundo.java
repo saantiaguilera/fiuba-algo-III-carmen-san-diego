@@ -28,7 +28,7 @@ public class Mundo {
 	public String getUnPaisDistintoDe(String unPais){
 		Random rnd = new Random();
 		int unNumero = rnd.nextInt(paises.size());
-		if (paises.get(unNumero)==unPais){
+		while (paises.get(unNumero)==unPais){
 			unNumero=rnd.nextInt(paises.size());
 		}
 		return paises.get(unNumero);
