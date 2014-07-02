@@ -3,7 +3,9 @@ package fiuba.algo3;
 //import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
+
 
 //import javax.xml.parsers.DocumentBuilder;
 //import javax.xml.parsers.DocumentBuilderFactory;
@@ -179,16 +181,24 @@ public class Ladron extends Sospechoso{
 		ladron.agregarPistaMedia(pistaLadron);
 		ladron.agregarPistaFacil(pistaLadron);
 		
-		primerEdificio.setComplice(unComplice);
-		segundoEdificio.setComplice(ladron);
-		tercerEdificio.setComplice(otroComplice);
+		ArrayList<Complice> complicesAElegir = new ArrayList<Complice>();
+		complicesAElegir.add(ladron);
+		complicesAElegir.add(unComplice);
+		complicesAElegir.add(otroComplice);
+		Collections.shuffle(complicesAElegir);
+		
+		primerEdificio.setComplice(complicesAElegir.get(0));
+		segundoEdificio.setComplice(complicesAElegir.get(1));
+		tercerEdificio.setComplice(complicesAElegir.get(2));
 	}
 	
-	public static Ladron Hidratar(Document doc, int numeroDeSospechoso){
+	public static Ladron Hidratar(Document doc){
 		Ladron ladron = new Ladron();
 		NodeList nodos = doc.getElementsByTagName("Sospechoso");
+		Random rnd = new Random();
+		int nroDeSospechoso = rnd.nextInt(nodos.getLength());
 
-		Element elementoNodo = (Element)nodos.item(numeroDeSospechoso);
+		Element elementoNodo = (Element)nodos.item(nroDeSospechoso);
 		ladron.setNombre(elementoNodo.getAttribute("nombre"));
 		ladron.setSexo(new Rasgo(elementoNodo.getAttribute("sexo")));
 		ladron.setHobby(new Rasgo(elementoNodo.getAttribute("hobby")));

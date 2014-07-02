@@ -1,7 +1,9 @@
 package fiuba.algo3;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.Stack;
 
 import org.w3c.dom.Document;
@@ -57,36 +59,47 @@ public abstract class Personaje {
 			if (seConfundioDePais()){
 				Pais miPaisActual = paisesVisitados.pop();
 				paisCorrecto = paisesVisitados.peek();
-				System.out.println("1. " + paisCorrecto.getNombre());
 				paisesVisitados.push(miPaisActual);
 			}
 			else{
 				paisCorrecto = jefatura.paisActualDelLadron(ubicacion);
-				System.out.println("1. " + paisCorrecto.getNombre());
 			}
+			
+			
 			String unStringDePaisIncorrecto = mundo.getUnPaisDistintoDe(paisCorrecto.getNombre());
 			Pais unPaisIncorrecto = Pais.hidratar(doc, unStringDePaisIncorrecto, null, null);
-			System.out.println("2. " + unPaisIncorrecto.getNombre());
+
 			
 			String otroStringDePaisIncorrecto = unStringDePaisIncorrecto;
 			while(otroStringDePaisIncorrecto.matches(unStringDePaisIncorrecto)){
 				otroStringDePaisIncorrecto = mundo.getUnPaisDistintoDe(paisCorrecto.getNombre());
 			}
 			Pais otroPaisIncorrecto = Pais.hidratar(doc, otroStringDePaisIncorrecto, null, null);
-			System.out.println("3. " + otroPaisIncorrecto.getNombre());
+			
+			
+			ArrayList<Pais> paisesAElegir = new ArrayList<Pais>();
+			paisesAElegir.add(paisCorrecto);
+			paisesAElegir.add(unPaisIncorrecto);
+			paisesAElegir.add(otroPaisIncorrecto);
+			Collections.shuffle(paisesAElegir);
+			System.out.println("1. " + (paisesAElegir.get(0)).getNombre());
+			System.out.println("2. " + (paisesAElegir.get(1)).getNombre());
+			System.out.println("3. " + (paisesAElegir.get(2)).getNombre());
+
+			
 			
 			System.in.read();	//Lee el enter
 			System.in.read();	//Lee el retorno al carro
 			char numero = (char)System.in.read();
 			switch (numero){
 			case '1':
-					viajarA(paisCorrecto);
+					viajarA(paisesAElegir.get(0));
 					break;
 			case '2':
-					viajarA(unPaisIncorrecto);
+					viajarA(paisesAElegir.get(1));
 					break;
 			case '3':
-					viajarA(otroPaisIncorrecto);
+					viajarA(paisesAElegir.get(2));
 					break;
 			}
 		}
@@ -140,99 +153,6 @@ public abstract class Personaje {
 		String hora = new String();
 		hora = Integer.toString(horaActual.get(Calendar.HOUR_OF_DAY)) +" hs del dia " + Integer.toString(horaActual.get(Calendar.DATE)) +"/" + Integer.toString(horaActual.get(Calendar.MONTH));
 		return hora;
-	}
-	
-	public Sospechoso describirSospechoso() throws IOException{
-		Sospechoso sospechoso = new Sospechoso();
-		char opcion;
-		System.out.println("SEXO\n1. Masculino\n2. Femenino\n3. Desconocido");
-		System.in.read(); System.in.read();
-		opcion = (char)System.in.read();
-		switch(opcion){
-		case '1':
-			sospechoso.setSexo(new Rasgo("masculino"));
-			break;
-		case '2':
-			sospechoso.setSexo(new Rasgo("femenino"));
-			break;
-		}
-		System.out.println("HOBBY\n1. Alpinismo\n2. Croquet\n3. Tenis");
-		System.out.println("4. Musica\n5. Paracaidismo\n6. Natacion\n7. Desconocido");
-		System.in.read(); System.in.read();
-		opcion = (char) System.in.read();
-		switch(opcion){
-		case '1':
-			sospechoso.setHobby(new Rasgo("alpinismo"));
-			break;
-		case '2':
-			sospechoso.setHobby(new Rasgo("croquet"));
-			break;
-		case '3':
-			sospechoso.setHobby(new Rasgo("tenis"));
-			break;
-		case '4':
-			sospechoso.setHobby(new Rasgo("musica"));
-			break;
-		case '5':
-			sospechoso.setHobby(new Rasgo("paracaidismo"));
-			break;
-		case '6':
-			sospechoso.setHobby(new Rasgo("natacion"));
-			break;
-		}
-		System.out.println("CABELLO\n1. Negro\n2. Colorado\n3. Rubio");
-		System.out.println("4. Castanio\n5. Desconocido");
-		System.in.read(); System.in.read();
-		opcion = (char)System.in.read();
-		switch(opcion){
-		case '1':
-			sospechoso.setCabello(new Rasgo("negro"));
-			break;
-		case '2':
-			sospechoso.setCabello(new Rasgo("colorado"));
-			break;
-		case '3':
-			sospechoso.setCabello(new Rasgo("rubio"));
-			break;
-		case '4':
-			sospechoso.setCabello(new Rasgo("castanio"));
-		}
-		System.out.println("SENIA\n1. Anillos\n2. Tatuajes\n3. Joyas");
-		System.out.println("4. Cicatrices\n5. Desconocido");
-		System.in.read(); System.in.read();
-		opcion = (char)System.in.read();
-		switch(opcion){
-		case '1':
-			sospechoso.setSenia(new Rasgo("anillos"));
-			break;
-		case '2':
-			sospechoso.setSenia(new Rasgo("tatuajes"));
-			break;
-		case '3':
-			sospechoso.setSenia(new Rasgo("joyas"));
-			break;
-		case '4':
-			sospechoso.setSenia(new Rasgo("cicactrices"));
-		}
-		System.out.println("VEHICULO\n1. Moto\n2. Descapotable\n3. Limusina");
-		System.out.println("4. Deportivo\n5. Desconocido");
-		System.in.read(); System.in.read();
-		opcion = (char)System.in.read();
-		switch(opcion){
-		case '1':
-			sospechoso.setVehiculo(new Rasgo("moto"));
-			break;
-		case '2':
-			sospechoso.setVehiculo(new Rasgo("descapotable"));
-			break;
-		case '3':
-			sospechoso.setVehiculo(new Rasgo("limusina"));
-			break;
-		case '4':
-			sospechoso.setVehiculo(new Rasgo("deportivo"));
-		}
-		
-		return sospechoso;
 	}
 	
 	public abstract String rango();

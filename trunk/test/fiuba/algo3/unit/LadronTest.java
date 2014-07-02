@@ -95,10 +95,9 @@ public class LadronTest {
 		doc = db.parse(sospechososXML);
 		doc.getDocumentElement().normalize();
 		
-		Ladron ladronCargado = Ladron.Hidratar(doc, 0);
+		Ladron ladronCargado = Ladron.Hidratar(doc);
 		
 		Assert.assertNotNull(ladronCargado);
-		Assert.assertEquals( "Nick Brunch" , ladronCargado.getNombre());
 		
 	}
 	
@@ -112,13 +111,13 @@ public class LadronTest {
 		doc = db.parse(sospechososXML);
 		doc.getDocumentElement().normalize();
 		
-		Ladron ladronCargado = Ladron.Hidratar(doc, 1);
+		Ladron ladronCargado = Ladron.Hidratar(doc);
 		
 		Assert.assertNotNull(ladronCargado);
 		
-		Assert.assertEquals( "colorado" , ladronCargado.getCabello().getRasgo());
-		Assert.assertEquals( "tatuajes" , ladronCargado.getSenia().getRasgo());
-		Assert.assertEquals( "descapotable" , ladronCargado.getVehiculo().getRasgo());
+		Assert.assertNotNull(ladronCargado.getCabello().getRasgo());
+		Assert.assertNotNull( ladronCargado.getSenia().getRasgo());
+		Assert.assertNotNull(ladronCargado.getVehiculo().getRasgo());
 	}
 }
 
