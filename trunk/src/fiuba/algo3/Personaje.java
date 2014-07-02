@@ -90,16 +90,12 @@ public abstract class Personaje {
 		horaActual.add(Calendar.HOUR_OF_DAY, horasADormir);
 	}
 	
-	public String getTiempoLimite(){
-		String diaLimite = new String();
-		diaLimite = Integer.toString(tiempoLimite.get(Calendar.HOUR_OF_DAY)) +" hs del dia " + Integer.toString(tiempoLimite.get(Calendar.DATE)) +"/" + Integer.toString(tiempoLimite.get(Calendar.MONTH));
-		return diaLimite;
+	public Calendar getTiempoLimite(){
+		return this.tiempoLimite;
 	}
 	
-	public String getHoraActual(){
-		String hora = new String();
-		hora = Integer.toString(horaActual.get(Calendar.HOUR_OF_DAY)) +" hs del dia " + Integer.toString(horaActual.get(Calendar.DATE)) +"/" + Integer.toString(horaActual.get(Calendar.MONTH));
-		return hora;
+	public Calendar getHoraActual(){
+		return this.horaActual;
 	}
 	
 	public abstract String rango();
