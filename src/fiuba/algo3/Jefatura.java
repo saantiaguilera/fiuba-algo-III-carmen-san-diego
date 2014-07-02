@@ -114,7 +114,6 @@ public class Jefatura {
 		jefatura.cargarListaDeSenias(doc);
 		jefatura.cargarListaDeVehiculos(doc);
 		
-		
 		return jefatura;
 	}
 
@@ -153,8 +152,8 @@ public class Jefatura {
 			}
 	}
 
-	public Pais paisActualDelLadron(Pais ubicacion) {
-		return ladron.getPaisActual(ubicacion);
+	public Pais paisActualDelLadron(Pais paisAnterior) {
+		return ladron.getPaisActual(paisAnterior);
 	}
 
 	public boolean verificarSiElLadronPasoPor(Pais ubicacion) {
@@ -213,6 +212,10 @@ public class Jefatura {
 			transformer.transform(source, result);
 		} catch (TransformerException e) {}
 		
+	}
+
+	public boolean esUltimoPais(Pais unPais) {
+		return ladron.esUltimoPais(unPais);
 	}
 
 }

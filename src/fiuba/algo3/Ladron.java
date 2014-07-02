@@ -24,6 +24,7 @@ public class Ladron extends Sospechoso{
 		this.listaPaises = new ArrayList<Pais>();
 		this.nombre = null;
 	}
+	
 	public Ladron(ArrayList<Pais> listaPaises, String unNombre){
 		super();
 		this.listaPaises = listaPaises;
@@ -40,7 +41,6 @@ public class Ladron extends Sospechoso{
 		int posision=listaPaises.indexOf(paisDelPersonaje);
 		return listaPaises.get(posision+1);
 	}
-	
 	
 	public void robarUnTesoroRandom(Tesoros tesoro ,Document doc) {
 		Random rnd = new Random();
@@ -91,14 +91,9 @@ public class Ladron extends Sospechoso{
 		this.generarListaPaisesDeTamanio(4,doc);
 	}	
 	
-
 	private void generarListaPaisesDeTamanio(int cantPaises,Document docPaises) throws ParserConfigurationException , SAXException, IOException{
 		//POST: this.listaPaises termina con una lista aleatoria de paises
 		//	que recorre el ladron
-		//	DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-		//	DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-		//	Document docPaises = dBuilder.parse(new File("paises.xml"));
-		//	docPaises.getDocumentElement().normalize();
 			
 			NodeList nodosPaises = docPaises.getElementsByTagName("Pais");
 			Random rnd = new Random();
@@ -129,6 +124,7 @@ public class Ladron extends Sospechoso{
 				else{
 					Pais paisNuevo = Pais.hidratar(docPaises, nombrePaisNuevo, null, this);
 					listaPaises.add(paisNuevo);
+					this.esconderse(paisNuevo.biblioteca, paisNuevo.banco, paisNuevo.puerto);
 				}
 				
 				//El siguiente pais sera el que ahora es proximo
@@ -158,10 +154,7 @@ public class Ladron extends Sospechoso{
 	
 	public boolean esUltimoPais(Pais unPais) {
 		int posision=listaPaises.indexOf(unPais);
-		if (posision==0){
-			posision+=1;
-		}
-		if (posision==listaPaises.size()){
+		if (posision == listaPaises.size() - 1){
 			return true;
 		}
 		else { return false;}
@@ -169,8 +162,23 @@ public class Ladron extends Sospechoso{
 	
 	public void esconderse(Edificio primerEdificio,Edificio segundoEdificio, Edificio tercerEdificio){
 		Complice unComplice= new Complice(this,new Bala());
+		Pista pistaBala = new Pista("Te han disparado!");
+		unComplice.agregarPistaDificil(pistaBala);
+		unComplice.agregarPistaMedia(pistaBala);
+		unComplice.agregarPistaFacil(pistaBala);
+		
 		Complice otroComplice = new Complice(this, new Cuchillo());
+		Pista pistaCuchillo = new Pista("Te han lastimado con un cuchillo!");
+		otroComplice.agregarPistaDificil(pistaCuchillo);
+		otroComplice.agregarPistaMedia(pistaCuchillo);
+		otroComplice.agregarPistaFacil(pistaCuchillo);
+		
 		Complice ladron= new Complice (this, new ActaDeRendicion());
+		Pista pistaLadron = new Pista("Has encontrado al ladron!");
+		ladron.agregarPistaDificil(pistaLadron);
+		ladron.agregarPistaMedia(pistaLadron);
+		ladron.agregarPistaFacil(pistaLadron);
+		
 		primerEdificio.setComplice(unComplice);
 		segundoEdificio.setComplice(ladron);
 		tercerEdificio.setComplice(otroComplice);
@@ -180,7 +188,7 @@ public class Ladron extends Sospechoso{
 		Ladron ladron = new Ladron();
 		NodeList nodos = doc.getElementsByTagName("Sospechoso");
 
-		Element elementoNodo =(Element)nodos.item(numeroDeSospechoso);
+		Element elementoNodo = (Element)nodos.item(numeroDeSospechoso);
 		ladron.setNombre(elementoNodo.getAttribute("nombre"));
 		ladron.setSexo(new Rasgo(elementoNodo.getAttribute("sexo")));
 		ladron.setHobby(new Rasgo(elementoNodo.getAttribute("hobby")));

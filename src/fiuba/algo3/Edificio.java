@@ -15,7 +15,6 @@ public class Edificio {
 		vecesVisitado = 0;
 		complice = new Complice(new Ladron(), null);
 	}
-
 	
 	public Pista darPistaA(PersonajeNovato unPersonaje){
 		if (complice.esElLadron(unPersonaje.getUbicacion())){

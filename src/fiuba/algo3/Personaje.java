@@ -50,42 +50,48 @@ public abstract class Personaje {
 	}
 	
 	public void elegirPaisAViajar(Mundo mundo, Document doc) throws IOException{
-		System.out.println("Seleccione un pais a viajar:");
-		Pais paisCorrecto;
-		if (seConfundioDePais()){
-			Pais miPaisActual = paisesVisitados.pop();
-			paisCorrecto = paisesVisitados.peek();
-			System.out.println("1. " + paisCorrecto.getNombre());
-			paisesVisitados.push(miPaisActual);
+		
+		if(!jefatura.esUltimoPais(ubicacion)){
+			System.out.println("Seleccione un pais a viajar:");
+			Pais paisCorrecto;
+			if (seConfundioDePais()){
+				Pais miPaisActual = paisesVisitados.pop();
+				paisCorrecto = paisesVisitados.peek();
+				System.out.println("1. " + paisCorrecto.getNombre());
+				paisesVisitados.push(miPaisActual);
+			}
+			else{
+				paisCorrecto = jefatura.paisActualDelLadron(ubicacion);
+				System.out.println("1. " + paisCorrecto.getNombre());
+			}
+			String unStringDePaisIncorrecto = mundo.getUnPaisDistintoDe(paisCorrecto.getNombre());
+			Pais unPaisIncorrecto = Pais.hidratar(doc, unStringDePaisIncorrecto, null, null);
+			System.out.println("2. " + unPaisIncorrecto.getNombre());
+			
+			String otroStringDePaisIncorrecto = unStringDePaisIncorrecto;
+			while(otroStringDePaisIncorrecto.matches(unStringDePaisIncorrecto)){
+				otroStringDePaisIncorrecto = mundo.getUnPaisDistintoDe(paisCorrecto.getNombre());
+			}
+			Pais otroPaisIncorrecto = Pais.hidratar(doc, otroStringDePaisIncorrecto, null, null);
+			System.out.println("3. " + otroPaisIncorrecto.getNombre());
+			
+			System.in.read();	//Lee el enter
+			System.in.read();	//Lee el retorno al carro
+			char numero = (char)System.in.read();
+			switch (numero){
+			case '1':
+					viajarA(paisCorrecto);
+					break;
+			case '2':
+					viajarA(unPaisIncorrecto);
+					break;
+			case '3':
+					viajarA(otroPaisIncorrecto);
+					break;
+			}
 		}
 		else{
-			paisCorrecto = jefatura.paisActualDelLadron(ubicacion);
-			System.out.println("1. " + paisCorrecto.getNombre());
-		}
-		String unStringDePaisIncorrecto = mundo.getUnPaisDistintoDe(paisCorrecto.getNombre());
-		Pais unPaisIncorrecto = Pais.hidratar(doc, unStringDePaisIncorrecto, null, null);
-		System.out.println("2. " + unPaisIncorrecto.getNombre());
-		
-		String otroStringDePaisIncorrecto = unStringDePaisIncorrecto;
-		while(otroStringDePaisIncorrecto.matches(unStringDePaisIncorrecto)){
-			otroStringDePaisIncorrecto = mundo.getUnPaisDistintoDe(paisCorrecto.getNombre());
-		}
-		Pais otroPaisIncorrecto = Pais.hidratar(doc, otroStringDePaisIncorrecto, null, null);
-		System.out.println("3. " + otroPaisIncorrecto.getNombre());
-		
-		System.in.read();	//Lee el enter
-		System.in.read();	//Lee el retorno al carro
-		char numero = (char)System.in.read();
-		switch (numero){
-		case '1':
-				viajarA(paisCorrecto);
-				break;
-		case '2':
-				viajarA(unPaisIncorrecto);
-				break;
-		case '3':
-				viajarA(otroPaisIncorrecto);
-				break;
+			System.out.println("Se rumorea que el ladron esta en la ciudad. Buscalo!");
 		}
 	}
 	
