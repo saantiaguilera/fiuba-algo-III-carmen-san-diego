@@ -1,6 +1,8 @@
 package fiuba.algo3;
 
 import java.io.*; 
+import java.util.ArrayList;
+import java.util.Collections;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -10,6 +12,63 @@ import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
 public class Main {
+	
+	private static void elegirUnPaisAViajar(Personaje unPersonaje, Mundo mundo, Document doc) throws IOException{
+		if(!(unPersonaje.getJefatura()).esUltimoPais(unPersonaje.getUbicacion())){
+			System.out.println("Seleccione un pais a viajar:");
+			Pais paisCorrecto;
+			if (unPersonaje.seConfundioDePais()){
+				Pais miPaisActual = unPersonaje.sacarPaisDeLaPila();
+				paisCorrecto = unPersonaje.verPaisDeLaPila();
+				unPersonaje.agregarPaisALaPila(miPaisActual);
+			}
+			else{
+				paisCorrecto = (unPersonaje.getJefatura()).paisActualDelLadron(unPersonaje.getUbicacion());
+			}
+			
+			
+			String unStringDePaisIncorrecto = mundo.getUnPaisDistintoDe(paisCorrecto.getNombre());
+			Pais unPaisIncorrecto = Pais.hidratar(doc, unStringDePaisIncorrecto, null, null);
+
+			
+			String otroStringDePaisIncorrecto = unStringDePaisIncorrecto;
+			while(otroStringDePaisIncorrecto.matches(unStringDePaisIncorrecto)){
+				otroStringDePaisIncorrecto = mundo.getUnPaisDistintoDe(paisCorrecto.getNombre());
+			}
+			Pais otroPaisIncorrecto = Pais.hidratar(doc, otroStringDePaisIncorrecto, null, null);
+			
+			
+			ArrayList<Pais> paisesAElegir = new ArrayList<Pais>();
+			paisesAElegir.add(paisCorrecto);
+			paisesAElegir.add(unPaisIncorrecto);
+			paisesAElegir.add(otroPaisIncorrecto);
+			Collections.shuffle(paisesAElegir);
+			System.out.println("1. " + (paisesAElegir.get(0)).getNombre());
+			System.out.println("2. " + (paisesAElegir.get(1)).getNombre());
+			System.out.println("3. " + (paisesAElegir.get(2)).getNombre());
+
+			
+			
+			System.in.read();	//Lee el enter
+			System.in.read();	//Lee el retorno al carro
+			char numero = (char)System.in.read();
+			switch (numero){
+			case '1':
+					unPersonaje.viajarA(paisesAElegir.get(0));
+					break;
+			case '2':
+					unPersonaje.viajarA(paisesAElegir.get(1));
+					break;
+			case '3':
+					unPersonaje.viajarA(paisesAElegir.get(2));
+					break;
+			}
+		}
+		else{
+			System.out.println("Se rumorea que el ladron esta en la ciudad. Buscalo!");
+		}
+	}
+	
 	
 	private static Sospechoso describirSospechoso() throws IOException{
 		Sospechoso sospechoso = new Sospechoso();
@@ -201,7 +260,7 @@ public class Main {
 				}
 				break;
 			case '2':
-				personaje.elegirPaisAViajar(mundo, docPaises);
+				elegirUnPaisAViajar(personaje,mundo,docPaises);
 				break;
 			case '3':
 				if(!jefatura.ordenEstaEmitida()){
