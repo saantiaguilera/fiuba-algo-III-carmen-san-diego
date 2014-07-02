@@ -3,9 +3,9 @@ package fiuba.algo3;
 public class Complice {
 	protected Ladron ladron;
 	protected Arma arma;
-	Pista pistaFacil;
-	Pista pistaMedia;
-	Pista pistaDificil;
+	protected Pista pistaFacil;
+	protected Pista pistaMedia;
+	protected Pista pistaDificil;
 	
 	public Complice(Ladron unLadron, Arma unArma){
 		arma=unArma;
