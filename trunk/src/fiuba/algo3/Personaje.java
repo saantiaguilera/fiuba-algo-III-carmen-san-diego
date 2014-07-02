@@ -51,64 +51,15 @@ public abstract class Personaje {
 		}
 	}
 	
-	public void elegirPaisAViajar(Mundo mundo, Document doc) throws IOException{
-		
-		if(!jefatura.esUltimoPais(ubicacion)){
-			System.out.println("Seleccione un pais a viajar:");
-			Pais paisCorrecto;
-			if (seConfundioDePais()){
-				Pais miPaisActual = paisesVisitados.pop();
-				paisCorrecto = paisesVisitados.peek();
-				paisesVisitados.push(miPaisActual);
-			}
-			else{
-				paisCorrecto = jefatura.paisActualDelLadron(ubicacion);
-			}
-			
-			
-			String unStringDePaisIncorrecto = mundo.getUnPaisDistintoDe(paisCorrecto.getNombre());
-			Pais unPaisIncorrecto = Pais.hidratar(doc, unStringDePaisIncorrecto, null, null);
-
-			
-			String otroStringDePaisIncorrecto = unStringDePaisIncorrecto;
-			while(otroStringDePaisIncorrecto.matches(unStringDePaisIncorrecto)){
-				otroStringDePaisIncorrecto = mundo.getUnPaisDistintoDe(paisCorrecto.getNombre());
-			}
-			Pais otroPaisIncorrecto = Pais.hidratar(doc, otroStringDePaisIncorrecto, null, null);
-			
-			
-			ArrayList<Pais> paisesAElegir = new ArrayList<Pais>();
-			paisesAElegir.add(paisCorrecto);
-			paisesAElegir.add(unPaisIncorrecto);
-			paisesAElegir.add(otroPaisIncorrecto);
-			Collections.shuffle(paisesAElegir);
-			System.out.println("1. " + (paisesAElegir.get(0)).getNombre());
-			System.out.println("2. " + (paisesAElegir.get(1)).getNombre());
-			System.out.println("3. " + (paisesAElegir.get(2)).getNombre());
-
-			
-			
-			System.in.read();	//Lee el enter
-			System.in.read();	//Lee el retorno al carro
-			char numero = (char)System.in.read();
-			switch (numero){
-			case '1':
-					viajarA(paisesAElegir.get(0));
-					break;
-			case '2':
-					viajarA(paisesAElegir.get(1));
-					break;
-			case '3':
-					viajarA(paisesAElegir.get(2));
-					break;
-			}
-		}
-		else{
-			System.out.println("Se rumorea que el ladron esta en la ciudad. Buscalo!");
-		}
+	public Pais sacarPaisDeLaPila(){
+		return paisesVisitados.pop();
 	}
 	
-	private boolean seConfundioDePais() {
+	public Pais verPaisDeLaPila(){
+		return paisesVisitados.peek();
+	}
+	
+	public boolean seConfundioDePais() {
 		return !jefatura.verificarSiElLadronPasoPor(ubicacion);
 	}
 
@@ -156,4 +107,12 @@ public abstract class Personaje {
 	}
 	
 	public abstract String rango();
+
+	public Jefatura getJefatura() {
+		return jefatura;
+	}
+
+	public void agregarPaisALaPila(Pais miPaisActual) {
+		paisesVisitados.push(miPaisActual);
+	}
 }
