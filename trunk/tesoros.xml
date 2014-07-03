@@ -1,12 +1,12 @@
 <Tesoros>
 	<ObjetosRaros>
-		<ObjetoRaro nombre="Safiro"></ObjetoRaro>
-		<ObjetoRaro nombre="Rubi"></ObjetoRaro>
+		<ObjetoRaro nombre="un Safiro"></ObjetoRaro>
+		<ObjetoRaro nombre="un Rubi"></ObjetoRaro>
 	</ObjetosRaros>
 	<ObjetosExoticos>
-		<ObjetoExotico nombre="Avion"></ObjetoExotico>
+		<ObjetoExotico nombre="el avion presidencial"></ObjetoExotico>
 	</ObjetosExoticos>
 	<ObjetosLegendarios>
-		<ObjetoLegendario nombre="Mona Lisa"></ObjetoLegendario>
+		<ObjetoLegendario nombre="la Mona Lisa"></ObjetoLegendario>
 	</ObjetosLegendarios>
 </Tesoros>
