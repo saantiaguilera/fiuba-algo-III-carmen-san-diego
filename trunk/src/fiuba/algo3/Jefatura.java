@@ -172,6 +172,7 @@ public class Jefatura {
 			dBuilder = dbFactory.newDocumentBuilder();
 		} catch (ParserConfigurationException e) {}
 		Document docPersonajes = dBuilder.newDocument();
+		
 		Element elementoPersonajes = docPersonajes.createElement("Personajes");
 		Boolean personajeEncontrado = false;
 		

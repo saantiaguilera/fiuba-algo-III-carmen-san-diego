@@ -5,8 +5,6 @@ public class Arma {
 	protected boolean haceDanio;
 	
 	public Arma(){
-		danio = 0;
-		haceDanio = false;
 	}
 	
 	public int daniar(){
