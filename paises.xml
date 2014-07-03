@@ -1,417 +1,417 @@
 <Paises>
 	<Pais nombre="Argentina" coordX="-2000" coordY="-4000">
 		<Edificio tipo="biblioteca">
-			<Pista tipo="dificil" pista="Le gustaba tomar mate">
+			<Pista tipo="dificil" pista="Le gustaba tomar mate.">
 			</Pista>
-			<Pista tipo="media" pista="Era hincha de boca">
+			<Pista tipo="media" pista="Era hincha de boca.">
 			</Pista>
-			<Pista tipo="facil" pista="Se iba a tomar un vuelo en un avion con bandera celeste y blanca">
+			<Pista tipo="facil" pista="Deseaba visitar la tierra del papa Francisco.">
 			</Pista>
 		</Edificio>
 		<Edificio tipo="puerto">
-			<Pista tipo="dificil" pista="El pais dijo que estaba en crisis economica">
+			<Pista tipo="dificil" pista="Queria visitar Tierra del Fuego.">
 			</Pista>
-			<Pista tipo="media" pista="Queria cambiar su dinero a pesos">
+			<Pista tipo="media" pista="Queria conocer la costa sur del Atlantico.">
 			</Pista>
-			<Pista tipo="facil" pista="Queria visitar cordoba">
+			<Pista tipo="facil" pista="Se iba a tomar un vuelo en un avion con bandera celeste y blanca.">
 			</Pista>
 		</Edificio>
 		<Edificio tipo="banco">
-			<Pista tipo="dificil" pista="Le encantaba la casa rosada">
+			<Pista tipo="dificil" pista="Le encantaba la casa rosada.">
 			</Pista>
-			<Pista tipo="media" pista="Le gustaba tomar mate">
+			<Pista tipo="media" pista="Estaba interesado en la soja.">
 			</Pista>
-			<Pista tipo="facil" pista="Queria cambiar su dinero a pesos">
+			<Pista tipo="facil" pista="Queria cambiar su dinero a pesos.">
 			</Pista>
 		</Edificio>
 	</Pais>
 	<Pais nombre="Paraguay" coordX="-2000" coordY="-3000">
 		<Edificio tipo="biblioteca">
-			<Pista tipo="dificil" pista="Queria ir a un pais cercano a Argentina">
+			<Pista tipo="dificil" pista="Le interesaba la historia de la Guerra de la Triple Alianza.">
 			</Pista>
-			<Pista tipo="media" pista="Le interesaba la historia de la Guerra de la Triple Alianza">
+			<Pista tipo="media" pista="Queria aprender sobre la cultura guarani.">
 			</Pista>
-			<Pista tipo="facil" pista="Estaba investigando sobre aborigenes de paraguay">
+			<Pista tipo="facil" pista="Estaba investigando sobre aborigenes de paraguay.">
 			</Pista>
 		</Edificio>
 		<Edificio tipo="puerto">
-			<Pista tipo="dificil" pista="Le interesaba la historia de la Guerra de la Triple Alianza">
+			<Pista tipo="dificil" pista="Dijo que navegaria por el rio Concepcion.">
 			</Pista>
-			<Pista tipo="media" pista="Pregunto por una bandera de colores rojo, blanco y azul">
+			<Pista tipo="media" pista="Pregunto por una bandera de colores rojo, blanco y azul.">
 			</Pista>
-			<Pista tipo="facil" pista="Queria ir a un pais cercano a Argentina">
+			<Pista tipo="facil" pista="Queria ir a un pais cercano a Argentina.">
 			</Pista>
 		</Edificio>
 		<Edificio tipo="banco">
-			<Pista tipo="dificil" pista="Viajaba en un crucero con bandera de colores rojo, blanco y azul">
+			<Pista tipo="dificil" pista="Viajo a un pais de PBI nominal de 53 mil millones.">
 			</Pista>
-			<Pista tipo="media" pista="Queria ir a un pais cercano a Argentina">
+			<Pista tipo="media" pista="Se interesaba en la industria de la cania de azucar.">
 			</Pista>
-			<Pista tipo="facil" pista="Fue a Paraguay">
+			<Pista tipo="facil" pista="Cambio su dinero a guaranies.">
 			</Pista>
 		</Edificio>
 	</Pais>
-	<Pais nombre="Ecuador" coordX="-4000" coordY="0">
+	<Pais nombre="Grecia" coordX="2000" coordY="4000">
 		<Edificio tipo="biblioteca">
-			<Pista tipo="dificil" pista="Queria ir a un pais chico de America">
+			<Pista tipo="dificil" pista="Queria ver la cultura helenistica.">
 			</Pista>
-			<Pista tipo="media" pista="Quedaba cerca del ecuador (O talvez era ecuador)">
+			<Pista tipo="media" pista="Estaba interesado en la mitologia.">
 			</Pista>
-			<Pista tipo="facil" pista="Viajo a Ecuador">
+			<Pista tipo="facil" pista="Se interesaba en la filosofia platonica.">
 			</Pista>
 		</Edificio>
 		<Edificio tipo="puerto">
-			<Pista tipo="dificil" pista="El avion en el que viajaba llevaba los colores amarillo, azul y rojo">
+			<Pista tipo="dificil" pista="Queria pescar en el mediterraneo.">
 			</Pista>
-			<Pista tipo="media" pista="Queria ir a un pais chico de America">
+			<Pista tipo="media" pista="La bandera era azul y blanca.">
 			</Pista>
-			<Pista tipo="facil" pista="Queria tener una discusion con el presidente Rafael Correa">
+			<Pista tipo="facil" pista="La bandera era azul y blanca rayada, con una cruz.">
 			</Pista>
 		</Edificio>
 		<Edificio tipo="banco">
-			<Pista tipo="dificil" pista="Queria tener una charla con el presidente Rafael Correa">
+			<Pista tipo="dificil" pista="Dijo que el pais estaba atravesando de las peores crisis economicas.">
 			</Pista>
-			<Pista tipo="media" pista="El avion en el que viajaba llevaba los colores amarillo, azul y rojo">
+			<Pista tipo="media" pista="Estaba interesado en la industria de los platos.">
 			</Pista>
-			<Pista tipo="facil" pista="Queria ir a un pais chico de America">
+			<Pista tipo="facil" pista="Estaba interesado en la industra de las olivas.">
 			</Pista>
 		</Edificio>
 	</Pais>
 	<Pais nombre="Francia" coordX="500" coordY="5500">
 		<Edificio tipo="biblioteca">
-			<Pista tipo="dificil" pista="Le gustaba decir Omelette Du Fromage por la calle">
+			<Pista tipo="dificil" pista="Le gustaba decir Omelette Du Fromage por la calle.">
 			</Pista>
-			<Pista tipo="media" pista="Compro entradas para ver al rival de Alemania en cuartos de final">
+			<Pista tipo="media" pista="Compro entradas para ver al rival de Alemania en cuartos de final.">
 			</Pista>
-			<Pista tipo="facil" pista="Queria visitar la torre Eiffel">
+			<Pista tipo="facil" pista="Queria visitar la torre Eiffel.">
 			</Pista>
 		</Edificio>
 		<Edificio tipo="puerto">
-			<Pista tipo="dificil" pista="Estaba interesado en comprar cuadros del Louvre">
+			<Pista tipo="dificil" pista="Estaba interesado en comprar cuadros del Louvre.">
 			</Pista>
-			<Pista tipo="media" pista="Solo sabia decir Oui">
+			<Pista tipo="media" pista="Solo sabia decir Oui.">
 			</Pista>
-			<Pista tipo="facil" pista="Llevaba una bandera de color azul, blanca y roja">
+			<Pista tipo="facil" pista="Llevaba una bandera de color azul, blanca y roja.">
 			</Pista>
 		</Edificio>
 		<Edificio tipo="banco">
-			<Pista tipo="dificil" pista="Queria visitar el arco de Triunfo">
+			<Pista tipo="dificil" pista="Queria comprar baguettes. Muchas baguettes.">
 			</Pista>
-			<Pista tipo="media" pista="Investigaba sobre Napoleon Bonaparte">
+			<Pista tipo="media" pista="Pregunto sobre la industria de la moda.">
 			</Pista>
-			<Pista tipo="facil" pista="Queria visitar Notredamme y el palacio de Versalles">
+			<Pista tipo="facil" pista="Se intereso en la industria de los perfumes.">
 			</Pista>
 		</Edificio>
 	</Pais>
 	<Pais nombre="Inglaterra" coordX="0" coordY="6000">
 		<Edificio tipo="biblioteca">
-			<Pista tipo="dificil" pista="Queria discutir con la reina debido a que las Malvinas no les pertenecian">
+			<Pista tipo="dificil" pista="Queria discutir con la reina debido a que las Malvinas no les pertenecian.">
 			</Pista>
-			<Pista tipo="media" pista="Llevaba una bandera roja y blanca (Y no era de independiente)">
+			<Pista tipo="media" pista="Le interesaba la historia de Enrique VIII.">
 			</Pista>
-			<Pista tipo="facil" pista="Queria hablar con la reina Isabel">
+			<Pista tipo="facil" pista="Queria hablar con la reina Isabel.">
 			</Pista>
 		</Edificio>
 		<Edificio tipo="puerto">
-			<Pista tipo="dificil" pista="Le interesaba la historia de Enrique VIII">
+			<Pista tipo="dificil" pista="Queria conocer el Stonehenge.">
 			</Pista>
-			<Pista tipo="media" pista="Queria cambiar su dinero a libras">
+			<Pista tipo="media" pista="Llevaba una bandera roja y blanca (y no era de Indepentiente).">
 			</Pista>
-			<Pista tipo="facil" pista="Queria visitar el Liverpool">
+			<Pista tipo="facil" pista="Queria visitar el Liverpool.">
 			</Pista>
 		</Edificio>
 		<Edificio tipo="banco">
-			<Pista tipo="dificil" pista="Queria estudiar en Cambridge">
+			<Pista tipo="dificil" pista="Se interesaba el la industria de barcos.">
 			</Pista>
-			<Pista tipo="media" pista="Queria visitar el Stonehenge">
+			<Pista tipo="media" pista="Queria mejorar su ingles.">
 			</Pista>
-			<Pista tipo="facil" pista="Queria cambiar su dinero a libras">
+			<Pista tipo="facil" pista="Queria cambiar su dinero a libras.">
 			</Pista>
 		</Edificio>
 	</Pais>
 	<Pais nombre="Marruecos" coordX="0" coordY="3000">
 		<Edificio tipo="biblioteca">
-			<Pista tipo="dificil" pista="Queria visitar el Marrakech">
+			<Pista tipo="dificil" pista="Queria visitar el Marrakech.">
 			</Pista>
-			<Pista tipo="media" pista="Queria conocer la Plaza de Yamaa el Fna">
+			<Pista tipo="media" pista="Queria conocer la Plaza de Yamaa el Fna.">
 			</Pista>
-			<Pista tipo="facil" pista="Queria visitar Marruecos">
+			<Pista tipo="facil" pista="Queria visitar Marruecos.">
 			</Pista>
 		</Edificio>
 		<Edificio tipo="puerto">
-			<Pista tipo="dificil" pista="Estaba cerca del Mediterraneo">
+			<Pista tipo="dificil" pista="Estaba cerca del Mediterraneo.">
 			</Pista>
-			<Pista tipo="media" pista="El avion en el que viajaba llevaba una bandera roja con una estrella en el centro">
+			<Pista tipo="media" pista="El avion en el que viajaba llevaba una bandera roja con una estrella en el centro.">
 			</Pista>
-			<Pista tipo="facil" pista="Estaba estudiando arabe">
+			<Pista tipo="facil" pista="Estaba estudiando arabe.">
 			</Pista>
 		</Edificio>
 		<Edificio tipo="banco">
-			<Pista tipo="dificil" pista="Queria conocer el Jardin Majorelle">
+			<Pista tipo="dificil" pista="Queria conocer el Jardin Majorelle.">
 			</Pista>
-			<Pista tipo="media" pista="Estaba estudiando arabe">
+			<Pista tipo="media" pista="Estaba estudiando arabe.">
 			</Pista>
-			<Pista tipo="facil" pista="El avion llevaba una bandera roja con una estrella en el centro">
+			<Pista tipo="facil" pista="El avion llevaba una bandera roja con una estrella en el centro.">
 			</Pista>
 		</Edificio>
 	</Pais>
 	<Pais nombre="Brasil" coordX="-3000" coordY="-2000">
 		<Edificio tipo="biblioteca">
-			<Pista tipo="dificil" pista="Estaba estudiando portugues">
+			<Pista tipo="dificil" pista="Le gustaba el futbol.">
 			</Pista>
-			<Pista tipo="media" pista="Iba a ver el mundial">
+			<Pista tipo="media" pista="Bailaba capoheira.">
 			</Pista>
-			<Pista tipo="facil" pista="El avion llevaba una bandera verde, amarilla y azul">
+			<Pista tipo="facil" pista="Estudiaba portugues.">
 			</Pista>
 		</Edificio>
 		<Edificio tipo="puerto">
-			<Pista tipo="dificil" pista="Iba a ver el partido de Brasil contra Colombia">
+			<Pista tipo="dificil" pista="Lei en su bandera que decia 'Orden y progreso'.">
 			</Pista>
-			<Pista tipo="media" pista="Queria cambiar su dinero a reales">
+			<Pista tipo="media" pista="Queria explorar el amazonas.">
 			</Pista>
-			<Pista tipo="facil" pista="Estaba estudiando portugues">
+			<Pista tipo="facil" pista="Queria descansar en las playas del Atlantico.">
 			</Pista>
 		</Edificio>
 		<Edificio tipo="banco">
-			<Pista tipo="dificil" pista="El avion llevaba una bandera verde, amarilla y azul">
+			<Pista tipo="dificil" pista="Pregunto sobre la industria del cafe.">
 			</Pista>
-			<Pista tipo="media" pista="Estaba estudiando portugues">
+			<Pista tipo="media" pista="Cambio su dinero a reales.">
 			</Pista>
-			<Pista tipo="facil" pista="Iba a ver el mundial">
+			<Pista tipo="facil" pista="Iba a ver el mundial.">
 			</Pista>
 		</Edificio>
 	</Pais>
 	<Pais nombre="EEUU" coordX="-6000" coordY="4000">
 		<Edificio tipo="biblioteca">
-			<Pista tipo="dificil" pista="Queria hablar con Obama">
+			<Pista tipo="dificil" pista="Queria hablar con Obama.">
 			</Pista>
-			<Pista tipo="media" pista="Llevaba una bandera roja y blanca, con azul y estrellas">
+			<Pista tipo="media" pista="Estaba antojado de unas hamburgesas.">
 			</Pista>
-			<Pista tipo="facil" pista="Estaba interesado en peliculas de Hollywood">
+			<Pista tipo="facil" pista="Queria ver los estudios de Hollywood.">
 			</Pista>
 		</Edificio>
 		<Edificio tipo="puerto">
-			<Pista tipo="dificil" pista="Queria cambiar su dinero a dolares americanos">
+			<Pista tipo="dificil" pista="Queria ver el Mississippi.">
 			</Pista>
-			<Pista tipo="media" pista="Queria visitar el Pentagono">
+			<Pista tipo="media" pista="Queria visitar el Pentagono.">
 			</Pista>
-			<Pista tipo="facil" pista="Estaba investigando sobre el incidente de las Torres Gemelas">
+			<Pista tipo="facil" pista="Su avion tenia una bandera roja, blanca y azul.">
 			</Pista>
 		</Edificio>
 		<Edificio tipo="banco">
-			<Pista tipo="dificil" pista="Queria ver los playoffs de Basquet">
+			<Pista tipo="dificil" pista="Aposto en los playoffs de Basquet.">
 			</Pista>
-			<Pista tipo="media" pista="Estaba interesado en peliculas de Hollywood">
+			<Pista tipo="media" pista="Estaba interesado en la industria del cine.">
 			</Pista>
-			<Pista tipo="facil" pista="Llevaba una bandera roja y blanca, con azul y estrellas">
+			<Pista tipo="facil" pista="Cambio su dinero a dolares.">
 			</Pista>
 		</Edificio>
 	</Pais>
 	<Pais nombre="Congo" coordX="2500" coordY="0">
 		<Edificio tipo="biblioteca">
-			<Pista tipo="dificil" pista="Estaba estudiando frances">
+			<Pista tipo="dificil" pista="Estaba estudiando frances.">
 			</Pista>
-			<Pista tipo="media" pista="Llevaba una bandera azul, amarilla y roja">
+			<Pista tipo="media" pista="Llevaba una bandera azul, amarilla y roja.">
 			</Pista>
-			<Pista tipo="facil" pista="Estaba interesado en la historia africana">
+			<Pista tipo="facil" pista="Estaba interesado en la historia africana.">
 			</Pista>
 		</Edificio>
 		<Edificio tipo="puerto">
-			<Pista tipo="dificil" pista="Queria conocer el Kinsasa">
+			<Pista tipo="dificil" pista="Queria conocer el Kinsasa.">
 			</Pista>
-			<Pista tipo="media" pista="Queria cambiar su dinero a Francos Congolenios">
+			<Pista tipo="media" pista="Queria cambiar su dinero a Francos Congolenios.">
 			</Pista>
-			<Pista tipo="facil" pista="Estaba estudiando frances">
+			<Pista tipo="facil" pista="Estaba estudiando frances.">
 			</Pista>
 		</Edificio>
 		<Edificio tipo="banco">
-			<Pista tipo="dificil" pista="Queria cambiar su dinero a Francos Congolientos">
+			<Pista tipo="dificil" pista="Queria cambiar su dinero a Francos Congolientos.">
 			</Pista>
-			<Pista tipo="media" pista="Estaba interesado en la historia africana">
+			<Pista tipo="media" pista="Estaba interesado en la historia africana.">
 			</Pista>
-			<Pista tipo="facil" pista="Llevaba una bandera azul, amarilla y roja">
+			<Pista tipo="facil" pista="Llevaba una bandera azul, amarilla y roja.">
 			</Pista>
 		</Edificio>
 	</Pais>
 	<Pais nombre="China" coordX="8000" coordY="2500">
 		<Edificio tipo="biblioteca">
-			<Pista tipo="dificil" pista="Tenia miedo porque hay sobrepoblacion">
+			<Pista tipo="dificil" pista="Tenia miedo por la sobrepoblacion.">
 			</Pista>
-			<Pista tipo="media" pista="Dijo que era su primera vez viajando a Asia">
+			<Pista tipo="media" pista="Queria conocer la gran muralla.">
 			</Pista>
-			<Pista tipo="facil" pista="Estaba estudiando kanjis">
+			<Pista tipo="facil" pista="Estaba estudiando kanjis.">
 			</Pista>
 		</Edificio>
 		<Edificio tipo="puerto">
-			<Pista tipo="dificil" pista="Se habia comprado un kimono">
+			<Pista tipo="dificil" pista="Le interesaba visitar un pais tan grande.">
 			</Pista>
-			<Pista tipo="media" pista="Queria cambiar su dinero a Yuanes">
+			<Pista tipo="media" pista="Se habia comprado un kimono.">
 			</Pista>
-			<Pista tipo="facil" pista="Llevaba una bandera roja con estrellas amarillas">
+			<Pista tipo="facil" pista="Llevaba una bandera roja con estrellas amarillas.">
 			</Pista>
 		</Edificio>
 		<Edificio tipo="banco">
-			<Pista tipo="dificil" pista="Queria conocerl a gran muralla">
+			<Pista tipo="dificil" pista="Dijo que era su primera vez viajando a Asia.">
 			</Pista>
-			<Pista tipo="media" pista="Llevaba una bandera roja con estrellas amarillas">
+			<Pista tipo="media" pista="Marco su interes en el mercado del arroz.">
 			</Pista>
-			<Pista tipo="facil" pista="Queria cambiar su dinero a Yuanes">
+			<Pista tipo="facil" pista="Queria cambiar su dinero a Yuanes.">
 			</Pista>
 		</Edificio>
 	</Pais>
 	<Pais nombre="Australia" coordX="10000" coordY="-2000">
 		<Edificio tipo="biblioteca">
-			<Pista tipo="dificil" pista="Queria conocer sidney">
+			<Pista tipo="dificil" pista="Le gustaba la opera.">
 			</Pista>
-			<Pista tipo="media" pista="Le gustaba Oceania">
+			<Pista tipo="media" pista="Le gustaba Oceania.">
 			</Pista>
-			<Pista tipo="facil" pista="Queria montar canguros">
+			<Pista tipo="facil" pista="Queria montar canguros.">
 			</Pista>
 		</Edificio>
 		<Edificio tipo="puerto">
-			<Pista tipo="dificil" pista="Le gustaba la opera">
+			<Pista tipo="dificil" pista="Queria hacer buceo en corales.">
 			</Pista>
-			<Pista tipo="media" pista="Queria hacer buceo en corales">
+			<Pista tipo="media" pista="Llevaba una bandera azul, blanca y roja, con estrellas.">
 			</Pista>
-			<Pista tipo="facil" pista="Llevaba una bandera azul, blanca y roja, con estrellas">
+			<Pista tipo="facil" pista="Queria conocer Sidney.">
 			</Pista>
 		</Edificio>
 		<Edificio tipo="banco">
-			<Pista tipo="dificil" pista="Queria hacer buceo en corales">
+			<Pista tipo="dificil" pista="Le gustaban los desiertos.">
 			</Pista>
-			<Pista tipo="media" pista="Queria montar canguros">
+			<Pista tipo="media" pista="Queria montar canguros.">
 			</Pista>
-			<Pista tipo="facil" pista="Le gustaba oceania">
+			<Pista tipo="facil" pista="Queria saber mas sobre la pesca.">
 			</Pista>
 		</Edificio>
 	</Pais>
 	<Pais nombre="India" coordX="4000" coordY="2000">
 		<Edificio tipo="biblioteca">
-			<Pista tipo="dificil" pista="Queria visitar el Taj Mahal">
+			<Pista tipo="dificil" pista="Queria conocer Bombay.">
 			</Pista>
-			<Pista tipo="media" pista="Llevaba una bandera naranja, verde y blanca">
+			<Pista tipo="media" pista="Queria visitar el Taj Mahal.">
 			</Pista>
-			<Pista tipo="facil" pista="Queria conocer Nueva Delhi">
+			<Pista tipo="facil" pista="Queria conocer Nueva Delhi.">
 			</Pista>
 		</Edificio>
 		<Edificio tipo="puerto">
-			<Pista tipo="dificil" pista="Llevaba una bandera naranja, verde y blanca">
+			<Pista tipo="dificil" pista="Temia que el transporte publico este lleno de gente.">
 			</Pista>
-			<Pista tipo="media" pista="Queria conocer Bombay">
+			<Pista tipo="media" pista="Llevaba una bandera naranja, verde y blanca.>
 			</Pista>
-			<Pista tipo="facil" pista="Queria visitar el Taj Mahal">
+			<Pista tipo="facil" pista="Se intereso en el Himalaya.">
 			</Pista>
 		</Edificio>
 		<Edificio tipo="banco">
-			<Pista tipo="dificil" pista="Queria conocer Bombay">
+			<Pista tipo="dificil" pista="Sabia que no le convenia el negocio de la carne vacuna.">
 			</Pista>
-			<Pista tipo="media" pista="Queria visitar el Taj Mahal">
+			<Pista tipo="media" pista="Pregunto sobre la industria del cine.">
 			</Pista>
-			<Pista tipo="facil" pista="Llevaba una bandera naranja, verde y blanca">
+			<Pista tipo="facil" pista="Queria ponerse un puestito de comida hindu.">
 			</Pista>
 		</Edificio>
 	</Pais>
 	<Pais nombre="Argelia" coordX="0" coordY="2000">
 		<Edificio tipo="biblioteca">
-			<Pista tipo="dificil" pista="Queria visitar el pais porque perdio 2-1 contra Alemania en octavos">
+			<Pista tipo="dificil" pista="Queria visitar el pais porque perdio 2-1 contra Alemania en octavos.">
 			</Pista>
-			<Pista tipo="media" pista="Llevaba una bandera verde y blanca">
+			<Pista tipo="media" pista="Llevaba una bandera verde y blanca.">
 			</Pista>
-			<Pista tipo="facil" pista="Estaba estudiando arabe">
+			<Pista tipo="facil" pista="Estaba estudiando arabe.">
 			</Pista>
 		</Edificio>
 		<Edificio tipo="puerto">
-			<Pista tipo="dificil" pista="Estaba estudiando arabe">
+			<Pista tipo="dificil" pista="Estaba estudiando arabe.">
 			</Pista>
-			<Pista tipo="media" pista="Queria conocer Ketchaoua Mosque">
+			<Pista tipo="media" pista="Queria conocer Ketchaoua Mosque.">
 			</Pista>
-			<Pista tipo="facil" pista="Llevaba una bandera verde y blanca">
+			<Pista tipo="facil" pista="Llevaba una bandera verde y blanca.">
 			</Pista>
 		</Edificio>
 		<Edificio tipo="banco">
-			<Pista tipo="dificil" pista="Queria conocer Tassili n Ajjer">
+			<Pista tipo="dificil" pista="Queria conocer Tassili n Ajjer.">
 			</Pista>
-			<Pista tipo="media" pista="Estaba estudiando arabe">
+			<Pista tipo="media" pista="Estaba estudiando arabe.">
 			</Pista>
-			<Pista tipo="facil" pista="Queria visitar el pais porque perdio 2-1 contra Alemania en octavos">
+			<Pista tipo="facil" pista="Queria visitar el pais porque perdio 2-1 contra Alemania en octavos.">
 			</Pista>
 		</Edificio>
 	</Pais>
 	<Pais nombre="Mexico" coordX="-4000" coordY="2000">
 		<Edificio tipo="biblioteca">
-			<Pista tipo="dificil" pista="Se quejaba que no podia pasar de octavos">
+			<Pista tipo="dificil" pista="Se quejaba que no podia pasar de octavos.">
 			</Pista>
-			<Pista tipo="media" pista="Queria comprar tequila">
+			<Pista tipo="media" pista="No paraba de repetir 'Pinche guey'.">
 			</Pista>
-			<Pista tipo="facil" pista="Queria conocer Cancun">
+			<Pista tipo="facil" pista="Queria conocer Cancun.">
 			</Pista>
 		</Edificio>
 		<Edificio tipo="puerto">
-			<Pista tipo="dificil" pista="Queria comprar Tequila">
+			<Pista tipo="dificil" pista="Queria comprar Tequila.">
 			</Pista>
-			<Pista tipo="media" pista="Queria cambiar su dinero a Pesos Mexicanos">
+			<Pista tipo="media" pista="Queria cambiar su dinero a Pesos Mexicanos.">
 			</Pista>
-			<Pista tipo="facil" pista="Queria conocer las piramides Mayas">
+			<Pista tipo="facil" pista="Queria conocer las piramides Mayas.">
 			</Pista>
 		</Edificio>
 		<Edificio tipo="banco">
-			<Pista tipo="dificil" pista="Queria conocer Cancun">
+			<Pista tipo="dificil" pista="Queria conocer Cancun.">
 			</Pista>
-			<Pista tipo="media" pista="Queria visitar las piramides Mayas">
+			<Pista tipo="media" pista="Queria visitar las piramides Mayas.">
 			</Pista>
-			<Pista tipo="facil" pista="Queria comprar Tequila">
+			<Pista tipo="facil" pista="Se quejaba que no podia pasar de octavos.">
 			</Pista>
 		</Edificio>
 	</Pais>
 <Pais nombre="Indonesia" coordX="8000" coordY="0">
 		<Edificio tipo="biblioteca">
-			<Pista tipo="dificil" pista="Llevaba una bandera roja y blanca">
+			<Pista tipo="dificil" pista="Llevaba una bandera roja y blanca.">
 			</Pista>
-			<Pista tipo="media" pista="Queria cambiar su dinero a Rupias">
+			<Pista tipo="media" pista="Queria cambiar su dinero a Rupias.">
 			</Pista>
-			<Pista tipo="facil" pista="Queria conocer el Yakarta">
+			<Pista tipo="facil" pista="Queria conocer el Yakarta.">
 			</Pista>
 		</Edificio>
 		<Edificio tipo="puerto">
-			<Pista tipo="dificil" pista="Le gustaban las islas del Oceano Indico">
+			<Pista tipo="dificil" pista="Le gustaban las islas del Oceano Indico.">
 			</Pista>
-			<Pista tipo="media" pista="Llevaba una bandera roja y blanca">
+			<Pista tipo="media" pista="Llevaba una bandera roja y blanca.">
 			</Pista>
-			<Pista tipo="facil" pista="Queria cambiar su dinero a Rupias">
+			<Pista tipo="facil" pista="Queria cambiar su dinero a Rupias.">
 			</Pista>
 		</Edificio>
 		<Edificio tipo="banco">
-			<Pista tipo="dificil" pista="Queria conocer el Borobudur">
+			<Pista tipo="dificil" pista="Queria conocer el Borobudur.">
 			</Pista>
-			<Pista tipo="media" pista="Le gustaban las islas del Oceano Indico">
+			<Pista tipo="media" pista="Le gustaban las islas del Oceano Indico.">
 			</Pista>
-			<Pista tipo="facil" pista="Llevaba una bandera roja y blanca">
+			<Pista tipo="facil" pista="Llevaba una bandera roja y blanca.">
 			</Pista>
 		</Edificio>
 	</Pais>
   <Pais nombre="Canada" coordX="-6000" coordY="6000">
 		<Edificio tipo="biblioteca">
-			<Pista tipo="dificil" pista="Queria conocer Ottawa">
+			<Pista tipo="dificil" pista="Queria conocer Ottawa.">
 			</Pista>
-			<Pista tipo="media" pista="Queria conocer Vancouver">
+			<Pista tipo="media" pista="Queria conocer Vancouver.">
 			</Pista>
-			<Pista tipo="facil" pista="Queria conocer Toronto">
+			<Pista tipo="facil" pista="Queria conocer Toronto.">
 			</Pista>
 		</Edificio>
 		<Edificio tipo="puerto">
-			<Pista tipo="dificil" pista="Le gustaban las Cataratas del Niagara">
+			<Pista tipo="dificil" pista="Le gustaban las Cataratas del Niagara.">
 			</Pista>
-			<Pista tipo="media" pista="Queria estudiar en la universidad de Toronto">
+			<Pista tipo="media" pista="Queria estudiar en la universidad de Toronto.">
 			</Pista>
-			<Pista tipo="facil" pista="Llevaba una bandera con una hoja roja en el centro">
+			<Pista tipo="facil" pista="Llevaba una bandera con una hoja roja en el centro.">
 			</Pista>
 		</Edificio>
 		<Edificio tipo="banco">
-			<Pista tipo="dificil" pista="Estaba estudiando Ingles y Frances">
+			<Pista tipo="dificil" pista="Estaba estudiando Ingles y Frances.">
 			</Pista>
-			<Pista tipo="media" pista="Queria conocer las Cataratas del Niagara">
+			<Pista tipo="media" pista="Queria conocer las Cataratas del Niagara.">
 			</Pista>
-			<Pista tipo="facil" pista="Queria conocer Vancouver">
+			<Pista tipo="facil" pista="Queria conocer Vancouver.">
 			</Pista>
 		</Edificio>
 	</Pais>

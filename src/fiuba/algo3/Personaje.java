@@ -98,6 +98,7 @@ public abstract class Personaje {
 		return this.horaActual;
 	}
 	
+	//Este metodo solo se usa en el Main y no dentro de if's (ver herarquia de llamadas)
 	public abstract String rango();
 
 	public Jefatura getJefatura() {

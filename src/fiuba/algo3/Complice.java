@@ -51,10 +51,8 @@ public class Complice {
 	}
 
 	public boolean esElLadron(Pais ubicacion) {
-		if (arma!= null && ladron.esUltimoPais(ubicacion)){
-			if (!arma.haceDanio()){
-				return true;
-			}
+		if (arma != null && ladron.esUltimoPais(ubicacion) && !arma.haceDanio()){
+			return true;
 		}
 		return false;
 	}

@@ -89,35 +89,4 @@ public class Sospechoso {
 		return cantidadCoincidencias >= COINCIDENCIAS_MINIMAS;	
 	}
 	
-	public boolean coincideRasgosCon(Ladron ladron) {
-		int cantidadCoincidencias = 0;
-		int COINCIDENCIAS_MINIMAS = 3;
-		
-		if(ladron.getSexo().hayRasgo())
-			if(sexo.getRasgo() == ladron.getSexo().getRasgo())
-				cantidadCoincidencias++;
-			else return false;
-		
-		if(ladron.getHobby().hayRasgo())
-			if(hobby.getRasgo() == ladron.getHobby().getRasgo())
-				cantidadCoincidencias++;
-			else return false;
-		
-		if(ladron.getCabello().hayRasgo())	
-			if(cabello.getRasgo() == ladron.getCabello().getRasgo())
-				cantidadCoincidencias++;
-			else return false;
-		
-		if(ladron.getSenia().hayRasgo())
-			if(senia.getRasgo() == ladron.getSenia().getRasgo())
-				cantidadCoincidencias++;
-			else return false;
-		
-		if(ladron.getVehiculo().hayRasgo())
-			if(vehiculo.getRasgo() == ladron.getVehiculo().getRasgo())
-				cantidadCoincidencias++;
-			else return false;
-		
-		return cantidadCoincidencias >= COINCIDENCIAS_MINIMAS;	
-	}
 }

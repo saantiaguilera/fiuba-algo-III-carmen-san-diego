@@ -27,15 +27,18 @@ public class Main {
 				paisCorrecto = (unPersonaje.getJefatura()).paisActualDelLadron(unPersonaje.getUbicacion());
 			}
 			
-			
-			String unStringDePaisIncorrecto = mundo.getUnPaisDistintoDe(paisCorrecto.getNombre());
+			String unStringDePaisIncorrecto;
+			do{
+				unStringDePaisIncorrecto = mundo.getUnPaisDistintoDe(paisCorrecto.getNombre());
+			}while(unStringDePaisIncorrecto == unPersonaje.getUbicacion().getNombre());
 			Pais unPaisIncorrecto = Pais.hidratar(doc, unStringDePaisIncorrecto, null, null);
 
 			
-			String otroStringDePaisIncorrecto = unStringDePaisIncorrecto;
-			while(otroStringDePaisIncorrecto.matches(unStringDePaisIncorrecto)){
+			String otroStringDePaisIncorrecto;
+			do{
 				otroStringDePaisIncorrecto = mundo.getUnPaisDistintoDe(paisCorrecto.getNombre());
-			}
+			}while(otroStringDePaisIncorrecto == unPersonaje.getUbicacion().getNombre()
+					|| otroStringDePaisIncorrecto == unStringDePaisIncorrecto);
 			Pais otroPaisIncorrecto = Pais.hidratar(doc, otroStringDePaisIncorrecto, null, null);
 			
 			
@@ -69,100 +72,7 @@ public class Main {
 			System.out.println("Se rumorea que el ladron esta en la ciudad. Buscalo!");
 		}
 	}
-	
-	
-	/*private static Sospechoso describirSospechoso() throws IOException{
-		Sospechoso sospechoso = new Sospechoso();
-		char opcion;
-		System.out.println("SEXO\n1. Masculino\n2. Femenino\n3. Desconocido");
-		System.in.read(); System.in.read();
-		opcion = (char)System.in.read();
-		switch(opcion){
-		case '1':
-			sospechoso.setSexo(new Rasgo("masculino"));
-			break;
-		case '2':
-			sospechoso.setSexo(new Rasgo("femenino"));
-			break;
-		}
-		System.out.println("HOBBY\n1. Alpinismo\n2. Croquet\n3. Tenis");
-		System.out.println("4. Musica\n5. Paracaidismo\n6. Natacion\n7. Desconocido");
-		System.in.read(); System.in.read();
-		opcion = (char) System.in.read();
-		switch(opcion){
-		case '1':
-			sospechoso.setHobby(new Rasgo("alpinismo"));
-			break;
-		case '2':
-			sospechoso.setHobby(new Rasgo("croquet"));
-			break;
-		case '3':
-			sospechoso.setHobby(new Rasgo("tenis"));
-			break;
-		case '4':
-			sospechoso.setHobby(new Rasgo("musica"));
-			break;
-		case '5':
-			sospechoso.setHobby(new Rasgo("paracaidismo"));
-			break;
-		case '6':
-			sospechoso.setHobby(new Rasgo("natacion"));
-			break;
-		}
-		System.out.println("CABELLO\n1. Negro\n2. Colorado\n3. Rubio");
-		System.out.println("4. Castanio\n5. Desconocido");
-		System.in.read(); System.in.read();
-		opcion = (char)System.in.read();
-		switch(opcion){
-		case '1':
-			sospechoso.setCabello(new Rasgo("negro"));
-			break;
-		case '2':
-			sospechoso.setCabello(new Rasgo("colorado"));
-			break;
-		case '3':
-			sospechoso.setCabello(new Rasgo("rubio"));
-			break;
-		case '4':
-			sospechoso.setCabello(new Rasgo("castanio"));
-		}
-		System.out.println("SENIA\n1. Anillos\n2. Tatuajes\n3. Joyas");
-		System.out.println("4. Cicatrices\n5. Desconocido");
-		System.in.read(); System.in.read();
-		opcion = (char)System.in.read();
-		switch(opcion){
-		case '1':
-			sospechoso.setSenia(new Rasgo("anillos"));
-			break;
-		case '2':
-			sospechoso.setSenia(new Rasgo("tatuajes"));
-			break;
-		case '3':
-			sospechoso.setSenia(new Rasgo("joyas"));
-			break;
-		case '4':
-			sospechoso.setSenia(new Rasgo("cicactrices"));
-		}
-		System.out.println("VEHICULO\n1. Moto\n2. Descapotable\n3. Limusina");
-		System.out.println("4. Deportivo\n5. Desconocido");
-		System.in.read(); System.in.read();
-		opcion = (char)System.in.read();
-		switch(opcion){
-		case '1':
-			sospechoso.setVehiculo(new Rasgo("moto"));
-			break;
-		case '2':
-			sospechoso.setVehiculo(new Rasgo("descapotable"));
-			break;
-		case '3':
-			sospechoso.setVehiculo(new Rasgo("limusina"));
-			break;
-		case '4':
-			sospechoso.setVehiculo(new Rasgo("deportivo"));
-		}
-		
-		return sospechoso;
-	}*/
+
 	
 	private static String convertirHoras(Calendar tiempo){
 		String hora = new String();
@@ -209,9 +119,9 @@ public class Main {
 	
 	private static void elejirSexo (Sospechoso sospechoso)throws IOException{
 		if (!sospechoso.getSexo().hayRasgo())
-				System.out.println("Aun no ha elejido el sexo del sospechoso");
+			System.out.println("Aun no ha elejido el sexo del sospechoso");
 		else{
-				System.out.println("usted marco q su sospechos es "+sospechoso.getSexo().getRasgo());
+			System.out.println("Usted marco que su sospechos es "+sospechoso.getSexo().getRasgo());
 		}
 		System.out.println("Elija el sexo de su sospechoso");
 		System.out.println("1 Masculino . 2 Femenino . 3 Borrar rasgos elejidos . 4 Salir");
@@ -241,7 +151,7 @@ public class Main {
 		if (!sospechoso.getHobby().hayRasgo())
 			System.out.println("Aun no ha elejido el hobby del sospechoso");
 		else{
-				System.out.println("Usted marco q su sospechoso le gusta el/la "+sospechoso.getHobby().getRasgo());
+				System.out.println("Usted marco que su sospechoso le gusta hacer "+sospechoso.getHobby().getRasgo());
 			}
 		System.out.println("Elija el hobby de su sospechoso");
 		System.out.println("1 Alpinismo . 2 Croquet . 3 Tenis . 4 Musica . 5 Paracaidismo . 6 Natacion . 7 Borrar el hobby . 8 Salir");
@@ -282,7 +192,7 @@ public class Main {
 		if (!sospechoso.getCabello().hayRasgo())
 			System.out.println("Aun no ha elejido el cabello del sospechoso");
 		else{
-				System.out.println("Usted marco q su sospechoso tiene el cabello "+sospechoso.getCabello().getRasgo());
+				System.out.println("Usted marco que su sospechoso tiene el cabello "+sospechoso.getCabello().getRasgo());
 			}
 		System.out.println("Elija el cabello de su sospechoso");
 		System.out.println("1 Negro . 2 Colorado . 3 Rubio . 4 Castanio . 5 Borrar el cabello . 6 Salir");
@@ -318,7 +228,7 @@ public class Main {
 		if (!sospechoso.getSenia().hayRasgo())
 			System.out.println("Aun no ha elejido la senia del sospechoso");
 		else{
-				System.out.println("Usted marco q su sospechoso tiene "+sospechoso.getSenia().getRasgo());
+				System.out.println("Usted marco que su sospechoso tiene "+sospechoso.getSenia().getRasgo());
 			}
 		System.out.println("Elija la senia de su sospechoso");
 		System.out.println("1 Anillos . 2 Tatuajes . 3 Joyas . 4 Cicatrices . 5 Borrar la senia . 6 Salir");
@@ -354,7 +264,7 @@ public class Main {
 		if (!sospechoso.getVehiculo().hayRasgo())
 			System.out.println("Aun no ha elejido el vehiculo del sospechoso");
 		else{
-				System.out.println("Usted marco q su sospechoso anda en "+sospechoso.getVehiculo().getRasgo());
+				System.out.println("Usted marco que su sospechoso anda en "+sospechoso.getVehiculo().getRasgo());
 			}
 		System.out.println("Elija el vehiculo de su sospechoso");
 		System.out.println("1 Moto . 2 Descapotable . 3 Limusina . 4 Deportivo . 5 Borrar el vehiculo . 6 Salir");
@@ -506,7 +416,7 @@ public class Main {
 					System.out.println("Felicidades! Ahora vivira sus dias en Azkaban");
 				}
 				else{
-					System.out.println("Pero como colgaste mal en emitir la orden, se fue no mas. Gil.");
+					System.out.println("Pero como colgaste mal en emitir la orden, se fue no mas");
 				}
 			}
 			else{
